@@ -1,5 +1,7 @@
-@define-color bar-bg #1e1e2e;
-/*@define-color bar-bg #11111b;*/
+/* themes.css */
+
+/*@define-color bar-bg #1e1e2e;*/
+@define-color bar-bg #11111b;
 /*@define-color bar-bg rgba(0, 0, 0, 0);*/
 
 /*@define-color main-bg #11111b;*/

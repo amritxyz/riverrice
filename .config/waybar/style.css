@@ -1,82 +1,123 @@
+/* style.css */
+
 * {
-    /*border: none;*/
-    border-radius: 0;
+    border: none;
     border-radius: 0px;
-    font-family: "Hack";
-    font-weight: bold;
+    font-family: Cantarell, Hack Nerd Font;
+    font-weight: bolder;
     font-size: 11px;
     min-height: 10px;
 }
 
 @import "theme.css";
+@import "colors.css";
 
 window#waybar {
-    background: #1e1e2e;
+    /*background-color: @crust;*/
+    background-color: @bar-bg;
 }
 
 #tags {
-    /*margin-top: 8px;*/
-    /*margin-left: 8px;*/
-    padding: 1px;
-    background-color: #1e1e2e; /*base02*/
+    padding: 0px;
+    /*background-color: #1e1e2e;*/
+    /*background-color: @crust;*/
+    background-color: rgba(0, 0, 0, 0);
     /*border: 2px solid #93a1a1;*/
 }
 
 #tags button {
     margin: 0.5px;
     padding: 0.5px;
-    color: #93a1a1; /*base1*/
-    border: 2px solid #1e1e2b; /*base02*/
+    color: #93a1a1;
+    /*border: 2px solid #1e1e2b;*/
 
     /* Disable animation on click, GTK has the stupidest defaults */
     transition-property: none;
 }
 
-/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
 #tags button:hover {
+    color: #6c7086;
     box-shadow: inherit;
     text-shadow: inherit;
-    background: #1e1e2b; /*base02*/
+    background: #1e1e2b;
+    /*background-color: @crust;*/
 }
 
 #tags button.focused {
-    color: #073642; /*base02*/
-    background-color: #93a1a1; /*base1*/
-    border: 2px solid #1e1e2b; /*base02*/
+    /*color: #073642;*/
+    color: @mantle;
+    background-color: #93a1a1;
+    /*border: 2px solid #1e1e2b;*/
 }
 
 #tags button.occupied {
-    border: 2px solid #93a1a1; /*base1*/
+    /*border: 2px solid #93a1a1;*/
+    /*background-color: @crust;*/
 }
 
 #tags button.urgent {
-    border: 2px solid #dc322f; /*red*/
+    /*border: 2px solid #dc322f;*/
 }
 
 #tags button.occupied.urgent {
-    border: 2px solid #dc322f; /*red*/
+    /*border: 2px solid #dc322f;*/
 }
 
-#tags button.focused.occupied {
-    color: #073642; /*base02*/
-    background-color: #93a1a1; /*base1*/
-    border: 2px solid #93a1a1; /*base1*/
+#tags button.focused.occupied{
+    /*color: #073642;*/
+    /*background-color: #93a1a1;*/
+    /*background-color: @crust;*/
+    /*border: 2px solid #93a1a1;*/
 }
 
-#clock,
+.modules-left > widget:first-child > #tags {
+    margin-left: 2px;
+    /*background-color: @crust;*/
+    background-color: @bar-bg;
+}
+
+#window,
 #mode,
-#cpu,
-#memory,
-#network,
-#battery,
-#idle_inhibitor,
 #temperature {
     padding: 1px 5px;
-    /*margin-top: 8px;*/
     margin-left: 8px;
-    background-color: #1e1e2b; /*base02*/
-    color: #93a1a1; /*base1*/
+    /*background-color: #1e1e2b;*/
+    /*background-color: @crust;*/
+    background-color: rgba(0, 0, 0, 0);
+    /*color: #93a1a1;*/
+    color: @text;
     /*border: 2px solid #93a1a1;*/
+}
+
+
+#clock {
+  color: @text;
+}
+
+#pulseaudio {
+  color: @mauve;
+  margin-right: 15px;
+}
+
+#pulseaudio.muted {
+  color: @surface2;
+}
+
+#network {
+    color: #89b4fa;
+    margin-right: 18px;
+}
+#network.disconnected {
+    color: #585b70;
+}
+
+#battery {
+    color: @green;
+    margin-right: 15px;
+}
+
+#battery.warning:not(.charging) {
+    color: @red;
 }
 
 #temperature {
@@ -84,17 +125,12 @@ window#waybar {
 }
 
 #clock {
-    margin-left: 0px;
-    margin-right: 0px;
+    /*margin-left: 5px;*/
+    margin-right: 13px;
 }
 
-#cpu.warning,
-#memory.warning {
-    /*border: 2px solid #b58900;*/
-}
-
-#cpu.critical,
-#memory.critical,
-#temperature.critical {
-    /*border: 2px solid #dc322f;*/
+#custom-power {
+  color: @maroon;
+  font-size: 10px;
+  margin-right: 5px;
 }
