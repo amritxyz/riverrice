@@ -21,7 +21,6 @@
     "format-wifi": "󰤨",
     "format-disconnected": "󰤭",
     "tooltip-format": "Connected to {essid}",
-    //"on-click": "pkill -SIGKILL nmtui || hyprctl dispatch exec '[float]' 'footclient -e nmtui'"
   },
 
   "cpu": {
@@ -64,7 +63,7 @@
 
   "custom/power": {
     "format": " ",
-    "on-click": "hyprlock"
+    "on-click": "waylock -init-color 0x1e1e2e -input-color 0x89b4fa -fail-color 0xf38ba8 -ignore-empty-password"
   },
 
   "battery": {
