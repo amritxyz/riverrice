@@ -22,3 +22,5 @@ SCREEN_RESOLUTION="1366x768"
 
 sleep 2
 wf-recorder --audio -g "$SCREEN_RESOLUTION" -r 24 -f "$FILENAME"
+stty sane
+# reset

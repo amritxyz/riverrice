@@ -27,3 +27,6 @@ sleep 2 &&
 	-ac 2 -ar 44100 -sample_fmt s16 \
 	-strict -2 \
 	"$FILENAME"
+
+stty sane
+# reset
