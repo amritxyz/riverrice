@@ -17,26 +17,30 @@ riverctl map normal Super Return spawn foot
 riverctl map normal Super Q close
 
 riverctl map normal Super W spawn firefox
+riverctl map normal Super+Shift B spawn bleachbit
+riverctl map normal Super g spawn gimp
+riverctl map normal Super+Shift N spawn "foot -e newsboat"
 riverctl map normal Super Escape spawn "foot -e htop"
 riverctl map normal Super N spawn "foot -e nvim"
 riverctl map normal Super I spawn 'foot -e lf'
-riverctl map normal Super+Shift N spawn "foot -e newsraft"
-riverctl map normal Super P spawn "foot -e alsamixer"
-riverctl map normal Super+Shift W spawn "foot -e sudo nmtui"
+riverctl map normal Super P spawn "foot -e pulsemixer"
+riverctl map normal Super+Shift W spawn "foot -e nmtui"
 
-riverctl map normal Super D spawn 'tofi-drun --drun-launch=true'
-riverctl map normal Super O spawn '~/.local/bin/snippets.sh'
+# riverctl map normal Super D spawn 'tofi-drun --drun-launch=true'
+riverctl map normal Super D spawn '~/.local/bin/fuzzel.sh'
+riverctl map normal Super O spawn '~/.local/bin/snippet.sh'
 riverctl map normal Super+Shift O spawn '~/.local/bin/key.sh'
 
 riverctl map normal Mod1+Shift D spawn 'foot -e sudo poweroff -i'
 riverctl map normal Mod1+Shift R spawn 'foot -e sudo reboot -i'
 
-riverctl map normal F12 spawn 'amixer -q sset Speaker 5%+'
-riverctl map normal F11 spawn 'amixer -q sset Speaker 5%-'
-riverctl map normal F10 spawn 'amixer -q sset Speaker toggle'
+riverctl map normal F12 spawn 'wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+'
+riverctl map normal F11 spawn 'wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-'
+riverctl map normal F10 spawn 'wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle'
+riverctl map normal F9 spawn 'wpctl set-volume @DEFAULT_AUDIO_SINK@ 0%'
 
-riverctl map normal Caps_Lock Escape
-riverctl map normal Escape Caps_Lock
+riverctl map normal Alt P spawn 'brightnessctl set 5%+'
+riverctl map normal Alt L spawn 'brightnessctl set 5%-'
 
 # Super+Shift+E to exit river
 riverctl map normal Super+Shift Q exit
@@ -151,9 +155,9 @@ do
     # Eject the optical drive (well if you still have one that is)
     riverctl map $mode None XF86Eject spawn 'eject -T'
 
-    riverctl map $mode None XF86AudioRaiseVolume  spawn 'amixer -q sset Speaker 5%+'
-    riverctl map $mode None XF86AudioLowerVolume  spawn 'amixer -q sset Speaker 5%-'
-    riverctl map $mode None XF86AudioMute         spawn 'amixer -q sset Speaker toggle'
+    riverctl map $mode None XF86AudioRaiseVolume  spawn 'wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+'
+    riverctl map $mode None XF86AudioLowerVolume  spawn 'wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-'
+    riverctl map $mode None XF86AudioMute         spawn 'wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle'
 
     riverctl map $mode None XF86AudioMedia spawn 'playerctl play-pause'
     riverctl map $mode None XF86AudioPlay  spawn 'playerctl play-pause'
@@ -184,6 +188,10 @@ riverctl rule-add -app-id "bar" csd
 # River will send the process group of the init executable SIGTERM on exit.
 riverctl default-layout rivertile
 
+# Swap capslock and escape
+riverctl keyboard-layout -options "caps:swapescape" us
+
 rivertile -view-padding 6 -outer-padding 6 &
 foot --server &
+swaybg -i ~/.local/share/wall/3.png &
 waybar &
