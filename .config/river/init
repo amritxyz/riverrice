@@ -37,10 +37,10 @@ riverctl map normal $mod Backspace spawn 'sh -c "pkill -SIGKILL wf-recorder; pki
 riverctl map normal Mod1+Shift D spawn 'foot -e sudo poweroff -i'
 riverctl map normal Mod1+Shift R spawn 'foot -e sudo reboot -i'
 
-riverctl map normal XKB_KEY_F12 spawn 'wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+'
-riverctl map normal XKB_KEY_F11 spawn 'wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-'
-riverctl map normal XKB_KEY_F10 spawn 'wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle'
-riverctl map normal XKB_KEY_F9 spawn 'wpctl set-volume @DEFAULT_AUDIO_SINK@ 0%'
+# riverctl map normal None XKB_KEY_F12 spawn 'wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+'
+# riverctl map normal None XKB_KEY_F11 spawn 'wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-'
+# riverctl map normal None XKB_KEY_F10 spawn 'wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle'
+# riverctl map normal None XKB_KEY_F9 spawn 'wpctl set-volume @DEFAULT_AUDIO_SINK@ 0%'
 
 riverctl map normal Mod1 P spawn 'brightnessctl set 5%+'
 riverctl map normal Mod1 L spawn 'brightnessctl set 5%-'
@@ -140,18 +140,6 @@ riverctl map normal $mod Right send-layout-cmd rivertile 'main-location right'
 riverctl map normal $mod Down  send-layout-cmd rivertile 'main-location bottom'
 riverctl map normal $mod Left  send-layout-cmd rivertile 'main-location left'
 
-# Declare a passthrough mode. This mode has only a single mapping to return to
-# normal mode. This makes it useful for testing a nested wayland compositor
-# riverctl declare-mode passthrough
-
-# $mod+F11 to enter passthrough mode
-# riverctl map normal $mod F11 enter-mode passthrough
-
-# $mod+F11 to return to normal mode
-# riverctl map passthrough $mod F11 enter-mode normal
-
-# Various media key mapping examples for both normal and locked mode which do
-# not have a modifier
 for mode in normal locked
 do
 
@@ -193,19 +181,19 @@ riverctl hide-cursor when-typing enabled
 # riverctl xcursor-theme Adwaita 24
 
 # Custom rules
-riverctl rule-add -app-id 'imv*' float
-riverctl rule-add -app-id 'mpv*' float
+# riverctl rule-add -app-id 'imv*' float
+# riverctl rule-add -app-id 'mpv*' float
 # riverctl rule-add -app-id foot -title 'htop' float
 # riverctl close-view -title 'htop'
 
 # Set the default layout generator to be rivertile and start it.
 # River will send the process group of the init executable SIGTERM on exit.
 riverctl default-layout rivertile
+rivertile -view-padding 6 -outer-padding 6 &
 
 # Swap capslock and escape
 riverctl keyboard-layout -options 'caps:swapescape' us
 
-rivertile -view-padding 6 -outer-padding 6 &
 foot --server &
 swaybg -i ~/.local/share/wall/3.png &
 waybar &
