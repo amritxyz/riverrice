@@ -12,8 +12,7 @@ eval "$(dircolors -b)"
 
 # Default programs
 export EDITOR="nvim"
-# export TERMINAL="st"
-# export TERMINAL_PROG="st"
+export TERMINAL="foot"
 export BROWSER="firefox"
 
 # Environment variables
@@ -46,7 +45,7 @@ alias torrent='deluge-gtk'
 alias rr='cd $HOME/.config/river && ls -AF'
 alias h='cd $HOME/ && ls -AF'
 alias cf='cd $HOME/.config && ls -AF'
-# alias wal='cd $HOME/.local/share/wall && ls -AF'
+alias wal='cd $HOME/.local/share/wall && ls -AF'
 alias mu='cd $HOME/.local/music && ls -AF'
 alias aud='cd $HOME/.local/audio && ls -AF'
 alias dl='cd $HOME/.local/dl && ls -AF'
@@ -75,7 +74,7 @@ alias v='nvim'
 alias vi='nvim'
 alias vim='nvim'
 alias mkdir='mkdir -p'
-alias zzz='sudo zzz'
+alias zzz='systemctl suspend'
 
 # Git aliases
 alias g='git'
