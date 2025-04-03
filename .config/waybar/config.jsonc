@@ -56,9 +56,9 @@
       "warning": 30
     },
     "format": "bat {capacity}%",
-    "interval": 1,
     "format-charging": "char {capacity}%",
-    "format-plugged": "plug {capacity}%",
+    "format-alt": "bat {capacity}%",
+    "interval": 1,
     "tooltip": false
   }
 }
