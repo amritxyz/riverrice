@@ -1,136 +1,123 @@
-/* style.css */
+/**
+ * solarized dark colorscheme:
+ *
+ * base03    #002b36
+ * base02    #073642
+ * base01    #586e75
+ * base00    #657b83
+ * base0     #839496
+ * base1     #93a1a1
+ * base2     #eee8d5
+ * base3     #fdf6e3
+ * yellow    #b58900
+ * orange    #cb4b16
+ * red       #dc322f
+ * magenta   #d33682
+ * violet    #6c71c4
+ * blue      #268bd2
+ * cyan      #2aa198
+ * green     #859900
+ */
 
 * {
-    border: none;
-    border-radius: 0px;
-    font-family: Cantarell, Hack Nerd Font;
-    font-weight: bolder;
-    font-size: 11px;
-    min-height: 10px;
+    border-radius: 0;
+    font-family: cozette;
+    min-height: 0;
 }
 
-@import "theme.css";
-@import "colors.css";
-
 window#waybar {
-    /*background-color: @crust;*/
-    background-color: @bar-bg;
+    background-color: rgba(0,0,0,0); /* transparent */
 }
 
 #tags {
-    padding: 0px;
-    /*background-color: #1e1e2e;*/
-    /*background-color: @crust;*/
-    background-color: rgba(0, 0, 0, 0);
-    /*border: 2px solid #93a1a1;*/
+    margin-top: 8px;
+    margin-left: 8px;
+    padding: 1px;
+    background-color: #073642; /*base02*/
+    border: 2px solid #93a1a1; /*base1*/
 }
 
 #tags button {
-    margin: 0.5px;
-    padding: 0.5px;
-    color: #93a1a1;
-    /*border: 2px solid #1e1e2b;*/
-
+    margin: 1px;
+    padding: 1px;
+    color: #93a1a1; /*base1*/
+    border: 2px solid #073642; /*base02*/
+    
     /* Disable animation on click, GTK has the stupidest defaults */
     transition-property: none;
 }
 
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
 #tags button:hover {
-    color: #6c7086;
     box-shadow: inherit;
     text-shadow: inherit;
-    background: #1e1e2b;
-    /*background-color: @crust;*/
+    background: #073642; /*base02*/
 }
 
 #tags button.focused {
-    /*color: #073642;*/
-    color: @mantle;
-    background-color: #93a1a1;
-    /*border: 2px solid #1e1e2b;*/
+    color: #073642; /*base02*/
+    background-color: #93a1a1; /*base1*/
+    border: 2px solid #073642; /*base02*/
 }
 
 #tags button.occupied {
-    /*border: 2px solid #93a1a1;*/
-    /*background-color: @crust;*/
+    border: 2px solid #93a1a1; /*base1*/
 }
 
 #tags button.urgent {
-    /*border: 2px solid #dc322f;*/
+    border: 2px solid #dc322f; /*red*/
 }
 
 #tags button.occupied.urgent {
-    /*border: 2px solid #dc322f;*/
+    border: 2px solid #dc322f; /*red*/
 }
 
-#tags button.focused.occupied{
-    /*color: #073642;*/
-    /*background-color: #93a1a1;*/
-    /*background-color: @crust;*/
-    /*border: 2px solid #93a1a1;*/
+#tags button.focused.occupied {
+    color: #073642; /*base02*/
+    background-color: #93a1a1; /*base1*/
+    border: 2px solid #93a1a1; /*base1*/
 }
 
-.modules-left > widget:first-child > #tags {
-    margin-left: 2px;
-    /*background-color: @crust;*/
-    background-color: @bar-bg;
-}
-
-#window,
+#clock,
 #mode,
+#cpu,
+#memory,
+#network,
+#idle_inhibitor,
 #temperature {
     padding: 1px 5px;
+    margin-top: 8px;
     margin-left: 8px;
-    /*background-color: #1e1e2b;*/
-    /*background-color: @crust;*/
-    background-color: rgba(0, 0, 0, 0);
-    /*color: #93a1a1;*/
-    color: @text;
-    /*border: 2px solid #93a1a1;*/
+    background-color: #073642; /*base02*/
+    color: #93a1a1; /*base1*/
+    border: 2px solid #93a1a1; /*base1*/
 }
 
-
-#clock {
-  color: @text;
-}
-
-#pulseaudio {
-  color: @mauve;
-  margin-right: 15px;
-}
-
-#pulseaudio.muted {
-  color: @surface2;
-}
-
-#network {
-    color: #89b4fa;
-    margin-right: 18px;
-}
-#network.disconnected {
-    color: #585b70;
-}
-
+/* #temperature { */
+/*     margin-right: 8px; */
+/* } */
 #battery {
-    color: @green;
-    margin-right: 15px;
-}
-
-#battery.warning:not(.charging) {
-    color: @red;
-}
-
-#temperature {
+    padding: 1px 5px;
+    margin-top: 8px;
+    margin-left: 8px;
+    background-color: #073642; /*base02*/
+    color: #93a1a1; /*base1*/
+    border: 2px solid #93a1a1; /*base1*/
     margin-right: 8px;
 }
 
 #clock {
-    /*margin-left: 5px;*/
-    margin-right: 13px;
+    margin-left: 0px;
+    margin-right: 0px;
 }
 
-#custom-power {
-  color: @maroon;
-  font-size: 10px;
-  margin-right: 5px;
+#cpu.warning,
+#memory.warning {
+    border: 2px solid #b58900; /*yellow*/
+}
+
+#cpu.critical,
+#memory.critical,
+#temperature.critical {
+    border: 2px solid #dc322f; /*red*/
 }

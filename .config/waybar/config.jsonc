@@ -1,30 +1,33 @@
-/* config.jsonc */
-
 {
-  "height": 20,
-  "reload_style_on_change": true,
-
-  "modules-left": [ "river/tags" ],
-  "modules-center": [ "river/window" ],
-  "modules-right": [ "pulseaudio", "network", "battery", "clock", "custom/power" ],
-
-  "river/tags": {
-    "hide-vacant": true
-  },
-
+  "modules-left": [
+    "river/tags"
+  ],
+  "modules-center": [
+    "clock"
+  ],
+  "modules-right": [
+    // "river/mode",
+    "network",
+    "cpu",
+    "memory",
+    "temperature",
+    "battery"
+  ],
   "clock": {
-    "tooltip-format": "{:%A, %B %d, %Y}",
-    "format": "{:%H:%M}"
+    "format": "{:%a %d-%m %T}",
+    "interval": 1,
+    "tooltip": false
   },
-
   "network": {
-    "format-wifi": "󰤨",
-    "format-disconnected": "󰤭",
-    "tooltip-format": "Connected to {essid}",
+    "format-wifi": "{essid} {signalStrength}%",
+    "format-ethernet": "{ifname}: {ipaddr}/{cidr}",
+    "format-linked": "{ifname} (No IP)",
+    "format-disconnected": "Disconnected",
+    "format-alt": "{ifname}: {ipaddr}/{cidr}",
+    "tooltip": false
   },
-
   "cpu": {
-    "format": "Cpu{usage:3}%",
+    "format": "cpu{usage:3}%",
     "interval": 1,
     "states": {
       "warning": 50,
@@ -32,9 +35,8 @@
     },
     "tooltip": false
   },
-
   "memory": {
-    "format": "Mem {}%",
+    "format": "mem {}%",
     "interval": 1,
     "states": {
       "warning": 50,
@@ -42,7 +44,6 @@
     },
     "tooltip": false
   },
-
   "temperature": {
     "format": "{temperatureC}°C",
     "interval": 1,
@@ -50,30 +51,14 @@
     "critical-threshold": 80,
     "tooltip": false
   },
-
-  "pulseaudio": {
-    //"scroll-step": 1, // %, can be a float
-    "format": "{icon}",
-    "format-muted": "󰖁",
-    "format-icons": {
-      "default": ["", "", "󰕾"]
-    },
-    "tooltip-format": "{volume}% volume"
-  },
-
-  "custom/power": {
-    "format": " ",
-    "on-click": "waylock -init-color 0x1e1e2e -input-color 0x89b4fa -fail-color 0xf38ba8 -ignore-empty-password"
-  },
-
   "battery": {
     "states": {
-      "warning": 20
+      "warning": 30
     },
-    "format": "{icon}",
-    "format-icons": [ "󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹" ],
-    "format-charging": "󰂄",
-    "format-warning": "󰂃",
-    "tooltip-format": "{capacity}% capacity"
+    "format": "bat {capacity}%",
+    "interval": 1,
+    "format-charging": "char {capacity}%",
+    "format-plugged": "plug {capacity}%",
+    "tooltip": false
   }
 }
