@@ -4,7 +4,7 @@
 [[ $- != *i* ]] && return
 
 # Prompt configuration
-PS1="\[$(tput bold)\]\[$(tput setaf 1)\][\[$(tput setaf 3)\]\u\[$(tput setaf 2)\]@\[$(tput setaf 4)\]\h \[$(tput setaf 5)\]\W\[$(tput setaf 1)\]]\[$(tput setaf 7)\]\\$ \[$(tput sgr0)\]"
+PS1='\[\e[34m\]\w\[\e[0m\] $(git branch 2>/dev/null | grep "*" | sed "s/*/(\e[36m&\e[0m)/") \[\e[36m\]$(jobs -p | wc -l | awk "{if (\$1>0) print \"+\"\$1}") \[\e[33m❯\e[0m\] '
 
 # LS_COLORS configuration
 export LS_COLORS='di=1;34:fi=0:ln=0;36:ex=0;32:'
@@ -27,7 +27,7 @@ export PYTHONSTARTUP="$HOME/.config/python/pythonrc"
 
 # Shell options and settings
 shopt -s autocd
-stty -ixon
+stty -ixon -ixoff
 export HISTSIZE=1000
 export HISTFILESIZE=2000
 
@@ -75,6 +75,9 @@ alias vi='nvim'
 alias vim='nvim'
 alias mkdir='mkdir -p'
 alias zzz='systemctl suspend'
+
+# Camera
+alias cam='mpv --untimed --no-cache --no-osc --no-input-default-bindings --profile=low-latency --input-conf=/dev/null --title=webcam $(ls /dev/video[0,2,4,6,8] | tail -n 1)'
 
 # Git aliases
 alias g='git'
