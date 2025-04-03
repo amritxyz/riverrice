@@ -1,7 +1,5 @@
 #!/bin/sh
 
-echo "Installing Issential packages.."
-
 # Cleanup first
 read -rep ':: Would you like to cleanup Home Dir? [y/N] ' DLT
 if [[ $DLT == "N" || $DLT == "n" || -z $DLT ]]; then
