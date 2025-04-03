@@ -24,7 +24,7 @@ riverctl map normal $mod N spawn 'foot -e nvim'
 riverctl map normal $mod I spawn 'foot -e lf'
 riverctl map normal $mod P spawn 'foot -e pulsemixer'
 riverctl map normal $mod+Shift W spawn 'foot -e nmtui'
-riverctl map normal Shift+Mod1 L spawn 'waylock -init-color 0x1e1e2e -input-color 0x89b4fa -fail-color 0xf38ba8 -ignore-empty-password'
+riverctl map normal Shift+Mod1 L spawn 'waylock'
 
 # riverctl map normal $mod D spawn 'tofi-drun --drun-launch=true'
 riverctl map normal $mod D spawn '~/.local/bin/fuzzel.sh'
@@ -32,8 +32,9 @@ riverctl map normal $mod O spawn '~/.local/bin/snippet.sh'
 riverctl map normal $mod+Shift O spawn '~/.local/bin/key.sh'
 riverctl map normal $mod+Shift F spawn '~/.local/bin/grim.sh'
 
-riverctl map normal $mod Backspace spawn 'sh -c "pkill -SIGKILL wf-recorder; pkill ffmpeg"'
+riverctl map normal $mod Backspace spawn 'sh -c "pkill -SIGKILL wf-recorder; pkill -SIGKILL ffmpeg"'
 
+riverctl map normal Mod1+Shift B spawn '~/.local/bin/blue.sh'
 riverctl map normal Mod1+Shift D spawn 'foot -e sudo poweroff -i'
 riverctl map normal Mod1+Shift R spawn 'foot -e sudo reboot -i'
 
@@ -196,5 +197,4 @@ rivertile -view-padding 6 -outer-padding 6 &
 riverctl keyboard-layout -options 'caps:swapescape' us
 
 foot --server &
-# swaybg -i ~/.local/share/wall/3.png &
 waybar &
