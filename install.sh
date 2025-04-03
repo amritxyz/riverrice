@@ -38,7 +38,7 @@ fi
 read -rep ':: Would you like to install the packages? [Y/n] ' INST
 if [[ $INST == "Y" || $INST == "y" || -z $INST ]]; then
 	sudo pacman -Sy --needed base-devel && \
-		sudo pacman -S --needed tesseract-data-nep river brightnessctl swaybg foot \
+		sudo pacman -S --needed tesseract-data-nep river brightnessctl foot \
 		waybar tmux mpv neovim pulsemixer bleachbit fastfetch unzip ripgrep imv lf \
 		newsboat waylock wtype wl-clipboard fuzzel htop grim slurp man-db zathura zathura-pdf-poppler \
 		vulkan-intel xdg-desktop-portal-gtk adwaita-icon-theme git-lfs wf-recorder \
@@ -51,7 +51,6 @@ fi
 mkdir -p ~/.local/share ~/.config ~/.local/bin ~/.local/git-repos ~/.local/hugo-dir ~/.local/dox ~/.local/vids ~/.local/music ~/.local/audio
 
 # Post Installation
-git clone --depth=1 https://github.com/amritxyz/wall.git/ ~/.local/share/wall
 git clone --depth=1 https://github.com/amritxyz/dev.git/ ~/.local/dev
 git clone --depth=1 https://github.com/amritxyz/kickstart-nvim.git ~/.config/nvim
 
