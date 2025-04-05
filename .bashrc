@@ -4,13 +4,13 @@
 [[ $- != *i* ]] && return
 
 # Prompt configuration
-PS1="\n\[$(tput setaf 4)\]\w\[$(tput sgr0)\] \
-\$(git branch 2>/dev/null | grep \"*\" | sed \"s/*/(\$(tput setaf 6)&\$(tput sgr0))/\") \
-\[$(tput setaf 6)\]\$(jobs -p | wc -l | awk '{if (\$1>0) print \"+\"\$1}')\n\
-\[$(tput setaf 3)\]❯\[$(tput sgr0)\] "
+PS1="\n\[\e[38;5;66m\]\w\[\e[0m\] \
+\$(git branch 2>/dev/null | grep \"*\" | sed \"s/*/(\e[38;5;108m&\e[0m)/\") \
+\[\e[38;5;108m\]\$(jobs -p | wc -l | awk '{if (\$1>0) print \"+\"\$1}')\n\
+\[\e[38;5;220m\]❯\[\e[0m\] "
 
 # LS_COLORS configuration
-export LS_COLORS='di=1;34:fi=0:ln=0;36:ex=0;32:'
+export LS_COLORS='di=38;5;240:fi=38;5;248:ln=38;5;109:ex=38;5;113:'
 eval "$(dircolors -b)"
 
 # Default programs
