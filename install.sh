@@ -4,7 +4,7 @@
 read -rep ':: Would you like to cleanup Home Dir? [y/N] ' DLT
 if [[ $DLT == "N" || $DLT == "n" || -z $DLT ]]; then
 	echo "Exiting..."
-	exit 1
+	break
 else
 	echo "Cleaning..."
 	sudo rm -rf $HOME/.[!.]*
