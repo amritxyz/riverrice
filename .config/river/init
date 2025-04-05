@@ -163,9 +163,10 @@ do
 done
 
 # Set background and border color
-riverctl background-color 0x002b36
-riverctl border-color-focused 0x93a1a1
-riverctl border-color-unfocused 0x586e75
+riverctl background-color 0x282828
+# riverctl border-color-focused 0xfabd2f  # Gruvbox yellow
+riverctl border-color-focused 0xebdbb2
+riverctl border-color-unfocused 0x928374
 
 # Set keyboard repeat rate
 riverctl keyboard-layout -options 'compose:rMod1' us
@@ -191,10 +192,11 @@ riverctl hide-cursor when-typing enabled
 # Set the default layout generator to be rivertile and start it.
 # River will send the process group of the init executable SIGTERM on exit.
 riverctl default-layout rivertile
-rivertile -view-padding 6 -outer-padding 6 &
 
 # Swap capslock and escape
 riverctl keyboard-layout -options 'caps:swapescape' us
+
+rivertile -view-padding 4 -outer-padding 4 &
 
 foot --server &
 waybar &
