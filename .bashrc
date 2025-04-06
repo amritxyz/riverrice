@@ -4,10 +4,7 @@
 [[ $- != *i* ]] && return
 
 # Prompt configuration
-PS1="\n\[\e[38;5;66m\]\w\[\e[0m\] \
-\$(git branch 2>/dev/null | grep \"*\" | sed \"s/*/(\e[38;5;108m&\e[0m)/\") \
-\[\e[38;5;108m\]\$(jobs -p | wc -l | awk '{if (\$1>0) print \"+\"\$1}')\n\
-\[\e[38;5;220m\]❯\[\e[0m\] "
+PS1="\[$(tput bold)\]\[$(tput setaf 1)\][\[$(tput setaf 3)\]\u\[$(tput setaf 2)\]@\[$(tput setaf 4)\]\h \[$(tput setaf 5)\]\W\[$(tput setaf 1)\]]\[$(tput setaf 7)\]\\$ \[$(tput sgr0)\]"
 
 # LS_COLORS configuration
 export LS_COLORS='di=38;5;240:fi=38;5;248:ln=38;5;109:ex=38;5;113:'
