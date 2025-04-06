@@ -18,7 +18,7 @@ riverctl map normal $mod N spawn 'foot -e nvim'
 riverctl map normal $mod I spawn 'foot -e lf'
 riverctl map normal $mod P spawn 'foot -e pulsemixer'
 riverctl map normal $mod+Shift W spawn 'foot -e nmtui'
-riverctl map normal Shift+Mod1 L spawn 'waylock -init-color 0x282828 -input-color 0x83a598 -fail-color 0xfb4934'
+riverctl map normal Shift+Mod1 L spawn 'waylock -init-color 0x282828 -input-color 0x83a598 -fail-color 0xfb4934 -ignore-empty-password'
 
 # riverctl map normal $mod D spawn 'tofi-drun --drun-launch=true'
 riverctl map normal $mod D spawn '~/.local/bin/fuzzel.sh'
