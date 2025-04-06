@@ -22,7 +22,7 @@
   "network": {
     "format-wifi": "{essid} {signalStrength}%",
     "format-ethernet": "ethernet",
-    "format-disconnected": "Disconnected",
+    "format-disconnected": "disconnected",
     "tooltip": false
   },
   "pulseaudio": {
