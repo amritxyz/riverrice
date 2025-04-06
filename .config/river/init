@@ -27,6 +27,7 @@ riverctl map normal $mod+Shift O spawn '~/.local/bin/key.sh'
 riverctl map normal $mod+Shift F spawn '~/.local/bin/grim.sh'
 
 riverctl map normal $mod Backspace spawn 'sh -c "pkill -SIGKILL wf-recorder; pkill -SIGKILL ffmpeg"'
+riverctl map normal $mod B spawn 'sh -c "pkill -SIGKILL waybar; waybar"'
 
 riverctl map normal Mod1+Shift B spawn '~/.local/bin/blue.sh'
 riverctl map normal Mod1+Shift D spawn 'foot -e sudo poweroff -i'
