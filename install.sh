@@ -66,6 +66,10 @@ mv ~/riverrice ~/.local/git-repos/
 # Start the bluetooth service
 sudo systemctl enable bluetooth.service
 
+# Just a empty directory for working stuffs
+sudo mkdir -p /opt/void
+sudo chown $USER:$USER /opt/void/
+
 echo
 echo "Successfully Installed RiverWm / Riverice."
 echo
