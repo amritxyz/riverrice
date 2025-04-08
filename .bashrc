@@ -74,6 +74,7 @@ alias vi='nvim'
 alias vim='nvim'
 alias mkdir='mkdir -p'
 alias zzz='systemctl suspend'
+alias jx='_JAVA_AWT_WM_NONREPARENTING=1 java'
 
 # Camera
 alias cam='mpv --untimed --no-cache --no-osc --no-input-default-bindings --profile=low-latency --input-conf=/dev/null --title=webcam $(ls /dev/video[0,2,4,6,8] | tail -n 1)'
