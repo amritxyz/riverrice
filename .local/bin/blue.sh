@@ -4,8 +4,8 @@ get_device_list() {
 }
 # Display devices using dmenu and get the selected device name
 device_list=$(get_device_list)
-selected_device=$(echo "$device_list" | fuzzel -T footclient -w 30% -b 002b36ff -t 839496ff -m dc322fff \
-	-s 073642ff -B 2 -r 0 -C 839496ff --font Hack -I -D no \
+selected_device=$(echo "$device_list" | fuzzel -T footclient -w 30% -b 282828cc -t ebdbb2ff -m fabd2fff \
+	-s 3c3836cc -B 2 -r 0 -C ebdbb2ff --font Hack -I -D no \
 	--filter-desktop $@ <&0 --cache=/dev/null --dmenu --lines 2 | awk '{print $1}')
 if [ -z "$selected_device" ]; then
 	echo "No device selected."
