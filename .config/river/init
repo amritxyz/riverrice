@@ -18,7 +18,6 @@ riverctl map normal $mod N spawn 'foot -e nvim'
 riverctl map normal $mod I spawn 'foot -e lf'
 riverctl map normal $mod P spawn 'foot -T top -e sh -c "pkill -SIGKILL pulsemixer || pulsemixer"'
 riverctl map normal $mod+Shift W spawn 'foot -e sh -c "pkill -SIGKILL nmtui || nmtui"'
-riverctl map normal Shift+Mod1 L spawn 'waylock -init-color 0x282828 -input-color 0x83a598 -fail-color 0xfb4934 -ignore-empty-password'
 
 # riverctl map normal $mod D spawn 'tofi-drun --drun-launch=true'
 riverctl map normal $mod D spawn 'pkill -SIGKILL fuzzel || ~/.local/bin/fuzzel.sh'
@@ -30,15 +29,11 @@ riverctl map normal $mod+Shift X spawn '~/.local/bin/caps_esc'
 riverctl map normal $mod Backspace spawn 'sh -c "pkill -SIGKILL wf-recorder; pkill -SIGKILL ffmpeg"'
 riverctl map normal $mod B spawn 'sh -c "pkill -SIGKILL waybar || waybar"'
 
-riverctl map normal Mod1+Shift B spawn 'sh -c "pkill -SIGKILL fuzzel" || ~/.local/bin/blue.sh'
-riverctl map normal Mod1+Shift D spawn 'foot -e sudo poweroff -i'
-riverctl map normal Mod1+Shift R spawn 'foot -e sudo reboot -i'
+riverctl map normal Mod1+Shift B spawn '~/.local/bin/blue.sh || pkill -SIGKILL fuzzel'
+riverctl map normal $mod+Shift Q spawn '~/.local/bin/syslock 2>/dev/null || pkill -SIGKILL fuzzel'
 
 riverctl map normal Mod1 P spawn 'brightnessctl set 5%+'
 riverctl map normal Mod1 L spawn 'brightnessctl set 5%-'
-
-# exit river
-riverctl map normal $mod+Shift Q exit
 
 # focus next/previous clients in the layout stack
 riverctl map normal $mod J focus-view next
