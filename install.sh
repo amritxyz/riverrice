@@ -39,7 +39,7 @@ if [[ $INST == "Y" || $INST == "y" || -z $INST ]]; then
 		sudo pacman -S --needed tesseract-data-nep river brightnessctl foot \
 		waybar tmux mpv neovim pulsemixer bleachbit fastfetch unzip ripgrep imv lf \
 		newsboat waylock wtype wl-clipboard fuzzel htop grim slurp man-db zathura zathura-pdf-poppler \
-		vulkan-intel xdg-desktop-portal-gtk adwaita-icon-theme git-lfs wf-recorder \
+		vulkan-intel xdg-desktop-portal-gtk adwaita-icon-theme git-lfs wf-recorder wlr-randr \
 		bluez bluez-utils gimp imagemagick wget deluge-gtk fzf curl cmatrix gnu-netcat \
 		gnu-free-fonts ttf-hack ttf-hack-nerd noto-fonts-emoji \
 		rust go jdk-openjdk nodejs npm php
