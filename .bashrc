@@ -23,7 +23,16 @@ export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_STATE_HOME="$HOME/.local/state"
 export XDG_RUNTIME_DIR="/run/user/$(id -u)"
 export WGETRC="$XDG_CONFIG_HOME/wget/wgetrc"
+export CARGO_HOME="$XDG_DATA_HOME/cargo"
+export GOPATH="$XDG_DATA_HOME/go"
+export GOMODCACHE="$XDG_CACHE_HOME/go/mod"
 export PYTHONSTARTUP="$HOME/.config/python/pythonrc"
+export PYTHON_HISTORY="$XDG_STATE_HOME/python_history"
+export PYTHONPYCACHEPREFIX="$XDG_CACHE_HOME/python"
+export PYTHONUSERBASE="$XDG_DATA_HOME/python"
+export PYENV_ROOT="$XDG_DATA_HOME/pyenv"
+export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
+export _JAVA_OPTIONS=-Djava.util.prefs.userRoot="$XDG_CONFIG_HOME/java"
 
 # Shell options and settings
 shopt -s autocd
