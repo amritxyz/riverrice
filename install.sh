@@ -42,7 +42,7 @@ if [[ $INST == "Y" || $INST == "y" || -z $INST ]]; then
 		vulkan-intel xdg-desktop-portal-wlr xdg-desktop-portal-gtk adwaita-icon-theme wlr-randr \
 		bluez bluez-utils gimp imagemagick wget deluge-gtk fzf curl cmatrix gnu-netcat \
 		gnu-free-fonts ttf-hack ttf-hack-nerd noto-fonts-emoji git-lfs wf-recorder \
-		rust go jdk-openjdk maven nodejs npm php
+		rust go jdk-openjdk maven nodejs npm php mariadb
 fi
 
 # Mkdir
