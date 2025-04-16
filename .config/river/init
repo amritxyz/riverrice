@@ -10,6 +10,7 @@ riverctl map normal $mod Q close
 
 # spawn some programs
 riverctl map normal $mod W spawn firefox
+riverctl map normal $mod T spawn deluge-gtk
 riverctl map normal $mod+Shift B spawn bleachbit
 riverctl map normal $mod g spawn gimp
 riverctl map normal $mod+Shift N spawn 'foot -e newsboat'
