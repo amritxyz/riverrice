@@ -33,8 +33,8 @@ riverctl map normal $mod B spawn 'sh -c "pkill -SIGKILL waybar || waybar"'
 riverctl map normal Mod1+Shift B spawn '~/.local/bin/blue.sh || pkill -SIGKILL fuzzel'
 riverctl map normal $mod+Shift Q spawn '~/.local/bin/syslock 2>/dev/null || pkill -SIGKILL fuzzel'
 
-riverctl map normal Mod1 P spawn 'brightnessctl set 5%+'
-riverctl map normal Mod1 L spawn 'brightnessctl set 5%-'
+riverctl map normal Mod1 P spawn 'brightnessctl set -e5 10%+'
+riverctl map normal Mod1 L spawn 'brightnessctl set -e5 10%-'
 
 # focus next/previous clients in the layout stack
 riverctl map normal $mod J focus-view next
@@ -117,8 +117,8 @@ do
     riverctl map $mode None XF86AudioPrev  spawn 'playerctl previous'
     riverctl map $mode None XF86AudioNext  spawn 'playerctl next'
 
-    riverctl map $mode None XF86MonBrightnessUp   spawn 'brightnessctl set +5%'
-    riverctl map $mode None XF86MonBrightnessDown spawn 'brightnessctl set 5%-'
+    riverctl map $mode None XF86MonBrightnessUp   spawn 'brightnessctl set -e5 10%+'
+    riverctl map $mode None XF86MonBrightnessDown spawn 'brightnessctl set -e5 10%-'
 done
 
 # Gruvbox background and borders
