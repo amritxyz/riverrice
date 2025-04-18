@@ -1,14 +1,14 @@
 #!/bin/bash
 
 export WM="river"
-export WL="waylock -ignore-empty-password"
+export WL="waylock -init-color 0x1d2021 -input-color 0x323a40 -fail-color 0x4a1e1e -ignore-empty-password"
 export CTL='systemctl'
 
 choice=$(printf "lock\nsleep\nlogout\nreboot\nshutdown" | \
 	fuzzel -p 'Action: ' \
-	-b 002b36cc -t 839496ff -m b58900ff -s 073642cc \
-	-B 2 -r 0 -C 839496ff --font Hack -I -D no \
-	-l 5 --filter-desktop "$@" <&0 --cache=/dev/null --dmenu
+	-b 282828cc -t 928374ff -m d79921ff -s 3c3836cc \
+	-B 2 -r 0 -C 928374ff --font Hack -I -D no \
+	-l 5 --cache=/dev/null --dmenu
 )
 
 case "$choice" in

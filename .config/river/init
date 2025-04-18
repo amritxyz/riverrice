@@ -121,6 +121,11 @@ do
     riverctl map $mode None XF86MonBrightnessDown spawn 'brightnessctl set 5%-'
 done
 
+# Gruvbox background and borders
+riverctl background-color 0x1d2021
+riverctl border-color-focused 0x928374
+riverctl border-color-unfocused 0x3c3836
+
 riverctl keyboard-layout -options 'compose:ralt' us
 riverctl set-repeat 50 300
 
@@ -131,6 +136,7 @@ riverctl rule-add -app-id foot -title 'top' float
 riverctl close-view -title 'top'
 riverctl rule-add -app-id 'imv*' float
 riverctl rule-add -app-id 'mpv*' float
+riverctl rule-add -app-id 'gimp*' tags 128
 riverctl rule-add -app-id 'org.pwmt.zathura*' float
 
 riverctl hide-cursor timeout 5000
