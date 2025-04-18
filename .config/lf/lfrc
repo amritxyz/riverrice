@@ -94,3 +94,4 @@ map gw cd ~/.local/share/wall
 map gp cd ~/.local/practice
 map gl cd ~/.local/dl
 map gx cd ~/.local/dox
+map gt cd /opt/void/
