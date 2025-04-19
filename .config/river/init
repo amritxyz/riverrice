@@ -121,11 +121,6 @@ do
     riverctl map $mode None XF86MonBrightnessDown spawn 'brightnessctl set -e5 10%-'
 done
 
-# Gruvbox background and borders
-riverctl background-color 0x1d2021
-riverctl border-color-focused 0x928374
-riverctl border-color-unfocused 0x3c3836
-
 riverctl keyboard-layout -options 'compose:ralt' us
 riverctl set-repeat 50 300
 

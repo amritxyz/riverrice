@@ -1,20 +1,17 @@
 /**
- * Gruvbox Dark colorscheme:
+ * Solarized Dark colorscheme:
  *
- * dark0_hard    #1d2021 (background)
- * dark0         #282828 (alternate bg)
- * dark1         #3c3836 (darker bg)
- * dark2         #504945 (lighter bg)
- * dark3         #665c54 (light bg)
- * dark4         #7c6f64 (very light bg)
- * neutral_red    #fb4934 (critical)
- * neutral_orange #fe8019 (urgent)
- * neutral_yellow #fabd2f (warning)
- * neutral_green  #b8bb26
- * neutral_blue   #83a598
- * neutral_purple #d3869b
- * neutral_aqua   #8ec07c
- * neutral_gray   #928374
+ * base03    #002b36 (background)
+ * base02    #073642 (alternate bg)
+ * base00    #657b83 (default fg)
+ * base0     #839496 (light fg)
+ * yellow    #b58900 (warning)
+ * orange    #cb4b16 (urgent)
+ * red       #dc322f (critical)
+ * green     #859900
+ * blue      #268bd2
+ * magenta   #d33682
+ * cyan      #2aa198
  */
 
 * {
@@ -25,53 +22,53 @@
 }
 
 window#waybar {
-    background-color: rgba(0, 0, 0, 0);
+    background-color: rgba(0, 0, 0, 0); /* transparent */
 }
 
 #tags {
     margin-top: 8px;
     margin-left: 8px;
     padding: 1px;
-    background-color: #1d2021;
-    border: 2px solid #928374;
+    background-color: #002b36; /* base03 */
+    border: 2px solid #839496; /* base0 */
 }
 
 #tags button {
     margin: 1px;
     padding: 1px;
-    color: #928374;
-    border: 2px solid #1d2021;
+    color: #839496; /* base0 */
+    border: 2px solid #002b36; /* base03 */
     transition-property: none;
 }
 
 #tags button:hover {
     box-shadow: inherit;
     text-shadow: inherit;
-    background: #1d2021;
+    background: #002b36;
 }
 
 #tags button.focused {
-    color: #1d2021;
-    background-color: #928374;
-    border: 2px solid #1d2021;
+    color: #002b36;
+    background-color: #839496;
+    border: 2px solid #002b36;
 }
 
 #tags button.occupied {
-    border: 2px solid #928374;
+    border: 2px solid #839496;
 }
 
 #tags button.urgent {
-    border: 2px solid #fe8019;
+    border: 2px solid #cb4b16; /* orange */
 }
 
 #tags button.occupied.urgent {
-    border: 2px solid #fe8019;
+    border: 2px solid #cb4b16;
 }
 
 #tags button.focused.occupied {
-    color: #1d2021;
-    background-color: #928374;
-    border: 2px solid #928374;
+    color: #002b36;
+    background-color: #839496;
+    border: 2px solid #839496;
 }
 
 #clock,
@@ -85,18 +82,18 @@ window#waybar {
     padding: 1px 5px;
     margin-top: 8px;
     margin-left: 8px;
-    background-color: #1d2021;
-    color: #928374;
-    border: 2px solid #928374;
+    background-color: #002b36;
+    color: #839496;
+    border: 2px solid #839496;
 }
 
 #battery {
     padding: 1px 5px;
     margin-top: 8px;
     margin-left: 8px;
-    background-color: #1d2021;
-    color: #928374;
-    border: 2px solid #928374;
+    background-color: #002b36;
+    color: #839496;
+    border: 2px solid #839496;
     margin-right: 8px;
 }
 
@@ -107,11 +104,11 @@ window#waybar {
 
 #cpu.warning,
 #memory.warning {
-    border: 2px solid #fabd2f;
+    border: 2px solid #b58900; /* yellow */
 }
 
 #cpu.critical,
 #memory.critical,
 #temperature.critical {
-    border: 2px solid #fb4934;
+    border: 2px solid #dc322f; /* red */
 }
