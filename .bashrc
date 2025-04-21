@@ -34,6 +34,7 @@ export PYTHON_HISTORY="$XDG_STATE_HOME/python_history"
 export PYTHONPYCACHEPREFIX="$XDG_CACHE_HOME/python"
 export PYTHONUSERBASE="$XDG_DATA_HOME/python"
 export PYENV_ROOT="$XDG_DATA_HOME/pyenv"
+export NODE_REPL_HISTORY="$XDG_DATA_HOME/node_repl_history"
 export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
 export JDK_JAVA_OPTIONS="-Djava.util.prefs.userRoot='$XDG_CONFIG_HOME/java' -Dsun.java2d.opengl=true \
     -Dawt.useSystemAAFontSettings=on -Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel \
