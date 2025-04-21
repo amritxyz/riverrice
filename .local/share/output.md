@@ -1,15 +1,25 @@
-# Right Monitor #
-wlr-randr --output HDMI-A-1 --mode 1920x1080 --right-of eDP-1
-wlr-randr --output HDMI-A-1 --mode 3840x2160 --right-of eDP-1
+# Right Monitor
+profile {
+	output HDMI-A-1 enable position 1366,0
+	output HDMI-A-1 position 1366,0 mode 3840x2160
+}
 
-# Mirror Primary Screen #
-wlr-randr --output HDMI-A-1 --same-as eDP-1
-wlr-randr --output HDMI-A-1 --mode 1920x1080 --same-as eDP-1
-wlr-randr --output HDMI-A-1 --mode 3840x2160 --same-as eDP-1
+# Helpful
+profile {
+	output HDMI-A-1 enable position 0,0 transform 90
+	output DVI-D-1 enable position 1080,420
+	output DVI-D-1 enable position 1366,0
+}
 
+# FHD Displays
+profile {
+	output eDP-1 position 0,0 mode 1920x1080
+	output HDMI-A-1 position 1920,0 mode 1920x1080
+	output HDMI-A-1 position 1920,0 mode 3840x2160
+}
+
+# Small Hack
+wf-recorder -o eDP-1 - | mpv -
+ 
 # Using a Graphical Tool for Mirroring #
 sudo pacman -S wayvnc
-
-## Start VNC server ##
-    $ wayvnc :1
-    $ (e.g., 192.168.1.10:1).
