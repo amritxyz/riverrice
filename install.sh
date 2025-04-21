@@ -41,6 +41,7 @@ if [[ $INST == "Y" || $INST == "y" || -z $INST ]]; then
 		newsboat waylock wtype wl-clipboard fuzzel htop grim slurp man-db zathura zathura-pdf-poppler \
 		vulkan-intel xdg-desktop-portal-wlr xdg-desktop-portal-gtk adwaita-icon-theme \
 		bluez bluez-utils gimp imagemagick wget deluge-gtk fzf curl cmatrix gnu-netcat \
+		texlive-latex texlive-latexextra texlive-pictures texlive-xetex texlive-latexrecommended \
 		gnu-free-fonts ttf-hack ttf-hack-nerd noto-fonts-emoji git-lfs wf-recorder \
 		rust go jdk-openjdk maven nodejs npm php
 fi
