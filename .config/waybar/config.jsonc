@@ -1,72 +1,90 @@
 {
-  "modules-left": [
-    "river/tags"
-  ],
-  "modules-center": [
-    "clock"
-  ],
-  "modules-right": [
-    // "river/mode",
-    "network",
-    "pulseaudio",
-    "cpu",
-    "memory",
-    "temperature",
-    "battery"
-  ],
-  "clock": {
-    "format": "{:%a %d-%m %T}",
-    "interval": 1,
-    "tooltip": false
-  },
-  "network": {
-    "format-wifi": "{essid} {signalStrength}%",
-    "format-ethernet": "ethernet",
-    "format-disconnected": "disconnected",
-    "tooltip": false
-  },
-  "pulseaudio": {
-    "format": "vol {volume}%",
-    "format-muted": "vol mute",
-    "on-click-right": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0%",
-    "tooltip": false
-  },
-  "cpu": {
-    "format": "cpu{usage:3}%",
-    "interval": 1,
-    "states": {
-      "warning": 50,
-      "critical": 90
+    "layer": "top",
+    "spacing": 0,
+    "height": 0,
+
+    "margin-top": 8,
+    "margin-right": 8,
+    "margin-bottom": 0,
+    "margin-left": 8,
+
+    "modules-left": [
+        "river/tags"
+    ],
+
+    "modules-center": [
+        "clock"
+    ],
+
+    "modules-right": [
+        "tray",
+        "cpu_text",
+        "cpu",
+        "memory",
+        "battery",
+        "network",
+        "pulseaudio"
+    ],
+
+    "river/tags": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "tooltip": false
     },
-    "tooltip": false
-  },
-  "memory": {
-    "format": "mem {}%",
-    "interval": 1,
-    "states": {
-      "warning": 50,
-      "critical": 90
+
+    "tray": {
+        "spacing": 10,
+        "tooltip": false
     },
-    "tooltip": false
-  },
-  "temperature": {
-    "format": "{temperatureC}°C",
-    "interval": 1,
-    "hwmon-path": "/sys/class/hwmon/hwmon5/temp1_input",
-    "critical-threshold": 80,
-    "tooltip": false
-  },
-  "battery": {
-    "states": {
-      "warning": 30
+
+    "clock": {
+        "format": "{:%I:%M %p - %a, %d %b %Y}",
+        "tooltip": false
     },
-    "format": "bat {capacity}%",
-    "format-charging": "char {capacity}%",
-    "format-alt": "bat {capacity}%",
-    "on-click": "waylock -ignore-empty-password",
-    "on-scroll-up": "brightnessctl set 1%+",
-    "on-scroll-down": "brightnessctl set 1%-",
-    "interval": 1,
-    "tooltip": false
-  }
+
+    "cpu": {
+        "format": "cpu {usage}%",
+        "interval": 2,
+
+        "states": {
+            "critical": 90
+        }
+    },
+
+    "memory": {
+        "format": "mem {percentage}%",
+        "interval": 2,
+
+        "states": {
+            "critical": 80
+        }
+    },
+
+    "battery": {
+        "format": "bat {capacity}%",
+        "interval": 5,
+        "states": {
+            "warning": 20,
+            "critical": 10
+        },
+        "tooltip": false
+    },
+
+    "network": {
+        "format-wifi" : "wifi {bandwidthDownBits}",
+        "format-ethernet": "enth {bandwidthDownBits}",
+        "format-disconnected" : "no network",
+        "interval": 5,
+        "tooltip": false
+    },
+
+    "pulseaudio": {
+        "scroll-step": 5,
+        "max-volume": 150,
+        "format": "vol {volume}%",
+        "format-bluetooth": "vol {volume}%",
+        "nospacing": 1,
+        "on-click": "pavucontrol",
+        "tooltip": false
+    }
 }

@@ -40,7 +40,7 @@ if [[ $INST == "Y" || $INST == "y" || -z $INST ]]; then
 		waybar tmux mpv neovim pulsemixer bleachbit fastfetch unzip ripgrep imv lf hugo \
 		newsboat waylock wtype wl-clipboard fuzzel htop grim slurp man-db zathura zathura-pdf-poppler \
 		vulkan-intel xdg-desktop-portal-wlr xdg-desktop-portal-gtk adwaita-icon-theme \
-		bluez bluez-utils gimp imagemagick wget deluge-gtk fzf curl cmatrix gnu-netcat \
+		bluez bluez-utils gimp imagemagick wget deluge-gtk fzf curl cmatrix gnu-netcat mako libnotify \
 		texlive-latex texlive-latexextra texlive-pictures texlive-xetex texlive-latexrecommended \
 		gnu-free-fonts ttf-hack ttf-hack-nerd noto-fonts-emoji git-lfs wf-recorder kanshi \
 		rust go jdk-openjdk maven nodejs npm php
