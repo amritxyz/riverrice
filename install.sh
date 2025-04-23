@@ -52,6 +52,7 @@ mkdir -p ~/.local/share ~/.config ~/.local/bin ~/.local/git-repos ~/.local/hugo-
 # Post Installation
 git clone --depth=1 https://github.com/amritxyz/dev.git/ ~/.local/dev
 git clone --depth=1 https://github.com/amritxyz/kickstart-nvim.git ~/.config/nvim
+git clone --depth=1 https://github.com/amritxyz/river-wall.git ~/.local/share/river-wall
 
 # Managing Dotfiles
 cp -r ~/riverrice/.local/share/* ~/.local/share
