@@ -64,6 +64,7 @@ map zi extract
 map . set hidden!
 map dd delete
 map du %du -sh "$f"
+map a %pkill -SIGKILL swaybg;nohup swaybg -i "$f" > /dev/null 2>&1 &
 
 # map u $trashy restore -r 0
 map dr $trashy restore
@@ -90,7 +91,7 @@ map ga cd ~/.local/audio
 map gv cd ~/.local/vids
 map gs cd ~/.local/share
 map gr cd ~/.local/git-repos
-map gw cd ~/.local/share/wall
+map gw cd ~/.local/share/river-wall
 map gp cd ~/.local/practice
 map gl cd ~/.local/dl
 map gx cd ~/.local/dox
