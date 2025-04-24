@@ -36,8 +36,8 @@ fi
 read -rep ':: Would you like to install the packages? [Y/n] ' INST
 if [[ $INST == "Y" || $INST == "y" || -z $INST ]]; then
 	sudo pacman -Sy --needed base-devel && \
-		sudo pacman -S --needed tesseract-data-nep river brightnessctl foot \
-		waybar tmux mpv neovim pulsemixer bleachbit fastfetch unzip ripgrep imv lf hugo \
+		sudo pacman -S --needed tesseract-data-nep river brightnessctl foot wlr-randr \
+		waybar tmux mpv neovim pulsemixer bleachbit fastfetch unzip ripgrep imv lf hugo wl-mirror \
 		newsboat waylock wtype wl-clipboard fuzzel htop grim slurp man-db zathura zathura-pdf-poppler \
 		vulkan-intel xdg-desktop-portal-wlr xdg-desktop-portal-gtk adwaita-icon-theme swaybg \
 		bluez bluez-utils gimp imagemagick wget deluge-gtk fzf curl cmatrix gnu-netcat mako libnotify \
