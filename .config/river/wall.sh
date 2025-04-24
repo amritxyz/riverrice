@@ -1,6 +1,6 @@
 #!/bin/sh
 
-IMG="$HOME/.local/share/river-wall/1.png"
+IMG="$HOME/.local/share/river-wall/2.png"
 
 if [ ! -f "$IMG" ]; then
     exit 1
