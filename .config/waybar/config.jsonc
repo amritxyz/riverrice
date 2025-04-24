@@ -62,6 +62,7 @@
 
     "battery": {
         "format": "bat {capacity}%",
+        "format-charging": "chr {capacity}%",
         "interval": 5,
         "states": {
             "warning": 20,
