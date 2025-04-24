@@ -85,7 +85,6 @@
         "format": "vol {volume}%",
         "format-bluetooth": "vol {volume}%",
         "nospacing": 1,
-        "on-click": "pavucontrol",
         "tooltip": false
     }
 }
