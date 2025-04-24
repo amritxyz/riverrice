@@ -10,6 +10,10 @@ map J zoom out
 map i recolor
 map p print
 map g goto top
+map a adjust_window best-fit
+map B toggle_statusbar
+map M toggle_page_mode
+map C toggle_inputbar
 map [fullscreen] u scroll half-up
 map [fullscreen] d scroll half-down
 map [fullscreen] D toggle_page_mode
@@ -20,13 +24,17 @@ map [fullscreen] J zoom out
 map [fullscreen] i recolor
 map [fullscreen] p print
 map [fullscreen] g goto top
+map [fullscreen] a adjust_window best-fit
+map [fullscreen] B toggle_statusbar
 
-set sandbox none
-set font "Hack 10"
+# set sandbox none
+set font "cozette 10"
 set statusbar-h-padding 0
 set statusbar-v-padding 0
 set page-padding 1
 set selection-clipboard clipboard
+set guioptions none
+set statusbar-home-tilde true
 
 # Gruvbox Material Dark Hard Theme
 set completion-bg "#282828"
@@ -47,15 +55,16 @@ set notification-warning-bg "#e78a4e"
 set notification-warning-fg "#1d2021"
 set statusbar-bg "#282828"
 set statusbar-fg "#d4be98"
-# set highlight-active-color "#a9b665"
-set highlight-transparency 0.5
+set recolor-keephue
 set recolor-darkcolor "#d4be98"
 set recolor-lightcolor "#1d2021"
 set index-fg "#d4be98"
 set index-bg "#1d2021"
 set index-active-fg "#a9b665"
 set index-active-bg "#282828"
-set tabbar-fg "#d4be98"
-set tabbar-bg "#1d2021"
-set tabbar-focus-fg "#d79921"
-set tabbar-focus-bg "#282828"
+# set highlight-active-color "#a9b665"
+# set highlight-transparency 0.5
+# set tabbar-fg "#d4be98"
+# set tabbar-bg "#1d2021"
+# set tabbar-focus-fg "#d79921"
+# set tabbar-focus-bg "#282828"
