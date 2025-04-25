@@ -14,6 +14,8 @@ sh ~/riverrice/install.sh
 
 ## What's Included
 
+You can see the included packages *[here](https://github.com/amritxyz/riverrice/blob/main/packages)*.
+
 - Dynamic Wayland compositor: **River**
 - Themed with **Adwaita**
 - Minimal configs for:
