@@ -16,7 +16,7 @@ log() {
 }
 
 ask() {
-	echo -ne "${CYAN}$1 ${RESET}"; read -r RESPONSE; echo "$RESPONSE"
+	echo -ne "${CYAN}$1 ${RESET}"
 }
 
 success() {

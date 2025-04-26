@@ -29,3 +29,6 @@ if [[ ! -d "$HOME/.local/share/river-wall" ]]; then
 else
 	warn "Wallpaper repo already exists. Skipping."
 fi
+
+# Move riverrice repo into ~/.local/git-repos
+mv "$RICE_DIR" "$HOME/.local/git-repos/riverrice"
