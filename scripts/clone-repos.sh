@@ -6,8 +6,6 @@ source "$SCRIPT_DIR/common.sh"
 
 log "Cloning personal repositories..."
 
-mkdir -p "$HOME/.local/git-repos" "$HOME/.config" "$HOME/.local/share"
-
 # Clone dev tools repo
 if [[ ! -d "$HOME/.local/dev" ]]; then
 	git clone --depth=1 https://github.com/amritxyz/dev.git "$HOME/.local/dev"

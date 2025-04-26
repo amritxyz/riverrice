@@ -7,6 +7,8 @@ source "$SCRIPT_DIR/common.sh"
 
 log "Copying dotfiles and personal rice..."
 
+mkdir -p "$HOME/.local/git-repos" "$HOME/.config" "$HOME/.local/share"
+
 # Copy .config files
 cp -r "$RICE_DIR/.config/"* "$HOME/.config"
 
