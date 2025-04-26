@@ -15,6 +15,10 @@ log() {
 	echo -e "${BLUE}[INFO]$(date +'%Y-%m-%d %H:%M:%S')${RESET} $1"
 }
 
+ask() {
+	echo -ne "${CYAN}$1 ${RESET}"; read -r RESPONSE; echo "$RESPONSE"
+}
+
 success() {
 	echo -e "${GREEN}${CHECK} $1${RESET}"
 }
