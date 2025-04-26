@@ -33,3 +33,5 @@ fi
 
 # Move riverrice repo into ~/.local/git-repos
 mv "$RICE_DIR" "$HOME/.local/git-repos/riverrice"
+
+success "Dotfiles and rice successfully set up."

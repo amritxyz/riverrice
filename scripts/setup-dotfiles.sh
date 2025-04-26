@@ -25,5 +25,3 @@ cp "$RICE_DIR/.inputrc" "$HOME/.inputrc"
 
 # Move riverrice repo into ~/.local/git-repos
 mkdir -p "$HOME/.local/git-repos"
-
-success "Dotfiles and rice successfully set up."
