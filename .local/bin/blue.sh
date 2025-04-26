@@ -7,7 +7,7 @@ device_list=$(get_device_list)
 selected_device=$(echo "$device_list" | fuzzel -w 30% \
 	-b 1d2021cc -t 766564ff -M e78a4eff -m 928374ff -S ddc7a1ff \
 	-s 282828cc -B 2 -r 0 -C 3c3836ff --input-color e78a4eff \
-	--font Hack -I -D no --cache=/dev/null --dmenu --lines 2 | awk '{print $1}')
+	--font monospace -I -D no --cache=/dev/null --dmenu --lines 2 | awk '{print $1}')
 if [ -z "$selected_device" ]; then
 	echo "No device selected."
 	exit 1
