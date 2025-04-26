@@ -7,7 +7,7 @@
 PS1="\n\[\e[38;5;132m\]\w\[\e[0m\] \
 \$(git branch 2>/dev/null | grep \"*\" | sed \"s/*/(\e[38;5;167m&\e[0m)/\") \
 \[\e[38;5;142m\]\$(jobs -p | wc -l | awk '{if (\$1>0) print \"+\"\$1}')\n\
-\[\e[38;5;250m\]❯\[\e[0m\] "
+\[\e[38;5;250m\]$\[\e[0m\] "
 
 # LS_COLORS configuration
 export LS_COLORS='di=38;5;240:fi=38;5;248:ln=38;5;109:ex=38;5;113:'
