@@ -11,7 +11,7 @@ sudo pacman -Syy
 echo
 log "Starting Modular Installation..."
 
-for group in base wm daemons media terminal apps cli fonts-tex dev; do
+for group in base fonts daemons terminal cli media wm apps dev tex; do
 	bash "$SCRIPT_DIR/install-group.sh" "$group"
 done
 
