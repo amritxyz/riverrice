@@ -24,5 +24,5 @@ bash "$SCRIPT_DIR/cleanup.sh"
 echo
 bash "$SCRIPT_DIR/tmp.sh"
 bash "$SCRIPT_DIR/setup-dotfiles.sh"
-bash "$SCRIPT_DIR/clone-repos.sh"
 bash "$SCRIPT_DIR/services.sh"
+bash "$SCRIPT_DIR/clone-repos.sh"
