@@ -29,7 +29,6 @@ riverctl map normal $mod+Shift X spawn '~/.local/bin/caps_esc'
 
 riverctl map normal $mod Backspace spawn 'sh -c "pkill -SIGKILL wf-recorder; pkill -SIGKILL ffmpeg"'
 riverctl map normal $mod B spawn 'sh -c "pkill -SIGKILL waybar || waybar"'
-riverctl map normal $mod M spawn 'sh -c "pkill -SIGKILL swaybg && riverctl background-color 0x000000 || ~/.config/river/wall.sh"'
 
 riverctl map normal Mod1+Shift B spawn '~/.local/bin/blue.sh || pkill -SIGKILL fuzzel'
 riverctl map normal $mod+Shift Q spawn '~/.local/bin/syslock 2>/dev/null || pkill -SIGKILL fuzzel'
@@ -122,10 +121,8 @@ do
     riverctl map $mode None XF86MonBrightnessDown spawn 'brightnessctl set -e4 10%-'
 done
 
-# riverctl background-color 0x000000
-# riverctl border-color-focused 0xebdbb2
-riverctl border-color-focused 0x3c3836
-riverctl border-color-unfocused 0x282828
+riverctl border-color-focused 0x073642
+riverctl border-color-unfocused 0x002b29
 
 riverctl keyboard-layout -options 'compose:ralt' us
 riverctl set-repeat 50 300
@@ -153,4 +150,3 @@ riverctl keyboard-layout -options 'caps:swapescape' us
 rivertile -view-padding 4 -outer-padding 4 &
 foot --server &
 waybar &
-~/.config/river/wall.sh &

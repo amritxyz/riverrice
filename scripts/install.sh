@@ -11,7 +11,7 @@ sudo pacman -Syy
 echo
 log "Starting Modular Installation..."
 
-for group in base fonts daemons terminal cli media wm apps dev bloat tex; do
+for group in base fonts daemons deps terminal cli media wm apps dev bloat tex; do
 	bash "$SCRIPT_DIR/install-group.sh" "$group"
 done
 
@@ -23,6 +23,12 @@ bash "$SCRIPT_DIR/cleanup.sh"
 
 echo
 bash "$SCRIPT_DIR/tmp.sh"
+
+echo
 bash "$SCRIPT_DIR/setup-dotfiles.sh"
+
+echo
 bash "$SCRIPT_DIR/services.sh"
+
+echo
 bash "$SCRIPT_DIR/clone-repos.sh"

@@ -23,14 +23,6 @@ else
 	warn "Neovim config already exists. Skipping."
 fi
 
-# Clone wallpaper repo
-if [[ ! -d "$HOME/.local/share/river-wall" ]]; then
-	git clone --depth=1 https://github.com/amritxyz/river-wall.git "$HOME/.local/share/river-wall"
-	success "Cloned wallpaper repo."
-else
-	warn "Wallpaper repo already exists. Skipping."
-fi
-
 # Move riverrice repo into ~/.local/git-repos
 mv "$RICE_DIR" "$HOME/.local/git-repos/riverrice"
 

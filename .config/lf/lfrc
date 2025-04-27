@@ -91,7 +91,6 @@ map ga cd ~/.local/audio
 map gv cd ~/.local/vids
 map gs cd ~/.local/share
 map gr cd ~/.local/git-repos
-map gw cd ~/.local/share/river-wall
 map gp cd ~/.local/practice
 map gl cd ~/.local/dl
 map gx cd ~/.local/dox

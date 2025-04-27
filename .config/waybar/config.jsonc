@@ -1,90 +1,82 @@
 {
-        "layer": "top",
-        "spacing": 0,
-        "height": 0,
+	"layer": "top",
+	"spacing": 0,
+	"height": 24,
 
-        "margin-top": 8,
-        "margin-right": 8,
-        "margin-bottom": 0,
-        "margin-left": 8,
+	"margin-top": 2,
+	"margin-right": 2,
+	"margin-bottom": 0,
+	"margin-left": 2,
 
-        "modules-left": [
-                "river/tags"
-        ],
+	"modules-left": [
+		"river/tags"
+	],
 
-        "modules-center": [
-                "clock"
-        ],
+	"modules-center": [
+		"clock"
+	],
 
-        "modules-right": [
-                "tray",
-                "cpu_text",
-                "cpu",
-                "memory",
-                "battery",
-                "network",
-                "pulseaudio"
-        ],
+	"modules-right": [
+		"tray",
+		"cpu",
+		"memory",
+		"battery",
+		"network",
+		"pulseaudio"
+	],
 
-        "river/tags": {
-                "disable-scroll": true,
-                "all-outputs": true,
-                "tooltip": false,
-                "hide-vacant": true
-        },
+	"river/tags": {
+		"disable-scroll": true,
+		"all-outputs": true,
+		"tooltip": false,
+		"hide-vacant": true
+	},
 
-        "tray": {
-                "spacing": 10,
-                "tooltip": false
-        },
+	"clock": {
+		"format": "{:%I:%M %p}",
+		"tooltip": false
+	},
 
-        "clock": {
-                "format": "{:%I:%M %p - %a, %d %b %Y}",
-                "tooltip": false
-        },
+	"cpu": {
+		"format": "CPU {usage}%",
+		"interval": 2,
+		"states": {
+			"critical": 90
+		}
+	},
 
-        "cpu": {
-                "format": "cpu {usage}%",
-                "interval": 2,
-                "states": {
-                        "critical": 90
-                }
-        },
+	"memory": {
+		"format": "MEM {percentage}%",
+		"interval": 2,
+		"states": {
+			"critical": 80
+		}
+	},
 
-        "memory": {
-                "format": "mem {percentage}%",
-                "interval": 2,
+	"battery": {
+		"format": "BAT {capacity}%",
+		"format-charging": "CHR {capacity}%",
+		"interval": 5,
+		"states": {
+			"warning": 20,
+			"critical": 10
+		},
+		"tooltip": false
+	},
 
-                "states": {
-                        "critical": 80
-                }
-        },
+	"network": {
+		"format-wifi": "WiFi {bandwidthDownBits}",
+		"format-ethernet": "ETH {bandwidthDownBits}",
+		"format-disconnected": "No Network",
+		"interval": 5,
+		"tooltip": false
+	},
 
-        "battery": {
-                "format": "bat {capacity}%",
-                "format-charging": "chr {capacity}%",
-                "interval": 5,
-                "states": {
-                        "warning": 20,
-                        "critical": 10
-                },
-                "tooltip": false
-        },
-
-        "network": {
-                "format-wifi" : "wifi {bandwidthDownBits}",
-                "format-ethernet": "enth {bandwidthDownBits}",
-                "format-disconnected" : "no network",
-                "interval": 5,
-                "tooltip": false
-        },
-
-        "pulseaudio": {
-                "scroll-step": 5,
-                "max-volume": 150,
-                "format": "vol {volume}%",
-                "format-bluetooth": "vol {volume}%",
-                "nospacing": 1,
-                "tooltip": false
-        }
+	"pulseaudio": {
+		"scroll-step": 5,
+		"max-volume": 150,
+		"format": "VOL {volume}%",
+		"format-bluetooth": "BT VOL {volume}%",
+		"tooltip": false
+	}
 }
