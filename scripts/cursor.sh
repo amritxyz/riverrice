@@ -12,7 +12,6 @@ BACKUP_FILE="$FILE.bak"
 
 # Make a backup first if it doesn't exist
 if [ ! -f "$BACKUP_FILE" ]; then
-	echo
 	log "Creating backup at $BACKUP_FILE..."
 	sudo cp "$FILE" "$BACKUP_FILE"
 else
@@ -22,5 +21,4 @@ fi
 # Replace the line
 sudo sed -i 's|^Inherits=.*$|Inherits=hicolor|' "$FILE"
 
-echo
 success "Cursor theme changed to hicolor."
