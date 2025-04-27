@@ -31,7 +31,7 @@ echo
 bash "$SCRIPT_DIR/services.sh"
 
 echo
-bash "$SCRIPT_DIR/clone-repos.sh"
+bash "$SCRIPT_DIR/cursor.sh"
 
 echo
-bash "$SCRIPT_DIR/cursor.sh"
+bash "$SCRIPT_DIR/clone-repos.sh"
