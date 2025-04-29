@@ -19,6 +19,6 @@ else
 fi
 
 # Replace the line
-sudo sed -i 's|^Inherits=.*$|Inherits=hicolor|' "$FILE"
+sudo sed -i 's|^Inherits=.*$|Inherits=Adwaita|' "$FILE"
 
-success "Cursor theme changed to hicolor."
+success "Cursor theme changed to Adwaita."

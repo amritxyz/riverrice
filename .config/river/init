@@ -139,7 +139,7 @@ riverctl rule-add -app-id 'org.pwmt.zathura*' float
 
 riverctl hide-cursor timeout 5000
 riverctl hide-cursor when-typing enabled
-riverctl xcursor-theme hicolor
+riverctl xcursor-theme Adwaita
 
 systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP MOZ_ENABLE_WAYLAND=1
 dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=river MOZ_DBUS_REMOTE=1
