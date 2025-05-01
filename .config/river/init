@@ -117,15 +117,15 @@ do
     riverctl map $mode None XF86AudioPrev  spawn 'playerctl previous'
     riverctl map $mode None XF86AudioNext  spawn 'playerctl next'
 
-    riverctl map $mode None XF86MonBrightnessUp   spawn 'brightnessctl set -e4 10%+'
-    riverctl map $mode None XF86MonBrightnessDown spawn 'brightnessctl set -e4 10%-'
+    riverctl map $mode None XF86MonBrightnessUp   spawn 'brightnessctl -d \* s 10%+'
+    riverctl map $mode None XF86MonBrightnessDown spawn 'brightnessctl -d \* s 10%-'
 done
 
 riverctl border-color-focused 0x073642
 riverctl border-color-unfocused 0x002b29
 
 riverctl keyboard-layout -options 'compose:ralt' us
-riverctl set-repeat 50 300
+riverctl set-repeat 70 250
 
 riverctl rule-add ssd
 riverctl rule-add -app-id float float
