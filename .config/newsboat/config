@@ -22,12 +22,12 @@ bind-key D pb-download
 bind-key U show-urls
 bind-key x pb-delete
 
-color listnormal white black
+color listnormal default black
 color listfocus black yellow standout bold
 color listnormal_unread blue black
 color listfocus_unread yellow black bold
 color info red black bold
-color article white black
+color article default black
 
 browser linkhandler
 macro , open-in-browser
@@ -44,7 +44,7 @@ macro P set browser "peertubetorrent %u 1080" ; open-in-browser ; set browser li
 highlight all "---.*---" yellow black
 highlight feedlist ".*(0/0))" black black
 highlight article "(^Feed:.*|^Title:.*|^Author:.*)" cyan black bold
-highlight article "(^Link:.*|^Date:.*)" white black
+highlight article "(^Link:.*|^Date:.*)" default black
 highlight article "https?://[^ ]+" blue black
 highlight article "^(Title):.*$" yellow black
 highlight article "\\[[0-9][0-9]*\\]" magenta black bold
