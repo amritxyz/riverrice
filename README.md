@@ -7,7 +7,7 @@
 
 ```bash
 git clone --depth=1 https://github.com/amritxyz/riverrice.git ~/riverrice
-sh ~/riverrice/install.sh
+sh ~/riverrice/scripts/install.sh
 ```
 
 ---
