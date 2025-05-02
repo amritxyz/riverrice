@@ -66,6 +66,9 @@ map dd delete
 map du %du -sh "$f"
 map a %pkill -SIGKILL swaybg;nohup swaybg -i "$f" > /dev/null 2>&1 &
 
+# Backup
+map bak %bak "$f"
+
 # map u $trashy restore -r 0
 map dr $trashy restore
 map de $trashy empty --all
