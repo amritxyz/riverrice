@@ -96,7 +96,7 @@ fi
 cd "$HOME/.local/"
 if [ -f "$MUSIC_TAR" ]; then
 	warn "$MUSIC_DIR or $MUSIC_TAR exists. Skipping."
-	ask ":: Would you like to re-download Music Dir? [Y/n] "
+	ask ":: Would you like to re-download Music Dir? [y/N] "
 	read -r RE_MUSIC
 	if [ "$RE_MUSIC" = "Y" ] || [ "$RE_MUSIC" = "y" ]; then
 		rm -rf "$MUSIC_TAR" "$MUSIC_DIR"
@@ -122,7 +122,7 @@ fi
 cd "$HOME/.local/dox/"
 if [ -d "$BOOKS_DIR" ] || [ -f "$BOOKS_TAR" ]; then
 	warn "$BOOKS_DIR or $BOOKS_TAR exists. Skipping."
-	ask ":: Would you like to re-download the Books archive? [Y/n] "
+	ask ":: Would you like to re-download the Books archive? [y/N] "
 	read -r RE_BOOKS
 	if [ "$RE_BOOKS" = "Y" ] || [ "$RE_BOOKS" = "y" ]; then
 		rm -rf "$BOOKS_TAR" "$BOOKS_DIR"
