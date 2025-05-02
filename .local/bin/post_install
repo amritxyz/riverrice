@@ -1,0 +1,102 @@
+#!/bin/sh
+
+BAK_DIR="/opt/void/bak"
+JSQL_FILE="mysql-connector-j-9.3.0"
+XAMPP_FILE="lampp"
+MUSIC_TAR="music.tar"
+BOOKS_TAR="books.tar"
+MUSIC_DIR="music"
+BOOKS_DIR="books"
+PRACTICE_DIR="practice"
+NOTES_DIR="notes"
+
+# Practice
+cd "$HOME/.local/"
+
+if [ ! -d "$PRACTICE_DIR" ]; then
+    git clone --depth=1 https://github.com/amritxyz/practice.git $PRACTICE_DIR
+else
+    echo "$PRACTICE_DIR dir already exists. Skipping creation."
+fi
+
+# Notes
+cd "$HOME/.local/dox/"
+
+if [ ! -d "$NOTES_DIR" ]; then
+    git clone --depth=1 https://github.com/amritxyz/notes.git $NOTES_DIR
+else
+    echo "$NOTES_DIR dir already exists. Skipping creation."
+fi
+
+# Music
+cd "$HOME/.local/"
+
+if [ -d "$MUSIC_DIR" ] || [ -f "$MUSIC_TAR" ]; then
+    echo "$MUSIC_DIR directory or $MUSIC_TAR file already exists. Skipping creation."
+else
+    read -rp ":: Would you like to get some Music? [Y/n] " MUSIC
+    if [ "$MUSIC" = "Y" ] || [ "$MUSIC" = "y" ] || [ -z "$MUSIC" ]; then
+        wget -q --show-progress -O "$MUSIC_TAR" https://gitlab.com/amritxyz/tars/-/raw/main/music.tar
+        tar -xf "$MUSIC_TAR"
+        # Create backup directory if it doesn't exist
+        mkdir -p "$BAK_DIR"
+        mv "$MUSIC_TAR" "$BAK_DIR"
+    fi
+fi
+
+# Books
+cd "$HOME/.local/dox/"
+
+if [ -d "$BOOKS_DIR" ] || [ -f "$BOOKS_TAR" ]; then
+    echo "$BOOKS_DIR directory or $BOOKS_TAR file already exists. Skipping creation."
+else
+    read -rp ":: Would you like to get some Books? [Y/n] " BOOKS
+    if [ "$BOOKS" = "Y" ] || [ "$BOOKS" = "y" ] || [ -z "$BOOKS" ]; then
+        wget -q --show-progress -O "$BOOKS_TAR" https://gitlab.com/amritxyz/tars/-/raw/main/books.tar
+        tar -xf "$BOOKS_TAR"
+        # Create backup directory if it doesn't exist
+        mkdir -p "$BAK_DIR"
+        mv "$BOOKS_TAR" "$BAK_DIR"
+    fi
+fi
+
+# MySQL - Java Connector
+cd /opt
+
+if [ -d "$JSQL_FILE" ]; then
+    echo "$JSQL_FILE already exists. Skipping creation."
+else
+    read -rp ":: Would you like to install Java-SQL Connector? [Y/n] " JSQL
+    if [ "$JSQL" = "Y" ] || [ "$JSQL" = "y" ] || [ -z "$JSQL" ]; then
+        sudo wget -q --show-progress https://dev.mysql.com/get/Downloads/Connector-J/mysql-connector-j-9.3.0.tar.gz
+        sudo tar -xzf mysql-connector-j-9.3.0.tar.gz
+        sudo rm -rf mysql-connector-j-9.3.0.tar.gz
+    fi
+fi
+
+# Xampp
+if [ -d "$XAMPP_FILE" ]; then
+    echo "$XAMPP_FILE already exists. Skipping creation."
+else
+    read -rp ":: Would you like to install Xampp server? [Y/n] " XAMPP
+    if [ "$XAMPP" = "Y" ] || [ "$XAMPP" = "y" ] || [ -z "$XAMPP" ]; then
+        sudo pacman -Sy
+        sudo pacman -S lib32-gcc-libs lib32-glibc libxcrypt-compat net-tools inetutils
+
+        # Optional
+        # sudo pacman -S lib32-libgcrypt
+
+        # Post Installation
+        cd /opt/
+        sudo wget -q --show-progress https://gitlab.com/amritxyz/xampp/-/raw/main/xampp-linux-x64-8.2.12-0-installer.run
+        sudo chown "$USER:$USER" /opt/xampp-linux-x64-8.2.12-0-installer.run
+        sudo chmod +x /opt/xampp-linux-x64-8.2.12-0-installer.run
+        sudo /opt/xampp-linux-x64-8.2.12-0-installer.run
+    fi
+fi
+
+# Path to the Java-DataBase-Connection Driver
+# /opt/mysql-connector-j-9.3.0/src/legacy/java/com/mysql/jdbc
+#
+# In Java
+# Class.forName("com.mysql.cj.jdbc.Driver");
