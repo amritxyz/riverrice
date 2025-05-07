@@ -12,21 +12,21 @@
 
 /* Main Window Styling */
 window#waybar {
-	background-color: #002b36; /* base03 */
-	color: #839496; /* base0 */
-	/* height: 24px; */
+	background-color: #1d2021; /* background */
+	color: #dfcfb3; /* foreground */
+	/* color: #d4be98; */
 }
 
 /* Tooltip Styling */
 tooltip {
-	background-color: #073642; /* base02 */
-	color: #839496; /* base0 */
+	background-color: #303536; /* regular0 */
+	color: #dfcfb3; /* foreground */
 	padding: 4px;
 }
 
 /* Tags Module */
 #tags {
-	background-color: #002b36; /* base03 */
+	background-color: #1d2021; /* background */
 	padding: 0 4px;
 }
 
@@ -34,17 +34,17 @@ tooltip {
 	all: unset;
 	min-width: 0;
 	padding: 0 4px;
-	color: #839496; /* base0 */
+	color: #dfcfb3; /* foreground */
 }
 
 #tags button.focused {
-	color: #268bd2; /* blue */
-	background-color: #002b36; /* base03 */
+	color: #7daea3; /* regular4 (blue-ish) */
+	background-color: #1d2021; /* background */
 }
 
 #tags button.urgent {
-	background-color: #cb4b16; /* orange */
-	color: #002b36; /* base03 */
+	background-color: #ea6962; /* regular1 (red) */
+	color: #1d2021; /* background */
 }
 
 /* Clock Module */
@@ -54,7 +54,7 @@ tooltip {
 
 /* Tray Module */
 #tray {
-	background-color: #002b36; /* base03 */
+	background-color: #1d2021; /* background */
 	padding: 0 4px;
 }
 
@@ -70,13 +70,62 @@ tooltip {
 /* Critical States */
 #cpu.critical,
 #memory.critical {
-	color: #dc322f; /* red */
-	background-color: #002b36; /* base03 */
+	color: #ea6962; /* regular1 (red) */
+	background-color: #1d2021; /* background */
 }
 
 #battery.warning,
 #battery.critical,
 #battery.urgent {
-	color: #dc322f; /* red */
-	background-color: #002b36; /* base03 */
+	color: #ea6962; /* regular1 (red) */
+	background-color: #1d2021; /* background */
+}
+
+/* Battery Module (Good, Charging) */
+#battery.good {
+	color: #a9b665; /* regular2 (green) */
+	background-color: #1d2021; /* background */
+}
+
+#battery.charging {
+	color: #d8a657; /* regular3 (yellow) */
+	background-color: #1d2021; /* background */
+}
+
+/* Network Module */
+#network.connected {
+	color: #89b482; /* regular6 (light green) */
+	background-color: #1d2021; /* background */
+}
+
+#network.disconnected {
+	color: #ea6962; /* regular1 (red) */
+	background-color: #1d2021; /* background */
+}
+
+/* PulseAudio Module */
+#pulseaudio {
+	color: #7daea3; /* regular4 (blue-ish) */
+	background-color: #1d2021; /* background */
+}
+
+/* Weather Module */
+#weather {
+	color: #d3869b; /* regular5 (pink) */
+	background-color: #1d2021; /* background */
+}
+
+/* Custom State Handling (e.g., Night Mode) */
+#nightmode.active {
+	color: #d8a657; /* regular3 (yellow) */
+	background-color: #1d2021; /* background */
+}
+
+/* Text/Font Color Adjustments for Different States */
+#tags button:hover {
+	color: #d8a657; /* regular3 (yellow) */
+}
+
+#tags button:active {
+	color: #a9b665; /* regular2 (green) */
 }

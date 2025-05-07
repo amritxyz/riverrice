@@ -27,7 +27,7 @@ color listfocus black yellow standout bold
 color listnormal_unread blue black
 color listfocus_unread yellow black bold
 color info red black bold
-color article default black
+color article white black
 
 browser linkhandler
 macro , open-in-browser

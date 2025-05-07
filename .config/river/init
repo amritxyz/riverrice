@@ -121,8 +121,9 @@ do
     riverctl map $mode None XF86MonBrightnessDown spawn 'brightnessctl -d \* s 10%-'
 done
 
-riverctl border-color-focused 0x073642
-riverctl border-color-unfocused 0x002b29
+riverctl background-color 0x000000
+riverctl border-color-focused 0x3c3836
+riverctl border-color-unfocused 0x282828
 
 riverctl keyboard-layout -options 'compose:ralt' us
 riverctl set-repeat 70 250
