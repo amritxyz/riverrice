@@ -9,6 +9,9 @@ log "Syncing Mirrors..."
 sudo pacman -Syy
 
 echo
+bash "$SCRIPT_DIR/network-manager.sh"
+
+echo
 log "Starting Modular Installation..."
 
 for group in base fonts daemons deps terminal cli media wm apps dev bloat tex; do
