@@ -109,15 +109,8 @@ tooltip {
 	background-color: #1d2021; /* background */
 }
 
-/* Weather Module */
-#weather {
-	color: #d3869b; /* regular5 (pink) */
-	background-color: #1d2021; /* background */
-}
-
-/* Custom State Handling (e.g., Night Mode) */
-#nightmode.active {
-	color: #d8a657; /* regular3 (yellow) */
+#pulseaudio.muted {
+	color: #ea6962; /* regular1 (red) */
 	background-color: #1d2021; /* background */
 }
 
