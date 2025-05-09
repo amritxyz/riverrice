@@ -1,4 +1,7 @@
-#!/usr/bin/env bash
+#!/bin/bash
+
+# This script checks for required commands (nmcli, fzf), then lists available WiFi networks
+# using `nmcli`, allowing the user to select and connect to a network using `fzf`.
 
 has() {
   local verbose=false

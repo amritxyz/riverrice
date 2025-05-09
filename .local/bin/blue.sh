@@ -5,7 +5,6 @@
 # then connects if it's disconnected or disconnects if it's already connected.
 # Uses notify-send to show status messages.
 
-# List paired Bluetooth devices (name and MAC)
 get_device_list() {
 	bluetoothctl devices | awk -F ' ' '{print $3 " " $2}'
 }
