@@ -149,6 +149,6 @@ systemctl --user restart xdg-desktop-portal
 
 riverctl default-layout rivertile
 riverctl keyboard-layout -options 'caps:swapescape' us
-rivertile -view-padding 4 -outer-padding 4 &
+rivertile -view-padding 2 -outer-padding 2 &
 foot --server &
 waybar &
