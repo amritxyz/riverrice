@@ -31,6 +31,9 @@ echo
 bash "$SCRIPT_DIR/setup-dotfiles.sh"
 
 echo
+bash "$SCRIPT_DIR/user-js.sh"
+
+echo
 bash "$SCRIPT_DIR/services.sh"
 
 echo
