@@ -51,8 +51,8 @@ riverctl map normal $mod+Shift Comma send-to-output previous
 riverctl map normal $mod Space zoom
 
 # main factor/count
-riverctl map normal $mod H send-layout-cmd rivertile 'main-ratio -0.05'
-riverctl map normal $mod L send-layout-cmd rivertile 'main-ratio +0.05'
+riverctl map -repeat normal $mod H send-layout-cmd rivertile 'main-ratio -0.01'
+riverctl map -repeat normal $mod L send-layout-cmd rivertile 'main-ratio +0.01'
 riverctl map normal $mod+Shift H send-layout-cmd rivertile 'main-count +1'
 riverctl map normal $mod+Shift L send-layout-cmd rivertile 'main-count -1'
 
