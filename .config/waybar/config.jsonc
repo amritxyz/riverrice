@@ -17,7 +17,7 @@
 	],
 
 	"modules-right": [
-		"tray",
+		// "tray",
 		"cpu",
 		"memory",
 		"battery",
