@@ -12,25 +12,25 @@
 
 /* Main Window Styling */
 window#waybar {
-	background-color: #002b36;
-	/* base03 */
-	color: #839496;
-	/* base0 */
+	background-color: #1d2021;
+	/* bg */
+	color: #d4be98;
+	/* fg */
 }
 
 /* Tooltip Styling */
 tooltip {
-	background-color: #073642;
-	/* base02 */
-	color: #839496;
-	/* base0 */
+	background-color: #282828;
+	/* bg2 */
+	color: #d4be98;
+	/* fg */
 	padding: 4px;
 }
 
 /* Tags Module */
 #tags {
-	background-color: #002b36;
-	/* base03 */
+	background-color: #1d2021;
+	/* bg */
 	padding: 0 4px;
 }
 
@@ -38,23 +38,22 @@ tooltip {
 	all: unset;
 	min-width: 0;
 	padding: 0 4px;
-	color: #839496;
-	/* base0 */
+	color: #d4be98;
+	/* fg */
 }
 
 #tags button.focused {
-	color: #268bd2;
+	color: #7daea3;
 	/* blue */
-	/* base1 */
-	background-color: #002b36;
-	/* base03 */
+	background-color: #1d2021;
+	/* bg */
 }
 
 #tags button.urgent {
-	background-color: #586e75;
-	/* base01 */
-	color: #002b36;
-	/* base03 */
+	background-color: #665c54;
+	/* gray */
+	color: #1d2021;
+	/* bg */
 }
 
 /* Clock Module */
@@ -64,8 +63,8 @@ tooltip {
 
 /* Tray Module */
 #tray {
-	background-color: #002b36;
-	/* base03 */
+	background-color: #1d2021;
+	/* bg */
 	padding: 0 4px;
 }
 
@@ -78,76 +77,76 @@ tooltip {
 	padding: 0 8px;
 }
 
-/* Critical States (subtle) */
+/* Critical States */
 #cpu.critical,
 #memory.critical {
-	color: #657b83;
-	/* base00 */
-	background-color: #002b36;
-	/* base03 */
+	color: #ea6962;
+	/* red */
+	background-color: #1d2021;
+	/* bg */
 }
 
 #battery.warning,
 #battery.critical,
 #battery.urgent {
-	color: #586e75;
-	/* base01 */
-	background-color: #002b36;
-	/* base03 */
+	color: #665c54;
+	/* gray */
+	background-color: #1d2021;
+	/* bg */
 }
 
 /* Battery Good/Charging (subtle emphasis) */
 #battery.good {
-	color: #93a1a1;
-	/* base1 */
-	background-color: #002b36;
-	/* base03 */
+	color: #a9b665;
+	/* green */
+	background-color: #1d2021;
+	/* bg */
 }
 
 #battery.charging {
-	color: #839496;
-	/* base0 */
-	background-color: #002b36;
-	/* base03 */
+	color: #d4be98;
+	/* fg */
+	background-color: #1d2021;
+	/* bg */
 }
 
 /* Network Module */
 #network.connected {
-	color: #93a1a1;
-	/* base1 */
-	background-color: #002b36;
-	/* base03 */
+	color: #89b482;
+	/* aqua */
+	background-color: #1d2021;
+	/* bg */
 }
 
 #network.disconnected {
-	color: #586e75;
-	/* base01 */
-	background-color: #002b36;
-	/* base03 */
+	color: #665c54;
+	/* gray */
+	background-color: #1d2021;
+	/* bg */
 }
 
 /* PulseAudio Module */
 #pulseaudio {
-	color: #839496;
-	/* base0 */
-	background-color: #002b36;
-	/* base03 */
+	color: #d4be98;
+	/* fg */
+	background-color: #1d2021;
+	/* bg */
 }
 
 #pulseaudio.muted {
-	color: #586e75;
-	/* base01 */
-	background-color: #002b36;
-	/* base03 */
+	color: #665c54;
+	/* gray */
+	background-color: #1d2021;
+	/* bg */
 }
 
 /* Hover/Active (soft) */
 #tags button:hover {
-	color: #93a1a1;
-	/* base1 */
+	color: #d8a657;
+	/* yellow */
 }
 
 #tags button:active {
-	color: #657b83;
-	/* base00 */
+	color: #a89984;
+	/* fg_dim */
 }

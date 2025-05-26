@@ -41,7 +41,7 @@
 		"format": "CPU {usage}%",
 		"interval": 2,
 		"states": {
-			"critical": 90
+			"critical": 60
 		}
 	},
 
@@ -49,7 +49,7 @@
 		"format": "MEM {percentage}%",
 		"interval": 2,
 		"states": {
-			"critical": 80
+			"critical": 60
 		}
 	},
 
