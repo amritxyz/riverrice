@@ -73,7 +73,7 @@
 	},
 
 	"pulseaudio": {
-		"scroll-step": 5,
+		"scroll-step": 2,
 		"max-volume": 150,
 		"format": "VOL {volume}%",
 		"format-muted": "VOL {volume}%",
