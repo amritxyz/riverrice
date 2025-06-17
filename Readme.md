@@ -15,11 +15,10 @@
 
 ## 📸 Screenshots
 
-> **Note:** Add screenshots of your desktop setup here showing different workspaces, applications, and the overall aesthetic.
 
-| Desktop Overview | Application Launcher | Terminal Setup |
+| Desktop Overview | Application Launcher | Multi-App Workflow |
 |:---:|:---:|:---:|
-| ![Desktop](screenshots/desktop.png) | ![Launcher](screenshots/launcher.png) | ![Terminal](screenshots/terminal.png) |
+| ![Desktop](screenshots/desktop.png) | ![Launcher](screenshots/launcher.png) | ![Terminal](screenshots/workflow.png) |
 
 ## ✨ Features
 
