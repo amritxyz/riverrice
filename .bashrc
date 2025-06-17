@@ -7,7 +7,7 @@
 PS1="\n\[\e[38;5;132m\]\w\[\e[0m\] \
 \$(git branch 2>/dev/null | grep \"*\" | sed \"s/*/(\e[38;5;167m&\e[0m)/\") \
 \[\e[38;5;142m\]\$(jobs -p | wc -l | awk '{if (\$1>0) print \"+\"\$1}')\n\
-\[\e[38;5;250m\]❯\[\e[0m\] "
+\[\e[38;5;250m\]$\[\e[0m\] "
 
 # LS_COLORS configuration
 export LS_COLORS='di=38;5;240:fi=38;5;248:ln=38;5;109:ex=38;5;113:'
@@ -103,7 +103,7 @@ alias jsqlc='javac -cp .:/opt/mysql-connector-j-9.3.0/mysql-connector-j-9.3.0.ja
 alias cam='mpv --untimed --no-cache --no-osc --no-input-default-bindings --profile=low-latency --input-conf=/dev/null --title=webcam $(ls /dev/video[0,2,4,6,8] | tail -n 1)'
 
 # Mirror
-alias mirror='wl-mirror eDP-1'
+alias mirror='wl-present mirror eDP-1'
 
 # Git aliases
 alias g='git'

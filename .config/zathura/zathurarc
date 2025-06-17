@@ -35,6 +35,7 @@ set page-padding 1
 set selection-clipboard clipboard
 set guioptions none
 set statusbar-home-tilde true
+set zoom-step 5
 
 # Gruvbox Material Dark Hard Theme
 set completion-bg "#282828"
@@ -55,7 +56,7 @@ set notification-warning-bg "#e78a4e"
 set notification-warning-fg "#1d2021"
 set statusbar-bg "#282828"
 set statusbar-fg "#d4be98"
-set highlight-transparency 0.5
+set recolor-keephue
 set recolor-darkcolor "#d4be98"
 set recolor-lightcolor "#1d2021"
 set index-fg "#d4be98"
