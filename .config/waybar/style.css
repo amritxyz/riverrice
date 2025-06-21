@@ -1,152 +1,127 @@
 /* Global Reset */
 * {
-	border: none;
-	border-radius: 0;
-	min-height: 0;
-	font-family: "monospace", "cozette";
-	font-weight: 600;
-	font-size: 14px;
-	padding: 0;
-	margin: 0;
+    border: none;
+    border-radius: 0;
+    min-height: 0;
+    font-family: "monospace", "cozette";
+    font-weight: 600;
+    font-size: 14px;
+    padding: 0;
+    margin: 0;
 }
 
 /* Main Window Styling */
 window#waybar {
-	background-color: #1d2021;
-	/* bg */
-	color: #d4be98;
-	/* fg */
+    background-color: #1d2021; /* bg */
+    color: #d4be98; /* fg */
 }
 
 /* Tooltip Styling */
 tooltip {
-	background-color: #282828;
-	/* bg2 */
-	color: #d4be98;
-	/* fg */
-	padding: 4px;
+    background-color: #282828; /* bg2 */
+    color: #d4be98; /* fg */
+    padding: 4px;
 }
 
 /* Tags Module */
 #tags {
-	background-color: #1d2021;
-	/* bg */
-	padding: 0 4px;
+    /* Removed: background-color: #1d2021; as it's inherited from window#waybar */
+    padding: 0 4px;
 }
 
 #tags button {
-	all: unset;
-	min-width: 0;
-	padding: 0 4px;
-	color: #d4be98;
-	/* fg */
+    all: unset;
+    min-width: 0;
+    padding: 0 4px;
+    /* Removed: color: #d4be98; as it's inherited from window#waybar */
 }
 
 #tags button.focused {
-	color: #7daea3;
-	/* blue */
-	background-color: #1d2021;
-	/* bg */
+    color: #7daea3; /* blue */
+    /* Removed: background-color: #1d2021; as it's inherited from window#waybar */
 }
 
 #tags button.urgent {
-	background-color: #665c54;
-	/* gray */
-	color: #1d2021;
-	/* bg */
+    background-color: #665c54; /* gray */
+    color: #1d2021; /* bg */
 }
 
 /* Clock Module */
 #clock {
-	padding: 0 8px;
+    /* Removed: background-color and color if they match window#waybar */
+    padding: 0 8px;
 }
 
-/* Tray Module */
+/* Tray Module (if uncommented in config, otherwise remove this block too) */
+/* If you uncomment "tray" in config, then use this:
 #tray {
-	background-color: #1d2021;
-	/* bg */
-	padding: 0 4px;
+    // Removed: background-color and color if they match window#waybar
+    padding: 0 4px;
 }
+*/
 
-/* Modules: CPU, Memory, Battery, Network, PulseAudio */
+/* Modules: CPU, Memory, Battery, Network, PulseAudio - Consolidated padding is good */
 #cpu,
 #memory,
 #battery,
 #network,
 #pulseaudio {
-	padding: 0 8px;
+    padding: 0 8px;
+    /* Removed: background-color and color as they are inherited from window#waybar */
 }
 
 /* Critical States */
 #cpu.critical,
 #memory.critical {
-	color: #ea6962;
-	/* red */
-	background-color: #1d2021;
-	/* bg */
+    color: #ea6962; /* red - Keep this, as it's a specific change from default text color */
+    /* Removed: background-color: #1d2021; as it's inherited from window#waybar */
 }
 
 #battery.warning,
 #battery.critical,
 #battery.urgent {
-	color: #665c54;
-	/* gray */
-	background-color: #1d2021;
-	/* bg */
+    color: #665c54; /* gray - Keep this */
+    /* Removed: background-color: #1d2021; as it's inherited from window#waybar */
 }
 
 /* Battery Good/Charging (subtle emphasis) */
 #battery.good {
-	color: #a9b665;
-	/* green */
-	background-color: #1d2021;
-	/* bg */
+    color: #a9b665; /* green - Keep this */
+    /* Removed: background-color: #1d2021; as it's inherited from window#waybar */
 }
 
 #battery.charging {
-	color: #d4be98;
-	/* fg */
-	background-color: #1d2021;
-	/* bg */
+    /* color: #d4be98; /* fg */ /* Can potentially remove if it's the same as default text color */
+    /* Removed: background-color: #1d2021; as it's inherited from window#waybar */
 }
 
 /* Network Module */
 #network.connected {
-	color: #89b482;
-	/* aqua */
-	background-color: #1d2021;
-	/* bg */
+    color: #89b482; /* aqua - Keep this */
+    /* Removed: background-color: #1d2021; as it's inherited from window#waybar */
 }
 
 #network.disconnected {
-	color: #665c54;
-	/* gray */
-	background-color: #1d2021;
-	/* bg */
+    color: #665c54; /* gray - Keep this */
+    /* Removed: background-color: #1d2021; as it's inherited from window#1d2021 */
 }
 
 /* PulseAudio Module */
 #pulseaudio {
-	color: #d4be98;
-	/* fg */
-	background-color: #1d2021;
-	/* bg */
+    /* color: #d4be98; /* fg */ /* Can potentially remove if it's the same as default text color */
+    /* Removed: background-color: #1d2021; as it's inherited from window#waybar */
 }
 
 #pulseaudio.muted {
-	color: #665c54;
-	/* gray */
-	background-color: #1d2021;
-	/* bg */
+    color: #665c54; /* gray - Keep this */
+    /* Removed: background-color: #1d2021; as it's inherited from window#waybar */
 }
 
 /* Hover/Active (soft) */
 #tags button:hover {
-	color: #d8a657;
-	/* yellow */
+    color: #d8a657; /* yellow */
 }
 
 #tags button:active {
-	color: #a89984;
-	/* fg_dim */
+    color: #a89984; /* fg_dim */
 }
