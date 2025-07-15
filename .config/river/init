@@ -22,6 +22,7 @@ riverctl map normal $mod+Shift W spawn 'foot -e sh -c "pkill -SIGKILL nmtui || n
 
 # riverctl map normal $mod D spawn 'tofi-drun --drun-launch=true'
 riverctl map normal $mod D spawn 'pkill -SIGKILL fuzzel || ~/.local/bin/fuzzel.sh'
+riverctl map normal $mod E spawn 'pkill -SIGKILL fuzzel || ~/.local/bin/emoji.sh'
 riverctl map normal $mod O spawn 'pkill -SIGKILL fuzzel || ~/.local/bin/snippet.sh'
 riverctl map normal $mod+Shift O spawn 'pkill -SIGKILL fuzzel || ~/.local/bin/key.sh'
 riverctl map normal $mod+Shift F spawn '~/.local/bin/grim.sh'
