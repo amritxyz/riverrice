@@ -13,6 +13,19 @@ PS1="\n\[\e[38;5;132m\]\w\[\e[0m\] \
 export LS_COLORS='di=38;5;240:fi=38;5;248:ln=38;5;109:ex=38;5;113:'
 eval "$(dircolors -b)"
 
+# Desktop session
+export MOZ_ENABLE_WAYLAND=1
+export CLUTTER_BACKEND=wayland
+export QT_QPA_PLATFORM=wayland
+export ECORE_EVAS_ENGINE=wayland-egl
+export ELM_ENGINE=wayland_egl
+export SDL_VIDEODRIVER=wayland
+export NO_AT_BRIDGE=1
+
+export XDG_SESSION_TYPE=wayland
+export XDG_SESSION_DESKTOP=river
+export XDG_CURRENT_DESKTOP=river
+
 # Default programs
 export EDITOR="nvim"
 export TERMINAL="foot"
