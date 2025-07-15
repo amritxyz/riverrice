@@ -38,13 +38,13 @@ tooltip {
 	all: unset;
 	min-width: 0;
 	padding: 0 4px;
-	color: #d4be98;
+	color: #665c54;
 	/* fg */
 }
 
 #tags button.focused {
-	color: #7daea3;
-	/* blue */
+	color: #d4be98;
+	/* fg */
 	background-color: #1d2021;
 	/* bg */
 }
