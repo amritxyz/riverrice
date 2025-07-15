@@ -154,9 +154,7 @@ riverctl hide-cursor timeout 5000
 riverctl hide-cursor when-typing enabled
 riverctl xcursor-theme Adwaita
 
-systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP MOZ_ENABLE_WAYLAND=1
-dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=river MOZ_DBUS_REMOTE=1
-systemctl --user restart xdg-desktop-portal
+# systemctl --user restart xdg-desktop-portal
 
 riverctl default-layout rivertile
 riverctl keyboard-layout -options 'caps:swapescape' us
