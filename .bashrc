@@ -4,13 +4,14 @@
 [[ $- != *i* ]] && return
 
 # Prompt configuration
-PS1="\n\[\e[38;5;132m\]\w\[\e[0m\] \
-\$(git branch 2>/dev/null | grep \"*\" | sed \"s/*/(\e[38;5;167m&\e[0m)/\") \
-\[\e[38;5;142m\]\$(jobs -p | wc -l | awk '{if (\$1>0) print \"+\"\$1}')\n\
-\[\e[38;5;250m\]$\[\e[0m\] "
+PS1="\n\[\e[38;5;66m\]\w\[\e[0m\] \
+\$(git branch 2>/dev/null | grep \"*\" | sed \"s/*/(\e[38;5;108m&\e[0m)/\") \
+\[\e[38;5;108m\]\$(jobs -p | wc -l | awk '{if (\$1>0) print \"+\"\$1}')\n\
+\[\e[38;5;99m\]❯\[\e[0m\] "
 
 # LS_COLORS configuration
 export LS_COLORS='di=38;5;240:fi=38;5;248:ln=38;5;109:ex=38;5;113:'
+export FZF_DEFAULT_OPTS="--color=dark,fg:#586e75,bg:#002b36,hl:#b58900 --color=fg+:#839496,bg+:#073642,hl+:#cb4b16 --color=info:#268bd2,prompt:#2aa198,pointer:#d33682,marker:#6c71c4,spinner:#859900,header:#268bd2"
 eval "$(dircolors -b)"
 
 # Desktop session
