@@ -12,20 +12,20 @@
 
 /* Main Window Styling */
 window#waybar {
-	background-color: #002b36;
-	color: #839496;
+	background-color: #1d2021;
+	color: #d4be98;
 }
 
 /* Tooltip Styling */
 tooltip {
-	background-color: #073642;
-	color: #839496;
+	background-color: #282828;
+	color: #d4be98;
 	padding: 4px;
 }
 
 /* Tags Module */
 #tags {
-	background-color: #002b36;
+	background-color: #1d2021;
 	padding: 0 4px;
 }
 
@@ -33,17 +33,17 @@ tooltip {
 	all: unset;
 	min-width: 0;
 	padding: 0 4px;
-	color: #586e75;
+	color: #665c54;
 }
 
 #tags button.focused {
-	color: #839496;
-	background-color: #002b36;
+	color: #d4be98;
+	background-color: #1d2021;
 }
 
 #tags button.urgent {
-	background-color: #586e75;
-	color: #002b36;
+	background-color: #665c54;
+	color: #1d2021;
 }
 
 /* Clock Module */
@@ -53,7 +53,7 @@ tooltip {
 
 /* Tray Module */
 #tray {
-	background-color: #002b36;
+	background-color: #1d2021;
 	padding: 0 4px;
 }
 
@@ -69,55 +69,55 @@ tooltip {
 /* Critical States */
 #cpu.critical,
 #memory.critical {
-	color: #657b83;
-	background-color: #002b36;
+	color: #ea6962;
+	background-color: #1d2021;
 }
 
 #battery.warning,
 #battery.critical,
 #battery.urgent {
-	color: #586e75;
-	background-color: #002b36;
+	color: #665c54;
+	background-color: #1d2021;
 }
 
 /* Battery Good/Charging */
 #battery.good {
-	color: #93a1a1;
-	background-color: #002b36;
+	color: #a9b665;
+	background-color: #1d2021;
 }
 
 #battery.charging {
-	color: #839496;
-	background-color: #002b36;
+	color: #d4be98;
+	background-color: #1d2021;
 }
 
 /* Network Module */
 #network.connected {
-	color: #93a1a1;
-	background-color: #002b36;
+	color: #89b482;
+	background-color: #1d2021;
 }
 
 #network.disconnected {
-	color: #586e75;
-	background-color: #002b36;
+	color: #665c54;
+	background-color: #1d2021;
 }
 
 /* PulseAudio Module */
 #pulseaudio {
-	color: #839496;
-	background-color: #002b36;
+	color: #d4be98;
+	background-color: #1d2021;
 }
 
 #pulseaudio.muted {
-	color: #586e75;
-	background-color: #002b36;
+	color: #665c54;
+	background-color: #1d2021;
 }
 
 /* Hover/Active (soft) */
 #tags button:hover {
-	color: #93a1a1;
+	color: #d8a657;
 }
 
 #tags button:active {
-	color: #657b83;
+	color: #a89984;
 }
