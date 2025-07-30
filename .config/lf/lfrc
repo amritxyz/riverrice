@@ -21,7 +21,7 @@ cmd mkfile ${{
 cmd open &{{
 	case $(file --mime-type -Lb $f) in
 		text/*|application/json|application/javascript|inode/*|application/*-ini) lf -remote "send $id \$nvim \$fx";;
-		image/*) pkill -SIGKILL imv; imv -W 700 -H 400 "$f";;
+		image/*) pkill -SIGKILL imv; imv -W 1100 -H 575 "$f";;
 		audio/*|video/*|application/ogg) pkill -SIGKILL mpv; mpv --geometry=50% --force-window "$f";;
 		application/pdf|image/vnd.djvu|application/x-cbr|application/x-cbz|application/x-comic|application/x-comic+zip) pkill -SIGKILL zathura; zathura "$f";;
 		application/vnd.oasis.opendocument.*|application/vnd.ms-office|application/vnd.openxmlformats-officedocument.*|application/vnd.sun.xml.*) libreoffice "$f";;
