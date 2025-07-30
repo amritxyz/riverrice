@@ -132,10 +132,8 @@ do
     riverctl map $mode None XF86AudioNext  spawn 'playerctl next'
 done
 
-riverctl background-color 0x1d2021
-# riverctl border-color-focused 0xebdbb2
-riverctl border-color-focused 0x3c3836
-riverctl border-color-unfocused 0x282828
+riverctl border-color-focused 0x073642
+riverctl border-color-unfocused 0x002b29
 
 riverctl keyboard-layout -options 'compose:ralt' us
 riverctl set-repeat 80 300

@@ -1,0 +1,8 @@
+#!/bin/bash
+
+[ "$#" -ne 1 ] && echo "Usage: zc <ZigSourceFile.zig>" && exit 1
+input_file="$1"
+output_file="${input_file%.rs}.out"
+
+[ ! -f "$input_file" ] && echo "Error: '$input_file' not found!" && exit 1
+zig build-exe "$input_file"
