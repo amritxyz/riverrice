@@ -61,6 +61,10 @@ export TEXMFHOME="$XDG_DATA_HOME/texmf"
 export TEXMFVAR="$XDG_CACHE_HOME/texlive/texmf-var"
 export TEXMFCONFIG="$XDG_CONFIG_HOME/texlive/texmf-config"
 
+# Video-Acceleration stuffs
+export ANV_DEBUG=video-decode,video-encode
+export LIBVA_DRIVER_NAME=iHD
+
 # Libre-office
 export SAL_USE_VCLPLUGIN=gtk3
 export GTK_THEME=Adwaita:dark
