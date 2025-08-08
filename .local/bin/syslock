@@ -6,7 +6,7 @@
 
 # For readable script.
 export WM="river"
-export WL="waylock -ignore-empty-password"
+export WL="waylock -init-color 0x1d2021 -input-color 0x7daea3 -fail-color 0xea6962 -ignore-empty-password"
 export CTL='systemctl'
 
 # Extract choice from selected options shown through fuzzel.
