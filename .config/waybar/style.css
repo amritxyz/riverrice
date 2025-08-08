@@ -25,7 +25,6 @@ tooltip {
 
 /* Tags Module */
 #tags {
-	background-color: #1d2021;
 	padding: 0 4px;
 }
 
@@ -38,7 +37,6 @@ tooltip {
 
 #tags button.focused {
 	color: #d4be98;
-	background-color: #1d2021;
 }
 
 #tags button.urgent {
@@ -53,7 +51,6 @@ tooltip {
 
 /* Tray Module */
 #tray {
-	background-color: #1d2021;
 	padding: 0 4px;
 }
 
@@ -70,47 +67,39 @@ tooltip {
 #cpu.critical,
 #memory.critical {
 	color: #ea6962;
-	background-color: #1d2021;
 }
 
 #battery.warning,
 #battery.critical,
 #battery.urgent {
 	color: #665c54;
-	background-color: #1d2021;
 }
 
 /* Battery Good/Charging */
 #battery.good {
 	color: #a9b665;
-	background-color: #1d2021;
 }
 
 #battery.charging {
 	color: #d4be98;
-	background-color: #1d2021;
 }
 
 /* Network Module */
 #network.connected {
 	color: #89b482;
-	background-color: #1d2021;
 }
 
 #network.disconnected {
 	color: #665c54;
-	background-color: #1d2021;
 }
 
 /* PulseAudio Module */
 #pulseaudio {
 	color: #d4be98;
-	background-color: #1d2021;
 }
 
 #pulseaudio.muted {
 	color: #665c54;
-	background-color: #1d2021;
 }
 
 /* Hover/Active (soft) */
