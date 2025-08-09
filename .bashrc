@@ -27,8 +27,8 @@ export SDL_VIDEODRIVER=wayland
 export NO_AT_BRIDGE=1
 
 export XDG_SESSION_TYPE=wayland
-export XDG_SESSION_DESKTOP=hyprland
-export XDG_CURRENT_DESKTOP=hyprland
+export XDG_SESSION_DESKTOP=river
+export XDG_CURRENT_DESKTOP=river
 
 # Default programs
 export EDITOR="nvim"
