@@ -1,7 +1,7 @@
 #!/usr/bin/bash
 
 # Config
-folder="$HOME/.local/dox/notes/"
+folder="$HOME/.local/dox/notes/mds/"
 mkdir -p "$folder"
 
 # Terminal (foot)
