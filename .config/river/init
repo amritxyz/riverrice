@@ -152,7 +152,7 @@ riverctl rule-add -app-id 'org.pwmt.zathura*' float
 
 riverctl hide-cursor timeout 5000
 riverctl hide-cursor when-typing enabled
-riverctl xcursor-theme hicolor
+riverctl xcursor-theme Adwaita 16
 
 # systemctl --user restart xdg-desktop-portal
 
