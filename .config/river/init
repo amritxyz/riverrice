@@ -150,7 +150,6 @@ riverctl rule-add -app-id 'mpv*' float
 riverctl rule-add -app-id 'gimp*' tags 128
 riverctl rule-add -app-id 'org.pwmt.zathura*' float
 
-riverctl input "$(riverctl list-inputs | grep Touchpad | awk '{print $1}')" pointer-accel 0.3
 riverctl hide-cursor timeout 5000
 riverctl hide-cursor when-typing enabled
 riverctl xcursor-theme Adwaita 16
