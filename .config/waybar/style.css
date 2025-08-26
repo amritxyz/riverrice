@@ -59,6 +59,7 @@ tooltip {
 
 /* Modules: CPU, Memory, Battery, Network, PulseAudio */
 #cpu,
+#temperature,
 #memory,
 #battery,
 #network,
@@ -68,15 +69,12 @@ tooltip {
 
 /* Critical States */
 #cpu.critical,
-#memory.critical {
-	color: #657b83;
-	background-color: #002b36;
-}
-
+#temperature.critical,
+#memory.critical,
 #battery.warning,
 #battery.critical,
 #battery.urgent {
-	color: #586e75;
+	color: #b83838;
 	background-color: #002b36;
 }
 

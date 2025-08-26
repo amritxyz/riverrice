@@ -17,7 +17,7 @@
 	],
 
 	"modules-right": [
-		// "tray",
+		"temperature",
 		"cpu",
 		"memory",
 		"battery",
@@ -34,6 +34,7 @@
 
 	"clock": {
 		"format": "{:%I:%M %p}",
+		"interval": 60,
 		"tooltip": false
 	},
 
@@ -43,6 +44,14 @@
 		"states": {
 			"critical": 60
 		}
+	},
+
+	"temperature": {
+		"format": "{temperatureC}°C",
+		"interval": 5,
+		"hwmon-path": "/sys/class/hwmon/hwmon5/temp1_input",
+		"critical-threshold": 80,
+		"tooltip": false
 	},
 
 	"memory": {
