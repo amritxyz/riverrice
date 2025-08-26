@@ -33,7 +33,7 @@
 	},
 
 	"clock": {
-		"format": "{:%I:%M %p}",
+		"format": "{:%a %m-%d %I:%M %p}",
 		"interval": 60,
 		"tooltip": false
 	},
