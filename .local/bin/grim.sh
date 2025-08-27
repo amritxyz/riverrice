@@ -38,3 +38,5 @@ REGION=$(slurp)
 if [ -n "$REGION" ]; then
   grim -g "$REGION" "$FILENAME"
 fi
+
+wl-copy < "$FILENAME"
