@@ -21,6 +21,13 @@ if [ -d "$pdir" ]; then
 		echo "Custom user.js has been installed to the profile."
 	else
 		echo "Error: ~/.local/share/user.js not found."
+		read -r -p "Would you like to wget the user.js? [Y/n] " JS
+		if [ -z "$JS" ] || [ "$JS" = "Y" ] || [ "$JS" = "y" ]; then
+			NAME="$HOME/.local/share/arkenfox.js"
+			USER_JS="minimal.js"
+			URL="https://raw.githubusercontent.com/amritxyz/user.js/refs/heads/main"
+			wget -q --show-progress -O "$NAME" "$URL/$USER_JS"
+		fi
 	fi
 else
 	echo "Error: Firefox profile directory not found."
