@@ -50,3 +50,6 @@ bash "$SCRIPT_DIR/cursor.sh"
 
 echo
 bash "$SCRIPT_DIR/clone-repos.sh"
+
+echo
+bash "$SCRIPT_DIR/posix.sh"
