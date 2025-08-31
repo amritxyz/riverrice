@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # This script compiles a Rust source file into a binary executable.
 # The script checks if the file exists and then uses `rustc` to compile it.

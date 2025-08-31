@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 CYAN='\033[0;36m'
 RESET='\033[0m'

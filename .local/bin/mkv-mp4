@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 ffmpeg -i $1 -codec copy $2
 stty sane

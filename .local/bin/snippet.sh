@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # This script lets you quickly insert a snippet from ~/.local/share/snippets.
 # It uses `fuzzel` for selection and `wtype` to insert the chosen snippet.

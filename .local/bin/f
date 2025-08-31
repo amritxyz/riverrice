@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Quick fuzzy finder for files and dirs.
 # Opens files in nvim, enters dirs with a shell.

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # This script installs a custom user.js file into the Firefox profile.
 # It first ensures Firefox is running in headless mode to generate the profile,

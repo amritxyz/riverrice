@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # This script creates a backup of a specified directory.
 # It first ensures the necessary directories exist:

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 [ "$#" -ne 1 ] && echo "Usage: zc <ZigSourceFile.zig>" && exit 1
 input_file="$1"

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # This script converts an input audio file to MP3 format with a 192k bitrate.
 

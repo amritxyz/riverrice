@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/bin/env bash
 
 DIR="$HOME/.config/gnupg"
 CONF="$DIR/gpg-agent.conf"

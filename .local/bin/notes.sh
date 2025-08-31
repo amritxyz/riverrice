@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/bin/env bash
 
 # Config
 folder="$HOME/.local/dox/notes/mds/"

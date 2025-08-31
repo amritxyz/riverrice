@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # This script records audio from the default ALSA device and saves it as a WAV file.
 # The audio files are stored in the ~/.local/audio directory, with each recording

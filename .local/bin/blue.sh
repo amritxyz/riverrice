@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Quick script to connect or disconnect Bluetooth devices on Unix systems.
 # Shows a list of paired devices using bluetoothctl, lets you pick one with fuzzel,

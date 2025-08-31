@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # This script records a screen capture and saves it as a video file.
 # The video files are stored in the ~/.local/vids directory, and each recording

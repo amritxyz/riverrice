@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 DIR_NUM=0
 while [ -d "${DIR_NUM}-project" ]; do
