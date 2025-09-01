@@ -9,27 +9,15 @@ PS1="\n\[\e[38;5;66m\]\w\[\e[0m\] \
 \[\e[38;5;108m\]\$(jobs -p | wc -l | awk '{if (\$1>0) print \"+\"\$1}')\n\
 \[\e[38;5;99m\]$\[\e[0m\] "
 
-# gpg
-# export GPG_TTY=$(tty)
-export PINENTRY_USER_DATA="USE_CURSES=1"
-
 # LS_COLORS configuration
 export LS_COLORS='di=38;5;240:fi=38;5;248:ln=38;5;109:ex=38;5;113:'
-export FZF_DEFAULT_OPTS="--color=dark,fg:#586e75,bg:#002b36,hl:#b58900 --color=fg+:#839496,bg+:#073642,hl+:#cb4b16 --color=info:#268bd2,prompt:#2aa198,pointer:#d33682,marker:#6c71c4,spinner:#859900,header:#268bd2"
 eval "$(dircolors -b)"
 
-# Desktop session
-export MOZ_ENABLE_WAYLAND=1
-export CLUTTER_BACKEND=wayland
-export QT_QPA_PLATFORM=wayland
-export ECORE_EVAS_ENGINE=wayland-egl
-export ELM_ENGINE=wayland_egl
-export SDL_VIDEODRIVER=wayland
-export NO_AT_BRIDGE=1
-
-export XDG_SESSION_TYPE=wayland
-export XDG_SESSION_DESKTOP=river
-export XDG_CURRENT_DESKTOP=river
+# Shell options and settings
+shopt -s autocd
+stty -ixon -ixoff
+export HISTSIZE=1000
+export HISTFILESIZE=2000
 
 # Default programs
 export EDITOR="nvim"
@@ -65,20 +53,6 @@ export OLLAMA_MODELS="$XDG_DATA_HOME/ollama/models"
 export TEXMFHOME="$XDG_DATA_HOME/texmf"
 export TEXMFVAR="$XDG_CACHE_HOME/texlive/texmf-var"
 export TEXMFCONFIG="$XDG_CONFIG_HOME/texlive/texmf-config"
-
-# Video-Acceleration stuffs
-export ANV_DEBUG=video-decode,video-encode
-export LIBVA_DRIVER_NAME=iHD
-
-# Libre-office
-export SAL_USE_VCLPLUGIN=gtk3
-export GTK_THEME=Adwaita:dark
-
-# Shell options and settings
-shopt -s autocd
-stty -ixon -ixoff
-export HISTSIZE=1000
-export HISTFILESIZE=2000
 
 # Aliases
 alias grep='grep --color=auto'

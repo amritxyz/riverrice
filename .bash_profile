@@ -2,4 +2,4 @@
 if [ -f ~/.bashrc ]; then
 	. ~/.bashrc
 fi
-[[ "$(fgconsole 2>/dev/null)" -eq 1 ]] && exec river > /dev/null 2>&1
+[[ "$(fgconsole 2>/dev/null)" -eq 1 ]] && exec start_river > /dev/null 2>&1

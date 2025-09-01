@@ -1,0 +1,35 @@
+#!/bin/sh
+
+# gpg
+# export GPG_TTY=$(tty)
+export PINENTRY_USER_DATA="USE_CURSES=1"
+
+# FZF
+export FZF_DEFAULT_OPTS="--color=dark,fg:#586e75,bg:#002b36,hl:#b58900 --color=fg+:#839496,bg+:#073642,hl+:#cb4b16 --color=info:#268bd2,prompt:#2aa198,pointer:#d33682,marker:#6c71c4,spinner:#859900,header:#268bd2"
+
+# Video-Acceleration stuffs
+export ANV_DEBUG=video-decode,video-encode
+export LIBVA_DRIVER_NAME=iHD
+
+# Libre-office
+export SAL_USE_VCLPLUGIN=gtk3
+export GTK_THEME=Adwaita:dark
+
+# Desktop session
+export MOZ_ENABLE_WAYLAND=1
+export CLUTTER_BACKEND=wayland
+export QT_QPA_PLATFORM=wayland
+export ECORE_EVAS_ENGINE=wayland-egl
+export ELM_ENGINE=wayland_egl
+export SDL_VIDEODRIVER=wayland
+export NO_AT_BRIDGE=1
+
+export XDG_SESSION_TYPE=wayland
+export XDG_SESSION_DESKTOP=river
+export XDG_CURRENT_DESKTOP=river
+
+systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
+dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=river
+systemctl --user restart xdg-desktop-portal
+
+exec river
