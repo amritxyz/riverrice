@@ -71,21 +71,20 @@ tooltip {
 #cpu.critical,
 #temperature.critical,
 #memory.critical,
-#battery.warning,
 #battery.critical,
 #battery.urgent {
 	color: #b83838;
 	background-color: #002b36;
 }
 
-/* Battery Good/Charging */
-#battery.good {
-	color: #93a1a1;
+/* Battery Warning/Good/Charging */
+#battery.warning {
+	color: #a57c00;
 	background-color: #002b36;
 }
 
 #battery.charging {
-	color: #839496;
+	color: #7c9000;
 	background-color: #002b36;
 }
 
