@@ -77,14 +77,9 @@ tooltip {
 	background-color: #002b36;
 }
 
-/* Battery Warning/Good/Charging */
+/* Battery Warning/Good */
 #battery.warning {
 	color: #a57c00;
-	background-color: #002b36;
-}
-
-#battery.charging {
-	color: #7c9000;
 	background-color: #002b36;
 }
 
