@@ -49,7 +49,7 @@ echo
 bash "$SCRIPT_DIR/cursor.sh"
 
 echo
-bash "$SCRIPT_DIR/clone-repos.sh"
+bash "$SCRIPT_DIR/posix.sh"
 
 echo
-bash "$SCRIPT_DIR/posix.sh"
+bash "$SCRIPT_DIR/clone-repos.sh"
