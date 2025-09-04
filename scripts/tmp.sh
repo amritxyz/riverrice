@@ -13,6 +13,7 @@ else
 	log "Creating tmp env in /opt dir..."
 	sudo mkdir $TMP_DIR
 	sudo chown $USER:$USER $TMP_DIR
-	mkdir $PRAC_DIRS/{clang,zig,class,rust,go,java,python,js}
+	mkdir $TMP_DIR/git-repos
+	mkdir $PRAC_DIRS/{clang,zig,class,rust,go,java,python,js,typst,latex}
 	success "Successfully Created tmp env with prac dir..."
 fi
