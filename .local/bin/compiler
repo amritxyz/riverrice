@@ -10,9 +10,9 @@ cd "$d" || exit
 case "$e" in
 	[0-9]) preconv "$f" | refer -PS -e | groff -mandoc -T pdf > "$b.pdf" ;;
 	mom|ms) preconv "$f" | refer -PS -e | groff -T pdf -m"$e" > "$b.pdf" ;;
-	c) cc "$f" -o "$b" && ./"$b" ;;
-	cob) cobc -x -o "$b" "$f" && ./"$b" ;;
-	cpp) c++ "$f" -o "$b" && ./"$b" ;;
+	c) cc "$f" -o "$b.o" && "$b" ;;
+	cob) cobc -x -o "$b.o" "$f" && ./"$b" ;;
+	cpp) c++ "$f" -o "$b.o" && "$b" ;;
 	go) go run "$f" ;;
 	h) make clean install || exit ;;
 	java) _JAVA_AWT_WM_NONREPARENTING=1 java "$f" ;;
