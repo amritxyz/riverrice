@@ -1,8 +1,8 @@
 #!/bin/sh
 
-i=0
+i=000
 while [ -d "${i}-project" ]; do
-	i=`expr $i + 1`
+	i=$(printf "%03d" $(($i + 1)))
 done
 
 n="${i}-project"
@@ -13,7 +13,9 @@ mkdir -p "$s"
 cat > "$s/main.c" << 'EOF'
 #include <stdio.h>
 #include <stdlib.h>
+
 #include "main.h"
+
 int main(int argc, char **argv)
 {
 	return 0;
@@ -30,12 +32,21 @@ cat > "$n/Makefile" << 'EOF'
 CC = cc
 CFLAGS = -Wall -Wextra -std=c99
 SRC = src/main.c
-OUT = main
+OUT = main.o
 
 all:
-	$CC $CFLAGS $SRC -o $OUT
+	${CC} ${CFLAGS} ${SRC} -o ${OUT}
+run:
+	./${OUT}
 clean:
-	rm -f $OUT
+	rm -f ${OUT}
+EOF
+
+cat > "$n/.gitignore" << 'EOF'
+*.o
+*.out
+*.obj
+build/
 EOF
 
 echo "Project $n created."
