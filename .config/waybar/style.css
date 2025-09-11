@@ -12,20 +12,19 @@
 
 /* Main Window Styling */
 window#waybar {
-	background-color: #002b36;
-	color: #839496;
+	background-color: #1d2021;
+	color: #d4be98;
 }
 
 /* Tooltip Styling */
 tooltip {
-	background-color: #073642;
-	color: #839496;
+	background-color: #282828;
+	color: #d4be98;
 	padding: 4px;
 }
 
 /* Tags Module */
 #tags {
-	background-color: #002b36;
 	padding: 0 4px;
 }
 
@@ -33,17 +32,16 @@ tooltip {
 	all: unset;
 	min-width: 0;
 	padding: 0 4px;
-	color: #586e75;
+	color: #665c54;
 }
 
 #tags button.focused {
-	color: #839496;
-	background-color: #002b36;
+	color: #d4be98;
 }
 
 #tags button.urgent {
-	background-color: #586e75;
-	color: #002b36;
+	background-color: #665c54;
+	color: #1d2021;
 }
 
 /* Clock Module */
@@ -53,13 +51,11 @@ tooltip {
 
 /* Tray Module */
 #tray {
-	background-color: #002b36;
 	padding: 0 4px;
 }
 
 /* Modules: CPU, Memory, Battery, Network, PulseAudio */
 #cpu,
-#temperature,
 #memory,
 #battery,
 #network,
@@ -69,47 +65,48 @@ tooltip {
 
 /* Critical States */
 #cpu.critical,
-#temperature.critical,
-#memory.critical,
-#battery.critical,
-#battery.urgent {
-	color: #b83838;
-	background-color: #002b36;
+#memory.critical {
+	color: #ea6962;
 }
 
-/* Battery Warning/Good */
-#battery.warning {
-	color: #a57c00;
-	background-color: #002b36;
+#battery.warning,
+#battery.critical,
+#battery.urgent {
+	color: #665c54;
+}
+
+/* Battery Good/Charging */
+#battery.good {
+	color: #a9b665;
+}
+
+#battery.charging {
+	color: #d4be98;
 }
 
 /* Network Module */
 #network.connected {
-	color: #93a1a1;
-	background-color: #002b36;
+	color: #89b482;
 }
 
 #network.disconnected {
-	color: #586e75;
-	background-color: #002b36;
+	color: #665c54;
 }
 
 /* PulseAudio Module */
 #pulseaudio {
-	color: #839496;
-	background-color: #002b36;
+	color: #d4be98;
 }
 
 #pulseaudio.muted {
-	color: #586e75;
-	background-color: #002b36;
+	color: #665c54;
 }
 
 /* Hover/Active (soft) */
 #tags button:hover {
-	color: #93a1a1;
+	color: #d8a657;
 }
 
 #tags button:active {
-	color: #657b83;
+	color: #a89984;
 }
