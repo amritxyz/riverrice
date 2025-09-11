@@ -65,19 +65,14 @@ tooltip {
 
 /* Critical States */
 #cpu.critical,
-#memory.critical {
+#memory.critical,
+#battery.critical,
+#battery.urgent {
 	color: #ea6962;
 }
 
-#battery.warning,
-#battery.critical,
-#battery.urgent {
-	color: #665c54;
-}
-
-/* Battery Good/Charging */
-#battery.good {
-	color: #a9b665;
+#battery.warning {
+	color: #d8a657;
 }
 
 #battery.charging {
