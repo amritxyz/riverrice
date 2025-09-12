@@ -36,6 +36,6 @@ set echo-control-characters off
 "\e[A": history-search-backward
 "\e[B": history-search-forward
 
-# Move foreward/backward by word
+# Move forward/backward by word
 "\e[1;5D": backward-word
 "\e[1;5C": forward-word

@@ -8,7 +8,7 @@ source "$SCRIPT_DIR/common.sh"
 
 log "Copying dotfiles and personal rice..."
 
-mkdir -p ~/.local/{share,bin,git-repos,hugo-dir,dox,vids,music,audio} ~/.config
+mkdir -p ~/.local/{share,state,bin,git-repos,hugo-dir,dox,vids,music,audio} ~/.config
 
 # Copy .config files
 cp -r "$RICE_DIR/.config/"* "$HOME/.config"
@@ -20,9 +20,8 @@ cp -r "$RICE_DIR/.local/share/"* "$HOME/.local/share"
 cp -r "$RICE_DIR/.local/bin/"* "$HOME/.local/bin"
 
 # Shell and input config
-cp "$RICE_DIR/.bashrc" "$HOME/.bashrc"
-cp "$RICE_DIR/.bash_profile" "$HOME/.bash_profile"
-cp "$RICE_DIR/.inputrc" "$HOME/.inputrc"
+cp "$RICE_DIR/.profile" "$HOME/.profile"
+ln -sfT "$HOME/.config/bash/bashrc" "$HOME/.bashrc"
 
 # Move riverrice repo into ~/.local/git-repos
 mkdir -p "$HOME/.local/git-repos"
