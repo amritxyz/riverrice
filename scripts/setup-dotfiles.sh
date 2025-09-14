@@ -20,8 +20,8 @@ cp -r "$RICE_DIR/.local/share/"* "$HOME/.local/share"
 cp -r "$RICE_DIR/.local/bin/"* "$HOME/.local/bin"
 
 # Shell and input config
-cp "$RICE_DIR/.profile" "$HOME/.profile"
-ln -sfT "$HOME/.config/bash/bashrc" "$HOME/.bashrc"
+ln -sfT "$HOME/.config/shell/bashrc" "$HOME/.bashrc"
+ln -sfT "$HOME/.config/shell/profile" "$HOME/.profile"
 
 # Move riverrice repo into ~/.local/git-repos
 mkdir -p "$HOME/.local/git-repos"
