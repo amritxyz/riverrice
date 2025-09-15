@@ -29,6 +29,8 @@ mv "$RICE_DIR" "$HOME/.local/git-repos/riverrice"
 
 export XDG_STATE_HOME="$HOME/.local/state"
 export HISTFILE="$XDG_STATE_HOME/bash/history"
+rm -rf $HOME/.bash_history
+rm -rf ~/.wget-hsts
 
 echo
 success "Dotfiles and rice successfully set up."
