@@ -2,3 +2,4 @@ vulkan-intel
 intel-media-driver
 libvpl
 vpl-gpu-rt
+libva-utils
