@@ -1,2 +1,4 @@
 gdb
 valgrind
+openssh
+openssl
