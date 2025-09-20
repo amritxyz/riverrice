@@ -135,9 +135,9 @@ do
     riverctl map $mode None XF86AudioNext  spawn 'playerctl next'
 done
 
-systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
-dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=river
-systemctl --user restart xdg-desktop-portal
+riverctl spawn "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=river"
+riverctl spawn "systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=river"
+riverctl spawn "gsettings set org.gnome.desktop.interface color-scheme prefer-dark"
 
 riverctl border-color-focused 0x073642
 riverctl border-color-unfocused 0x002b29
