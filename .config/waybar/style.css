@@ -12,19 +12,20 @@
 
 /* Main Window Styling */
 window#waybar {
-	background-color: #1d2021;
-	color: #d4be98;
+	background-color: #002b36;
+	color: #839496;
 }
 
-/* Tooltip Styling */
+/* Tooltip */
 tooltip {
-	background-color: #282828;
-	color: #d4be98;
+	background-color: #073642;
+	color: #839496;
 	padding: 4px;
 }
 
-/* Tags Module */
+/* Tags */
 #tags {
+	background-color: #002b36;
 	padding: 0 4px;
 }
 
@@ -32,77 +33,71 @@ tooltip {
 	all: unset;
 	min-width: 0;
 	padding: 0 4px;
-	color: #665c54;
+	color: #586e75;
 }
 
 #tags button.focused {
-	color: #d4be98;
+	color: #839496;
+	background-color: #002b36;
 }
 
 #tags button.urgent {
-	background-color: #665c54;
-	color: #1d2021;
+	background-color: #586e75;
+	color: #002b36;
 }
 
-/* Clock Module */
+/* Clock */
 #clock {
+	color: #839496;
 	padding: 0 8px;
 }
 
-/* Tray Module */
+/* Tray */
 #tray {
+	background-color: #002b36;
 	padding: 0 4px;
 }
 
-/* Modules: CPU, Memory, Battery, Network, PulseAudio */
+/* Modules */
 #cpu,
 #temperature,
 #memory,
 #battery,
 #network,
 #pulseaudio {
+	color: #839496;
 	padding: 0 8px;
 }
 
 /* Critical States */
 #cpu.critical,
+#temperature.critical,
 #memory.critical,
 #battery.critical,
 #battery.urgent {
-	color: #ea6962;
+	color: #b83838;
+	background-color: #002b36;
 }
 
 #battery.warning {
-	color: #d8a657;
-}
-
-#battery.charging {
-	color: #d4be98;
-}
-
-/* Network Module */
-#network.connected {
-	color: #89b482;
+	color: #a57c00;
+	background-color: #002b36;
 }
 
 #network.disconnected {
-	color: #665c54;
-}
-
-/* PulseAudio Module */
-#pulseaudio {
-	color: #d4be98;
+	color: #586e75;
+	background-color: #002b36;
 }
 
 #pulseaudio.muted {
-	color: #665c54;
+	color: #586e75;
+	background-color: #002b36;
 }
 
-/* Hover/Active (soft) */
 #tags button:hover {
-	color: #d8a657;
+	color: #93a1a1;
 }
 
 #tags button:active {
-	color: #a89984;
+	color: #657b83;
 }
