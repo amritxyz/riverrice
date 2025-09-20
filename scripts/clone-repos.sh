@@ -29,6 +29,7 @@ mv "$RICE_DIR" "$HOME/.local/git-repos/riverrice"
 
 export XDG_STATE_HOME="$HOME/.local/state"
 export HISTFILE="$XDG_STATE_HOME/bash/history"
+mkdir -p "$XDG_STATE_HOME/bash"
 rm -rf $HOME/.bash_history
 rm -rf ~/.wget-hsts
 
