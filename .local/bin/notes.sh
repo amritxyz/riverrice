@@ -10,10 +10,7 @@ TERMINAL="foot"
 # New note function
 newnote() {
 	# Prompt for name
-	name=$(fuzzel --dmenu --prompt="Enter note name: " -w 50% \
-		-b 1d2021cc -t 766564ff -M e78a4eff -m 928374ff -S ddc7a1ff \
-		-s 282828cc -B 2 -r 0 -C 3c3836ff --input-color e78a4eff \
-		--font "monospace:size=12" -I -D no -l 0 --cache=/dev/null <<EOF
+	name=$(fuzzel --dmenu --prompt="Enter note name: " -w 50% -I -l 0 <<EOF
 EOF
 	)
 	[ -z "$name" ] && exit 0
@@ -34,10 +31,7 @@ $files"
 
 	# Show in fuzzel
 	choice=$(echo "$choices" | fuzzel --dmenu \
-		--prompt="Choose note or create new: " -w 50% \
-		-b 1d2021cc -t 766564ff -M e78a4eff -m 928374ff -S ddc7a1ff \
-		-s 282828cc -B 2 -r 0 -C 3c3836ff --input-color e78a4eff \
-		--font "monospace:size=12" -I -D no -l 5 --cache=/dev/null)
+		--prompt="Choose note or create new: " -w 50% -I -l 5)
 
 	[ -z "$choice" ] && exit 0
 
