@@ -135,8 +135,10 @@ do
     riverctl map $mode None XF86AudioNext  spawn 'playerctl next'
 done
 
-riverctl border-color-focused 0x073642
-riverctl border-color-unfocused 0x002b29
+riverctl background-color 0x1d2021
+# riverctl border-color-focused 0xebdbb2
+riverctl border-color-focused 0x3c3836
+riverctl border-color-unfocused 0x282828
 
 riverctl spawn "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=river"
 riverctl spawn "systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=river"
