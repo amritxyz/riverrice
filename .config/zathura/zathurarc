@@ -57,7 +57,7 @@ set notification-warning-fg "#1d2021"
 set statusbar-bg "#282828"
 set statusbar-fg "#d4be98"
 set recolor-keephue
-set recolor-darkcolor "#d4be98"
+set recolor-darkcolor "#c8d7d8"
 set recolor-lightcolor "#1d2021"
 set index-fg "#d4be98"
 set index-bg "#1d2021"
