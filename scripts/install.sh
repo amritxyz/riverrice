@@ -20,7 +20,7 @@ if [[ $INSTALL == "Y" || $INSTALL == "y" || -z $INSTALL ]]; then
 	echo
 	log "Starting Modular Installation..."
 
-	for group in base intel fonts daemons deps terminal cli media wm apps dev build dev_ext bloat tex; do
+	for group in base intel fonts daemons deps terminal cli media wm apps dev build dev_ext bloat deps_ext tex; do
 		bash "$SCRIPT_DIR/install-group.sh" "$group"
 	done
 
