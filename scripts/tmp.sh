@@ -27,11 +27,11 @@ else
 fi
 
 # INFO: Prac dirs
-if [ ! -d "$PRAC_DIRS" ]; then
-	mkdir -p $PRAC_DIRS/{clang,zig,class,rust,go,java,python,js,typst,latex}
-else
-	warn "$PRAC_DIRS Exists..."
-fi
+# if [ ! -d "$PRAC_DIRS" ]; then
+# 	mkdir -p $PRAC_DIRS/{clang,zig,class,rust,go,java,python,js,typst,latex}
+# else
+# 	warn "$PRAC_DIRS Exists..."
+# fi
 
 # INFO: Git repos
 if [ ! -d "$GIT_REP" ]; then
