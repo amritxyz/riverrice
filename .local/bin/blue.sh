@@ -5,7 +5,7 @@ get_device_list() {
 }
 
 device_list=$(get_device_list)
-selected_device=$(echo "$device_list" | fuzzel -w 30% \
+selected_device=$(echo "$device_list" | fuzzel -w 30% --no-mouse \
 	-I --dmenu --lines 2 | awk '{print $1}')
 
 [ -z "$selected_device" ] && notify-send "No device selected." && exit 1

@@ -1,6 +1,6 @@
 #!/bin/sh
 
-fuzzel --dmenu -w 64% -I --filter-desktop "$@" <&0 \
+fuzzel --dmenu -w 64% -I --no-mouse --filter-desktop "$@" <&0 \
 << "EOF" | cut -f1 -d' ' | xargs wtype
 (◉̶‿◉̶) creepy-cute face 1
 (◔◡◔) creepy-cute face 2
