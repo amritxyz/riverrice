@@ -20,6 +20,6 @@ else
 fi
 
 # Replace the line
-sudo sed -i 's|^Inherits=.*$|Inherits=Adwaita|' "$FILE"
+sudo sed -i 's|^Inherits=.*$|Inherits=hicolor|' "$FILE"
 
-success "Cursor theme changed to Adwaita."
+success "Cursor theme changed to hicolor."

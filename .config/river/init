@@ -140,7 +140,24 @@ riverctl border-color-unfocused 0x002b29
 
 riverctl spawn "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=river"
 riverctl spawn "systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=river"
-riverctl spawn "gsettings set org.gnome.desktop.interface color-scheme prefer-dark"
+riverctl spawn /lib/xdg-desktop-portal
+riverctl spawn /lib/xdg-desktop-portal-gtk
+riverctl spawn /lib/xdg-desktop-portal-wlr
+
+riverctl spawn "gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'"
+riverctl spawn "gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark'"
+riverctl spawn "gsettings set org.gnome.desktop.interface cursor-theme 'hicolor'"
+riverctl spawn "gsettings set org.gnome.desktop.interface cursor-size 16"
+riverctl spawn "gsettings set org.gnome.desktop.interface font-name 'sans 10'"
+riverctl spawn "gsettings set org.gnome.desktop.interface monospace-font-name 'mono 10'"
+riverctl spawn "gsettings set org.gnome.desktop.session session-name 'river'"
+riverctl spawn "gsettings set org.gnome.desktop.wm.preferences button-layout 'none'"
+riverctl spawn "gsettings set org.gnome.desktop.wm.preferences action-double-click-titlebar 'none'"
+riverctl spawn "gsettings set org.gnome.desktop.wm.preferences action-middle-click-titlebar 'none'"
+riverctl spawn "gsettings set org.gnome.desktop.wm.preferences action-left-click-titlebar 'none'"
+riverctl spawn "gsettings set org.gnome.desktop.wm.preferences action-double-click-titlebar 'none'"
+riverctl spawn "gsettings set org.gnome.desktop.wm.preferences titlebar-font 'none'"
+
 
 riverctl keyboard-layout -options 'compose:ralt' us
 riverctl set-repeat 80 300
@@ -157,7 +174,7 @@ riverctl rule-add -app-id 'org.pwmt.zathura*' float
 
 riverctl hide-cursor timeout 5000
 riverctl hide-cursor when-typing enabled
-riverctl xcursor-theme Adwaita 16
+riverctl xcursor-theme hicolor 16
 riverctl input "$TOUCHPAD_ID" pointer-accel 0.3
 
 riverctl default-layout rivertile
