@@ -11,7 +11,7 @@ riverctl map normal $mod Q close
 
 # spawn some programs
 riverctl map normal $mod W spawn firefox
-riverctl map normal $mod T spawn transmission-gtk
+riverctl map normal $mod T spawn qbittorrent
 riverctl map normal $mod+Shift B spawn bleachbit
 riverctl map normal $mod g spawn gimp
 riverctl map normal $mod+Shift N spawn 'foot -e newsboat'
@@ -135,10 +135,8 @@ do
     riverctl map $mode None XF86AudioNext  spawn 'playerctl next'
 done
 
-riverctl background-color 0x1d2021
-# riverctl border-color-focused 0xebdbb2
-riverctl border-color-focused 0x3c3836
-riverctl border-color-unfocused 0x282828
+riverctl border-color-focused 0x073642
+riverctl border-color-unfocused 0x002b29
 
 riverctl spawn "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=river"
 riverctl spawn "systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=river"
