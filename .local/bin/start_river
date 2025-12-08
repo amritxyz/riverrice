@@ -5,7 +5,7 @@
 export PINENTRY_USER_DATA="USE_CURSES=1"
 
 # FZF
-# export FZF_DEFAULT_OPTS="--color=dark,fg:#586e75,bg:#002b36,hl:#b58900 --color=fg+:#839496,bg+:#073642,hl+:#cb4b16 --color=info:#268bd2,prompt:#2aa198,pointer:#d33682,marker:#6c71c4,spinner:#859900,header:#268bd2"
+export FZF_DEFAULT_OPTS="--color=dark,fg:#586e75,bg:#002b36,hl:#b58900 --color=fg+:#839496,bg+:#073642,hl+:#cb4b16 --color=info:#268bd2,prompt:#2aa198,pointer:#d33682,marker:#6c71c4,spinner:#859900,header:#268bd2"
 
 # Video-Acceleration stuffs
 export ANV_DEBUG=video-decode,video-encode
