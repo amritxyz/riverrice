@@ -91,3 +91,8 @@ tooltip {
 	border: 2px solid #c7ab7a;
 	color: #1d2021;
 }
+
+#pulseaudio.muted,
+#network.disconnected {
+	color: #7c6f64;
+}
