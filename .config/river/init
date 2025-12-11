@@ -136,8 +136,10 @@ do
     riverctl map $mode None XF86AudioNext  spawn 'playerctl next'
 done
 
-riverctl border-color-focused 0x073642
-riverctl border-color-unfocused 0x002b29
+riverctl background-color 0x1d2021
+# riverctl border-color-focused 0xebdbb2
+riverctl border-color-focused 0x3c3836
+riverctl border-color-unfocused 0x282828
 
 riverctl spawn "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=river"
 riverctl spawn "systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=river"
@@ -179,7 +181,7 @@ riverctl xcursor-theme hicolor 16
 riverctl input "$TOUCHPAD_ID" pointer-accel 0.3
 
 riverctl default-layout rivertile
-riverctl keyboard-layout -options 'caps:swapescape' us
+riverctl keyboard-layout -options 'caps:swapescape,ctrl:menu_rctrl' us
 rivertile -view-padding 2 -outer-padding 2 &
 foot --server &
 waybar &
