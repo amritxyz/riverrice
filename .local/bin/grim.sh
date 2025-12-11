@@ -19,3 +19,4 @@ file="$SAVE_DIR/${next}_screenshot.png"
 
 region=$(slurp) || exit 1
 grim -g "$region" "$file" && wl-copy < "$file"
+notify-send "${next}_screenshot.png" "copied to clipboard!"

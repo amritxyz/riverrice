@@ -19,8 +19,9 @@ fi
 NEXT_NUMBER=$((MAX_NUMBER + 1))
 
 FILENAME="$TARGET_DIR/${NEXT_NUMBER}_vid.mkv"
-SCREEN_RESOLUTION="1366x768"
+SCREEN_RESOLUTION="1920x1200"
 
 sleep 2
+notify-send "Recording screen..."
 wf-recorder --audio -g "$SCREEN_RESOLUTION" -r 24 -f "$FILENAME"
 stty sane
