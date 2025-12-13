@@ -78,6 +78,8 @@ tooltip {
 	color: #1d2021;
 }
 
+#cpu.warning,
+#memory.warning,
 #battery.warning {
 	background-color: #d8a657;
 	border: 2px solid #c7ab7a;
