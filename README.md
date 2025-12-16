@@ -6,7 +6,7 @@
 ## Installation
 
 ```bash
-git clone --depth=1 https://github.com/amritxyz/riverrice.git ~/riverrice
+git clone --depth=1 https://codeberg.org/amrit/riverrice.git ~/riverrice
 sh ~/riverrice/scripts/install.sh
 ```
 
@@ -14,7 +14,7 @@ sh ~/riverrice/scripts/install.sh
 
 ## What's Included
 
-You can see the included packages *[here](https://github.com/amritxyz/riverrice/blob/main/packages)*.
+You can see the included packages *[here](https://codeberg.org/amrit/riverrice/src/branch/main/packages)*.
 
 - Dynamic Wayland compositor: **River**
 - Themed with **Adwaita**
