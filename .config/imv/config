@@ -1,5 +1,5 @@
 [options]
-background = 1d2021
+background = #000000
 overlay = false
 overlay_font = monospace:14
 

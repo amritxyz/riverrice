@@ -31,6 +31,7 @@ riverctl map normal $mod+Shift F spawn '~/.local/bin/grim.sh'
 riverctl map normal $mod+Shift X spawn '~/.local/bin/caps_esc'
 riverctl map normal $mod M spawn '~/.local/bin/river_touchpad.sh enable'
 riverctl map normal $mod+Shift M spawn '~/.local/bin/river_touchpad.sh disable'
+riverctl map normal $mod+Shift S spawn "~/.local/share/darkman/switch-theme.sh"
 
 riverctl map normal $mod Backspace spawn 'sh -c "pkill -SIGKILL wf-recorder; pkill -SIGKILL ffmpeg"'
 riverctl map normal $mod B spawn 'sh -c "pkill -SIGKILL waybar || waybar"'
@@ -136,10 +137,7 @@ do
     riverctl map $mode None XF86AudioNext  spawn 'playerctl next'
 done
 
-riverctl background-color 0x1d2021
-# riverctl border-color-focused 0xebdbb2
-riverctl border-color-focused 0x3c3836
-riverctl border-color-unfocused 0x282828
+riverctl spawn '~/.config/river/colors'
 
 riverctl spawn "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=river"
 riverctl spawn "systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=river"

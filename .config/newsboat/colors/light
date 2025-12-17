@@ -1,0 +1,20 @@
+color listnormal default default
+color listfocus white red standout bold
+color listnormal_unread cyan default
+color listfocus_unread white blue standout bold
+color info red default bold
+color article default default
+
+highlight all "---.*---" yellow default
+highlight feedlist ".*(0/0))" black default
+highlight article "(^Feed:.*|^Title:.*|^Author:.*)" cyan default bold
+highlight article "(^Date:.*)" default default
+highlight article "(^Link:.*)" blue default
+highlight article "https?://[^ ]+" blue default
+highlight article "^(Title):.*$" yellow default
+highlight article "\\[[0-9][0-9]*\\]" magenta default bold
+highlight article "\\[image\\ [0-9]+\\]" green default bold
+highlight article "\\[embedded flash: [0-9][0-9]*\\]" green default bold
+highlight article ":.*\\(link\\)$" blue default
+highlight article ":.*\\(image\\)$" blue black
+highlight article ":.*\\(embedded flash\\)$" magenta default
