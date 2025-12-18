@@ -12,7 +12,6 @@ riverctl map normal $mod Q close
 # spawn some programs
 riverctl map normal $mod W spawn firefox
 riverctl map normal $mod+Shift W spawn 'firefox --private-window'
-riverctl map normal $mod T spawn qbittorrent
 riverctl map normal $mod+Shift B spawn bleachbit
 riverctl map normal $mod g spawn gimp
 riverctl map normal $mod+Shift N spawn 'foot -e newsboat'
@@ -27,11 +26,13 @@ riverctl map normal $mod D spawn 'pkill -SIGKILL fuzzel || ~/.local/bin/fuzzel.s
 riverctl map normal $mod E spawn 'pkill -SIGKILL fuzzel || ~/.local/bin/emoji.sh'
 riverctl map normal $mod O spawn 'pkill -SIGKILL fuzzel || ~/.local/bin/snippet.sh'
 riverctl map normal $mod+Shift O spawn 'pkill -SIGKILL fuzzel || ~/.local/bin/key.sh'
-riverctl map normal $mod+Shift F spawn '~/.local/bin/grim.sh'
-riverctl map normal $mod+Shift X spawn '~/.local/bin/caps_esc'
+riverctl map normal $mod+Shift S spawn 'pkill -SIGKILL slurp || ~/.local/bin/grim.sh'
+riverctl map normal $mod X spawn 'pkill -SIGKILL slurp || ~/.local/bin/tmp_preview_grim.sh'
+riverctl map normal $mod+Shift X spawn 'pkill -SIGKILL slurp || ~/.local/bin/tmp_grim.sh'
+riverctl map normal $mod+Shift C spawn '~/.local/bin/caps_esc'
 riverctl map normal $mod M spawn '~/.local/bin/river_touchpad.sh enable'
 riverctl map normal $mod+Shift M spawn '~/.local/bin/river_touchpad.sh disable'
-riverctl map normal $mod S spawn "~/.local/share/darkman/switch-theme.sh"
+riverctl map normal $mod T spawn "~/.local/share/darkman/switch-theme.sh"
 
 riverctl map normal $mod Backspace spawn 'sh -c "pkill -SIGKILL wf-recorder; pkill -SIGKILL ffmpeg"'
 riverctl map normal $mod B spawn 'sh -c "pkill -SIGKILL waybar || waybar"'
