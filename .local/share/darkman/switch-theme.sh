@@ -28,11 +28,17 @@ Dark)
 	killall -s SIGUSR1 foot
 
 	# Neovim
-	echo dark > ~/.config/nvim/lua/colors/toggle-theme.lua
+	sed -i "s/modus_operandi/modus_vivendi/g" \
+		/home/void/.config/nvim/lua/plugins/color.lua
+	echo dark > ~/.config/nvim/modus_state
 	killall -s SIGUSR1 nvim
 
 	# Newsboat
 	cp ~/.config/newsboat/colors/dark ~/.config/newsboat/colors/color
+
+	# Mako
+	cp ~/.config/mako/colors/dark ~/.config/mako/colors/color
+	killall mako && mako &
 
 	# Tmux
 	echo "source-file ~/.config/tmux/colors/dark.conf" > ~/.config/tmux/colors/color.conf
@@ -72,11 +78,17 @@ Light)
 	killall -s SIGUSR2 foot
 
 	# Neovim
-	echo light > ~/.config/nvim/lua/colors/toggle-theme.lua
+	sed -i "s/modus_vivendi/modus_operandi/g" \
+		/home/void/.config/nvim/lua/plugins/color.lua
+	echo light > ~/.config/nvim/modus_state
 	killall -s SIGUSR1 nvim
 
 	# Newsboat
 	cp ~/.config/newsboat/colors/light ~/.config/newsboat/colors/color
+
+	# Mako
+	cp ~/.config/mako/colors/light ~/.config/mako/colors/color
+	killall mako && mako &
 
 	# Tmux
 	echo "source-file ~/.config/tmux/colors/light.conf" > ~/.config/tmux/colors/color.conf
