@@ -22,6 +22,6 @@ FILENAME="$TARGET_DIR/${NEXT_NUMBER}_vid.mkv"
 SCREEN_RESOLUTION="1920x1200"
 
 sleep 2
-notify-send "Recording screen..."
+notify-send -u normal "Recording screen..."
 wf-recorder --audio -g "$SCREEN_RESOLUTION" -r 24 -f "$FILENAME"
 stty sane

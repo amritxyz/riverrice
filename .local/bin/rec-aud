@@ -22,7 +22,7 @@ FILENAME="$TARGET_DIR/${NEXT_NUMBER}_aud.wav"
 # -ac 2 -ar 44100 -ab 192k
 
 sleep 2  &&
-	notify-send "Recording audio only..." &&
+	notify-send -u normal "Recording audio only..." &&
 	ffmpeg -y \
 	-f alsa -i default \
 	-af "afftdn=nf=-75" \
