@@ -40,6 +40,11 @@ Dark)
 	cp ~/.config/mako/colors/dark ~/.config/mako/colors/color
 	killall mako && mako &
 
+	# QT5CT/QT6CT
+	cp ~/.config/qt5ct/colors/dark.conf ~/.config/qt5ct/colors/color.conf
+	cp ~/.config/qt6ct/colors/dark.conf ~/.config/qt6ct/colors/color.conf
+	killall -s SIGUSR1 qt5ct qt6ct
+
 	# Tmux
 	echo "source-file ~/.config/tmux/colors/dark.conf" > ~/.config/tmux/colors/color.conf
 	tmux source-file ~/.config/tmux/tmux.conf 2>/dev/null
@@ -89,6 +94,10 @@ Light)
 	# Mako
 	cp ~/.config/mako/colors/light ~/.config/mako/colors/color
 	killall mako && mako &
+
+	# QT5CT/QT6CT
+	cp ~/.config/qt5ct/colors/light.conf ~/.config/qt5ct/colors/color.conf
+	cp ~/.config/qt6ct/colors/light.conf ~/.config/qt6ct/colors/color.conf
 
 	# Tmux
 	echo "source-file ~/.config/tmux/colors/light.conf" > ~/.config/tmux/colors/color.conf
