@@ -22,8 +22,8 @@ Dark)
 	echo "riverctl border-color-focused 0xffffff # fg-main" >> ~/.config/river/colors
 	echo "riverctl border-color-unfocused 0x646464 # border" >> ~/.config/river/colors
 	echo "riverctl border-color-urgent 0xff5f59 # red" >> ~/.config/river/colors
-	echo "riverctl spawn "gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'"" >> ~/.config/river/colors
-	echo "riverctl spawn "gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark'"" >> ~/.config/river/colors
+	echo "riverctl spawn \"gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'\"" >> ~/.config/river/colors
+	echo "riverctl spawn \"gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark'\"" >> ~/.config/river/colors
 	sed -i   -e "s/GTK_THEME=Adwaita:light/GTK_THEME=Adwaita:dark/"   ~/.config/river/init
 	riverctl map normal Mod4+Shift B spawn 'GTK_THEME=Adwaita:dark bleachbit'
 
@@ -69,8 +69,8 @@ Dark)
 	sed -i 's|include light|include dark|' ~/.config/zathura/zathurarc
 	killall -SIGUSR2 zathura
 
-	gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark'
-	gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
+	riverctl spawn "gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark'"
+	riverctl spawn "gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'"
 
 	notify-send -u low "Theme Changed" "Dark mode activated"
 
@@ -92,8 +92,8 @@ Light)
 	echo "riverctl border-color-focused 0x000000 # fg-main" >> ~/.config/river/colors
 	echo "riverctl border-color-unfocused 0x9f9f9f # border" >> ~/.config/river/colors
 	echo "riverctl border-color-urgent 0xa60000 # red" >> ~/.config/river/colors
-	echo "riverctl spawn "gsettings set org.gnome.desktop.interface color-scheme 'prefer-light'"" >> ~/.config/river/colors
-	echo "riverctl spawn "gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita'"" >> ~/.config/river/colors
+	echo "riverctl spawn \"gsettings set org.gnome.desktop.interface color-scheme 'prefer-light'\"" >> ~/.config/river/colors
+	echo "riverctl spawn \"gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita'\"" >> ~/.config/river/colors
 	sed -i   -e "s/GTK_THEME=Adwaita:dark/GTK_THEME=Adwaita:light/"   ~/.config/river/init
 	riverctl map normal Mod4+Shift B spawn 'GTK_THEME=Adwaita:light bleachbit'
 
@@ -138,8 +138,8 @@ Light)
 	sed -i 's|^include .*|include "~/.config/zathura/light"|' ~/.config/zathura/zathurarc
 	killall -SIGUSR2 zathura
 
-	gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita'
-	gsettings set org.gnome.desktop.interface color-scheme 'prefer-light'
+	riverctl spawn "gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita:light'"
+	riverctl spawn "gsettings set org.gnome.desktop.interface color-scheme 'prefer-light'"
 
 	notify-send -u low "Theme Changed" "Light mode activated"
 

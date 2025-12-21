@@ -13,7 +13,7 @@ export LIBVA_DRIVER_NAME=iHD
 
 # Libre-office
 export SAL_USE_VCLPLUGIN=gtk3
-export GTK_THEME=Adwaita:dark
+# export GTK_THEME=Adwaita:dark
 # export QT_STYLE_OVERRIDE=Adwaita-Dark
 # export GSK_RENDERER=gl
 # export ADW_DEBUG_COLOR_SCHEME=prefer-dark
