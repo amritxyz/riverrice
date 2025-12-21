@@ -12,7 +12,7 @@ riverctl map normal $mod Q close
 # spawn some programs
 riverctl map normal $mod W spawn firefox
 riverctl map normal $mod+Shift W spawn 'firefox --private-window'
-riverctl map normal $mod+Shift B spawn bleachbit
+riverctl map normal $mod+Shift B spawn 'GTK_THEME=Adwaita:dark bleachbit'
 riverctl map normal $mod g spawn gimp
 riverctl map normal $mod+Shift N spawn 'foot -e newsboat'
 riverctl map normal $mod Escape spawn 'foot -T top -e sh -c "pkill -SIGKILL htop || htop"'

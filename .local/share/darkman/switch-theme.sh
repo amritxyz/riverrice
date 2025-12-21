@@ -24,6 +24,8 @@ Dark)
 	echo "riverctl border-color-urgent 0xff5f59 # red" >> ~/.config/river/colors
 	echo "riverctl spawn "gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'"" >> ~/.config/river/colors
 	echo "riverctl spawn "gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark'"" >> ~/.config/river/colors
+	sed -i   -e "s/GTK_THEME=Adwaita:light/GTK_THEME=Adwaita:dark/"   ~/.config/river/init
+	riverctl map normal Mod4+Shift B spawn 'GTK_THEME=Adwaita:dark bleachbit'
 
 	# Foot
 	echo "initial-color-theme=1" > ~/.config/foot/colors.ini
@@ -92,6 +94,8 @@ Light)
 	echo "riverctl border-color-urgent 0xa60000 # red" >> ~/.config/river/colors
 	echo "riverctl spawn "gsettings set org.gnome.desktop.interface color-scheme 'prefer-light'"" >> ~/.config/river/colors
 	echo "riverctl spawn "gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita'"" >> ~/.config/river/colors
+	sed -i   -e "s/GTK_THEME=Adwaita:dark/GTK_THEME=Adwaita:light/"   ~/.config/river/init
+	riverctl map normal Mod4+Shift B spawn 'GTK_THEME=Adwaita:light bleachbit'
 
 	# Foot
 	echo "initial-color-theme=2" > ~/.config/foot/colors.ini
