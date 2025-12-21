@@ -1,0 +1,84 @@
+# warning; the trailing whitespace is intended!
+
+colorscheme green
+source ~/.config/cmus/colors/color
+
+set format_current= %a - %t %= %l (%4y)
+set format_statusline= %{status} %{position}/%{duration} [%{total}] %{codec} %{bitrate}kbps %= Playing from: %{playlist_mode} [%1{continue}%1{follow}%1{repeat}%1{shuffle}]
+set format_title=🎶 %a - %t
+set format_trackwin=   %t %= %4y  %5d
+set format_trackwin_va=   %t %= %4y  %5d
+set format_trackwin_album= %l
+set format_playlist= %20%a - %-50%t %= %-30%l  %4y  %5d
+set format_playlist_va= %20%a - %-50%t %= %-30%l  %4y  %5d
+
+set status_display_program=advanced-cmus-status
+
+set follow=true
+set continue=true
+set shuffle=true
+set repeat=true
+set auto_expand_albums_follow=false
+set auto_expand_albums_search=false
+set auto_expand_albums_selcur=false
+set show_all_tracks=true
+set show_current_bitrate=true
+set show_remaining_time=true
+set mouse=true
+
+set replaygain=track
+
+bind -f common a toggle aaa_mode
+bind -f common d win-remove
+bind -f common p player-pause
+bind -f common right player-next
+bind -f common left player-prev
+bind -f common ^C quit -i
+bind -f common Q quit -i
+
+unbind -f common +
+unbind -f common -
+unbind -f common ,
+unbind -f common .
+unbind -f common =
+unbind -f common ?
+unbind -f browser space
+unbind -f browser backspace
+unbind -f common D
+unbind -f common E
+unbind -f common F
+unbind -f common I
+unbind -f common L
+unbind -f common M
+unbind -f common P
+unbind -f common U
+unbind -f common [
+unbind -f common ]
+unbind -f common {
+unbind -f common }
+unbind -f common b
+unbind -f common c
+unbind -f common delete
+unbind -f common end
+unbind -f common home
+unbind -f browser i
+unbind -f common o
+unbind -f common t
+unbind -f browser u
+unbind -f common v
+unbind -f common x
+unbind -f common y
+unbind -f common z
+
+bind -f common n search-next
+bind -f common N search-prev
+bind -f common ^N player-next
+bind -f common ^P player-prev
+bind -f common s toggle shuffle
+bind -f common S toggle shuffle
+bind -f common space player-pause
+bind -f common ^R refresh
+bind -f common R refresh
+bind -f common r refresh
+bind -f common ^H left-view -n
+bind -f common ^L right-view -n

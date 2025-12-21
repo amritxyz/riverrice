@@ -29,6 +29,10 @@ Dark)
 	echo "initial-color-theme=1" > ~/.config/foot/colors.ini
 	killall -s SIGUSR1 foot
 
+	# Cmus
+	cp ~/.config/cmus/colors/dark ~/.config/cmus/colors/color
+	cmus-remote -C "source ~/.config/cmus/colors/color"
+
 	# Neovim
 	sed -i "s/modus_operandi/modus_vivendi/g" \
 		/home/void/.config/nvim/lua/plugins/color.lua
@@ -86,6 +90,10 @@ Light)
 	# Foot
 	echo "initial-color-theme=2" > ~/.config/foot/colors.ini
 	killall -s SIGUSR2 foot
+
+	# Cmus
+	cp ~/.config/cmus/colors/light ~/.config/cmus/colors/color
+	cmus-remote -C "source ~/.config/cmus/colors/color"
 
 	# Neovim
 	sed -i "s/modus_vivendi/modus_operandi/g" \
