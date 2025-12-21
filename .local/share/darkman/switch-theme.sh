@@ -70,6 +70,8 @@ Dark)
 	gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark'
 	gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
 
+	notify-send -u low "Theme Changed" "Dark mode activated"
+
 	;;
 
 Light)
@@ -134,6 +136,8 @@ Light)
 
 	gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita'
 	gsettings set org.gnome.desktop.interface color-scheme 'prefer-light'
+
+	notify-send -u low "Theme Changed" "Light mode activated"
 
 	;;
 
