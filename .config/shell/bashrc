@@ -13,6 +13,11 @@ PS1="\n\[\e[38;5;33m\]\w\[\e[0m\] \
 export LS_COLORS='di=38;5;240:fi=38;5;248:ln=38;5;109:ex=38;5;113:'
 eval "$(dircolors -b)"
 
+# Fzf
+if [ -f "$HOME/.config/fzf/color" ]; then
+    FZF_DEFAULT_OPTS="$(cat ~/.config/fzf/color)"
+fi
+
 # Shell options and settings
 shopt -s autocd
 stty -ixon -ixoff
@@ -92,13 +97,3 @@ alias gt='git ls-tree -r main --name-only'
 alias gb='git branch'
 alias gf='git fetch'
 alias glg='git log --graph --abbrev-commit --decorate --format=format:"%C(bold green)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold yellow)(%ar)%C(reset)%C(auto)%d%C(reset)%n%  C(white)%s%C(reset) %C(dim white)- %an%C(reset)" --all'
-
-man() {
-    LESS_TERMCAP_md=$'\e[01;34m' \
-    LESS_TERMCAP_me=$'\e[0m' \
-    LESS_TERMCAP_se=$'\e[0m' \
-    LESS_TERMCAP_so=$'\e[01;44;90m' \
-    LESS_TERMCAP_ue=$'\e[0m' \
-    LESS_TERMCAP_us=$'\e[01;32m' \
-    command man "$@"
-}
