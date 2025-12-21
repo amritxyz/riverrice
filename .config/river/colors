@@ -2,3 +2,5 @@ riverctl background-color 0x000000 # bg-main
 riverctl border-color-focused 0xffffff # fg-main
 riverctl border-color-unfocused 0x646464 # border
 riverctl border-color-urgent 0xff5f59 # red
+riverctl spawn gsettings set org.gnome.desktop.interface color-scheme prefer-dark
+riverctl spawn gsettings set org.gnome.desktop.interface gtk-theme Adwaita-dark

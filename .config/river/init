@@ -146,11 +146,9 @@ riverctl spawn /lib/xdg-desktop-portal
 riverctl spawn /lib/xdg-desktop-portal-gtk
 riverctl spawn /lib/xdg-desktop-portal-wlr
 
-riverctl spawn "gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'"
-riverctl spawn "gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark'"
 riverctl spawn "gsettings set org.gnome.desktop.interface cursor-theme 'hicolor'"
 riverctl spawn "gsettings set org.gnome.desktop.interface cursor-size 16"
-riverctl spawn "gsettings set org.gnome.desktop.interface font-name 'sans 10'"
+riverctl spawn "gsettings set org.gnome.desktop.interface font-name 'freesans 12'"
 riverctl spawn "gsettings set org.gnome.desktop.interface monospace-font-name 'mono 10'"
 riverctl spawn "gsettings set org.gnome.desktop.session session-name 'river'"
 riverctl spawn "gsettings set org.gnome.desktop.wm.preferences button-layout 'none'"
@@ -159,7 +157,6 @@ riverctl spawn "gsettings set org.gnome.desktop.wm.preferences action-middle-cli
 riverctl spawn "gsettings set org.gnome.desktop.wm.preferences action-left-click-titlebar 'none'"
 riverctl spawn "gsettings set org.gnome.desktop.wm.preferences action-double-click-titlebar 'none'"
 riverctl spawn "gsettings set org.gnome.desktop.wm.preferences titlebar-font 'none'"
-
 
 riverctl keyboard-layout -options 'compose:ralt' us
 riverctl set-repeat 80 300
