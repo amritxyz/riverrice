@@ -1,18 +1,24 @@
-background-color=#1d2021
-text-color=#ddc7a1
-border-color=#000000
-
-[urgency=low]
 background-color=#ffffff
 text-color=#000000
+border-color=#9f9f9f
+border-size=2
+border-radius=4
+padding=8
+
+[urgency=low]
+background-color=#f2f2f2
+text-color=#595959
+border-color=#9f9f9f
 default-timeout=3000
 
 [urgency=normal]
-background-color=#d0bc00
-default-timeout=5000
+background-color=#ffffff
 text-color=#000000
+border-color=#0031a9
+default-timeout=5000
 
 [urgency=critical]
-background-color=#ff5f59
+background-color=#fff1f0
+text-color=#8f1313
+border-color=#a60000
 default-timeout=8000
-text-color=#000000
