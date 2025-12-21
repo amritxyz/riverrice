@@ -18,7 +18,7 @@
 
         "modules-right": [
                 "tray",
-                "cpu_text",
+                "temperature",
                 "cpu",
                 "memory",
                 "battery",
@@ -52,6 +52,14 @@
                 }
         },
 
+        "temperature": {
+                "format": "{temperatureC}°c",
+                "interval": 5,
+                "hwmon-path": "/sys/class/hwmon/hwmon5/temp1_input",
+                "critical-threshold": 80,
+                "tooltip": false
+        },
+
         "memory": {
                 "format": "mem {percentage}%",
                 "interval": 2,
@@ -71,9 +79,10 @@
                         "critical": 15
                 },
                 "events": {
-                     "on-discharging-warning": "notify-send -u normal 'Low Battery'",
-                     "on-discharging-critical": "notify-send -u critical 'Very Low Battery'",
-                     "on-charging-100": "notify-send -u low 'Battery Full!'"
+                        "on-charging-100": "test -f /tmp/battery_full_notified || (notify-send -u low 'Battery Full!' && touch /tmp/battery_full_notified)",
+                        "on-discharging-warning": "test -f /tmp/battery_low_notified || (notify-send -u normal 'Low Battery' && touch /tmp/battery_low_notified)",
+                        "on-discharging-critical": "test -f /tmp/battery_critical_notified || (notify-send -u critical 'Very Low Battery' && touch /tmp/battery_critical_notified)",
+                        "on-discharging-*": "test $(cat /sys/class/power_supply/BAT0/capacity) -lt 100 && rm -f /tmp/battery_full_notified"
                 },
                 "tooltip": false
         },
