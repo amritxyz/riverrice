@@ -1,7 +1,7 @@
 #!/bin/sh
 
 export WM="river"
-export WL="waylock -ignore-empty-password"
+export WL="waylock -init-color 0x000000 -input-color 0x338fff -fail-color 0xff5f59 -ignore-empty-password"
 export CTL='systemctl'
 
 choice=$(printf "lock\nsleep\nlogout\nreboot\nshutdown" | \

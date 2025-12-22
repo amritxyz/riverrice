@@ -1,5 +1,5 @@
 [options]
-background = #000000
+background = #ffffff
 overlay = false
 overlay_font = monospace:14
 
@@ -12,3 +12,4 @@ overlay_font = monospace:14
 <R> = reset
 <m> = flip horizontal
 <Shift+M> = flip vertical
+<y> = exec wl-copy < $imv_current_file

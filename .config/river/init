@@ -12,7 +12,7 @@ riverctl map normal $mod Q close
 # spawn some programs
 riverctl map normal $mod W spawn firefox
 riverctl map normal $mod+Shift W spawn 'firefox --private-window'
-riverctl map normal $mod+Shift B spawn 'GTK_THEME=Adwaita:dark bleachbit'
+riverctl map normal $mod+Shift B spawn 'bleachbit'
 riverctl map normal $mod g spawn gimp
 riverctl map normal $mod+Shift N spawn 'foot -e newsboat'
 riverctl map normal $mod Escape spawn 'foot -T top -e sh -c "pkill -SIGKILL htop || htop"'
@@ -139,7 +139,10 @@ do
     riverctl map $mode None XF86AudioNext  spawn 'playerctl next'
 done
 
-riverctl spawn '~/.config/river/colors'
+riverctl background-color 0xffffff # bg-main
+riverctl border-color-focused 0x000000 # fg-main
+riverctl border-color-unfocused 0x9f9f9f # border
+riverctl border-color-urgent 0xa60000 # red
 
 riverctl spawn "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=river"
 riverctl spawn "systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=river"
@@ -147,6 +150,8 @@ riverctl spawn /lib/xdg-desktop-portal
 riverctl spawn /lib/xdg-desktop-portal-gtk
 riverctl spawn /lib/xdg-desktop-portal-wlr
 
+riverctl spawn "gsettings set org.gnome.desktop.interface color-scheme 'prefer-light'"
+riverctl spawn "gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita'"
 riverctl spawn "gsettings set org.gnome.desktop.interface cursor-theme 'hicolor'"
 riverctl spawn "gsettings set org.gnome.desktop.interface cursor-size 16"
 riverctl spawn "gsettings set org.gnome.desktop.interface font-name 'freesans 12'"
@@ -159,7 +164,6 @@ riverctl spawn "gsettings set org.gnome.desktop.wm.preferences action-left-click
 riverctl spawn "gsettings set org.gnome.desktop.wm.preferences action-double-click-titlebar 'none'"
 riverctl spawn "gsettings set org.gnome.desktop.wm.preferences titlebar-font 'none'"
 
-riverctl keyboard-layout -options 'compose:ralt' us
 riverctl set-repeat 80 300
 
 riverctl rule-add ssd

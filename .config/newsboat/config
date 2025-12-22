@@ -22,6 +22,27 @@ bind-key D pb-download
 bind-key U show-urls
 bind-key x pb-delete
 
+color listnormal default default
+color listfocus white red standout bold
+color listnormal_unread cyan default
+color listfocus_unread white blue standout bold
+color info red default bold
+color article default default
+
+highlight all "---.*---" yellow default
+highlight feedlist ".*(0/0))" black default
+highlight article "(^Feed:.*|^Title:.*|^Author:.*)" cyan default bold
+highlight article "(^Date:.*)" default default
+highlight article "(^Link:.*)" blue default
+highlight article "https?://[^ ]+" blue default
+highlight article "^(Title):.*$" yellow default
+highlight article "\\[[0-9][0-9]*\\]" magenta default bold
+highlight article "\\[image\\ [0-9]+\\]" green default bold
+highlight article "\\[embedded flash: [0-9][0-9]*\\]" green default bold
+highlight article ":.*\\(link\\)$" blue default
+highlight article ":.*\\(image\\)$" blue black
+highlight article ":.*\\(embedded flash\\)$" magenta default
+
 browser "firefox --private-window %u &"
 macro , open-in-browser
 macro t set browser "qndl" ; open-in-browser ; set browser linkhandler
@@ -33,5 +54,3 @@ macro c set browser "echo %u | xclip -r -sel c" ; open-in-browser ; set browser 
 macro C set browser "youtube-viewer --comments=%u" ; open-in-browser ; set browser linkhandler
 macro p set browser "peertubetorrent %u 480" ; open-in-browser ; set browser linkhandler
 macro P set browser "peertubetorrent %u 1080" ; open-in-browser ; set browser linkhandler
-
-include "~/.config/newsboat/colors/color"
