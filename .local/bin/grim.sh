@@ -1,6 +1,6 @@
 #!/bin/sh
 
-SAVE_DIR="$HOME/.local/ss"
+SAVE_DIR="$HOME/.local/img/ss"
 mkdir -p "$SAVE_DIR"
 
 max=0
