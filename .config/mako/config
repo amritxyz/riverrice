@@ -1,6 +1,4 @@
 font=monospace 12
-border-size=2
-border-radius=0
 icons=0
 text-alignment=left
 default-timeout=5000
@@ -8,8 +6,8 @@ default-timeout=5000
 background-color=#ffffff
 text-color=#000000
 border-color=#9f9f9f
-border-size=2
-border-radius=4
+border-size=4
+border-radius=0
 padding=8
 
 [urgency=low]
