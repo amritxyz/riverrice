@@ -27,6 +27,7 @@ riverctl map normal $mod E spawn 'pkill -SIGKILL fuzzel || ~/.local/bin/emoji.sh
 riverctl map normal $mod O spawn 'pkill -SIGKILL fuzzel || ~/.local/bin/snippet.sh'
 riverctl map normal $mod+Shift O spawn 'pkill -SIGKILL fuzzel || ~/.local/bin/key.sh'
 riverctl map normal $mod+Shift S spawn 'pkill -SIGKILL slurp || ~/.local/bin/grim.sh'
+riverctl map normal $mod S spawn 'pkill -SIGKILL fuzzel || ~/.local/bin/disp.sh'
 riverctl map normal $mod X spawn 'pkill -SIGKILL slurp || ~/.local/bin/tmp_preview_grim.sh'
 riverctl map normal $mod+Shift X spawn 'pkill -SIGKILL slurp || ~/.local/bin/tmp_grim.sh'
 riverctl map normal $mod+Shift C spawn '~/.local/bin/caps_esc'
