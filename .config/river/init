@@ -15,10 +15,10 @@ riverctl map normal $mod+Shift W spawn 'firefox --private-window'
 riverctl map normal $mod+Shift B spawn 'bleachbit'
 riverctl map normal $mod g spawn gimp
 riverctl map normal $mod+Shift N spawn 'foot -e newsboat'
-riverctl map normal $mod Escape spawn 'foot -T top -e sh -c "pkill -SIGKILL htop || htop"'
+riverctl map normal $mod Escape spawn 'foot -T top -w 1400x800 -e sh -c "pkill -SIGKILL htop || htop"'
 riverctl map normal $mod N spawn 'pkill -SIGKILL fuzzel || ~/.local/bin/notes.sh'
 riverctl map normal $mod I spawn 'foot -e lf'
-riverctl map normal $mod P spawn 'foot -T top -e sh -c "pkill -SIGKILL pulsemixer || pulsemixer"'
+riverctl map normal $mod P spawn 'foot -T top -w 1200x600 -e sh -c "pkill -SIGKILL pulsemixer || pulsemixer"'
 riverctl map normal $mod+Shift P spawn 'foot -e sh -c "pkill -SIGKILL nmtui || nmtui"'
 
 # riverctl map normal $mod D spawn 'tofi-drun --drun-launch=true'
@@ -30,6 +30,7 @@ riverctl map normal $mod+Shift S spawn 'pkill -SIGKILL slurp || ~/.local/bin/gri
 riverctl map normal $mod S spawn 'pkill -SIGKILL fuzzel || ~/.local/bin/disp.sh'
 riverctl map normal $mod X spawn 'pkill -SIGKILL slurp || ~/.local/bin/tmp_preview_grim.sh'
 riverctl map normal $mod+Shift X spawn 'pkill -SIGKILL slurp || ~/.local/bin/tmp_grim.sh'
+riverctl map normal $mod C spawn 'pkill -SIGKILL slurp || ~/.local/bin/color_picker.sh'
 riverctl map normal $mod+Shift C spawn '~/.local/bin/caps_esc'
 riverctl map normal $mod M spawn '~/.local/bin/river_touchpad.sh enable'
 riverctl map normal $mod+Shift M spawn '~/.local/bin/river_touchpad.sh disable'
@@ -144,7 +145,7 @@ riverctl background-color 0xffffff
 riverctl border-color-focused 0x000000
 riverctl border-color-unfocused 0xe3e3e3
 riverctl border-color-urgent 0xa60000
-riverctl border-width 4
+riverctl border-width 3
 
 riverctl spawn "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=river"
 riverctl spawn "systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=river"
@@ -171,9 +172,8 @@ riverctl set-repeat 80 300
 riverctl rule-add ssd
 riverctl rule-add -app-id float float
 riverctl rule-add -app-id 'xdg-desktop-portal*' float
-riverctl rule-add -app-id foot -title 'top' float
+riverctl rule-add -title 'top*' float
 riverctl rule-add -title 'Open*' float
-riverctl close-view -title 'top'
 riverctl rule-add -app-id 'imv*' float
 riverctl rule-add -app-id 'mpv*' float
 riverctl rule-add -app-id 'gimp*' tags 128
