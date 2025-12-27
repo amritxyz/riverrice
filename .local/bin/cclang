@@ -51,13 +51,13 @@ SRC = src/main.c
 OUT = main.o
 
 all:
-${CC} ${CFLAGS} ${SRC} -o ${OUT}
+	${CC} ${CFLAGS} ${SRC} -o ${OUT}
 
 run:
-./${OUT}
+	./${OUT}
 
 clean:
-rm -f ${OUT}
+	rm -f ${OUT}
 EOF
 
 cat > "$n/.gitignore" << 'EOF'
