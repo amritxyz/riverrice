@@ -83,16 +83,20 @@ mkdir -p $HOME/.local/{share,bin,dox,git-repos,hugo-dir,vids,audio}
 # fi
 
 # AUR [ yay-bin ]
-cd "/opt/void/"
-ask ":: Would you like to install AUR helper? [Y/n] "
-read -r AUR
-if [ "$AUR" = "Y" ] || [ "$AUR" = "y" ] || [ -z "$AUR" ]; then
-	git clone --depth=1 https://aur.archlinux.org/yay-bin.git
-	cd yay-bin
-	makepkg -si
-	cd -
-	rm -rf yay-bin
-	success "Successfully installed AUR helper. [ YAY ]"
+if [ ! -f "/usr/bin/yay" ]; then
+	cd "/opt/void/"
+	ask ":: Would you like to install AUR helper? [Y/n] "
+	read -r AUR
+	if [ "$AUR" = "Y" ] || [ "$AUR" = "y" ] || [ -z "$AUR" ]; then
+		git clone --depth=1 https://aur.archlinux.org/yay-bin.git
+		cd yay-bin
+		makepkg -si
+		cd -
+		rm -rf yay-bin
+		success "Successfully installed AUR helper. [ YAY ]"
+	fi
+else
+	warn "yay package already exists. Skipping."
 fi
 
 # Music
