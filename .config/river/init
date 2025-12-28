@@ -145,7 +145,7 @@ riverctl background-color 0xffffff
 riverctl border-color-focused 0x000000
 riverctl border-color-unfocused 0xe3e3e3
 riverctl border-color-urgent 0xa60000
-riverctl border-width 3
+riverctl border-width 2
 
 riverctl spawn "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=river"
 riverctl spawn "systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=river"
