@@ -175,7 +175,7 @@ if [ "$LO" = "Y" ] || [ "$LO" = "y" ] || [ -z "$LO" ]; then
 		mkdir -p $HOME/.config/libreoffice/4/user/
 		touch $HOME/.config/libreoffice/4/user/registrymodifications.xcu
 	fi
-	wget -q --show-progress -O $HOME/.config/libreoffice/4/user/registrymodifications.xcu https://codeberg.org/amritxyz/dev/raw/branch/main/xml/registrymodifications.xcu
+	# wget -q --show-progress -O $HOME/.config/libreoffice/4/user/registrymodifications.xcu https://codeberg.org/amritxyz/dev/raw/branch/main/xml/registrymodifications.xcu
 	sudo pacman -S libreoffice-fresh
 	success "Libre-office successfully installed."
 fi
