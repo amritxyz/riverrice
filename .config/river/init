@@ -141,10 +141,10 @@ do
     riverctl map $mode None XF86AudioNext  spawn 'playerctl next'
 done
 
-riverctl background-color 0xffffff
-riverctl border-color-focused 0x000000
-riverctl border-color-unfocused 0xe3e3e3
-riverctl border-color-urgent 0xa60000
+riverctl background-color 0x1d2021
+# riverctl border-color-focused 0xebdbb2
+riverctl border-color-focused 0x3c3836
+riverctl border-color-unfocused 0x282828
 riverctl border-width 2
 
 riverctl spawn "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=river"
@@ -153,7 +153,7 @@ riverctl spawn /lib/xdg-desktop-portal
 riverctl spawn /lib/xdg-desktop-portal-gtk
 riverctl spawn /lib/xdg-desktop-portal-wlr
 
-riverctl spawn "gsettings set org.gnome.desktop.interface color-scheme 'prefer-light'"
+riverctl spawn "gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'"
 riverctl spawn "gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita'"
 riverctl spawn "gsettings set org.gnome.desktop.interface cursor-theme 'Adwaita'"
 riverctl spawn "gsettings set org.gnome.desktop.interface cursor-size 16"

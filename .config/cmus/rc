@@ -1,7 +1,6 @@
 # warning; the trailing whitespace is intended!
 
-colorscheme green
-source ~/.config/cmus/colors/color
+colorscheme gruvbox
 
 set format_current= %a - %t %= %l (%4y)
 set format_statusline= %{status} %{position}/%{duration} [%{total}] %{codec} %{bitrate}kbps %= Playing from: %{playlist_mode} [%1{continue}%1{follow}%1{repeat}%1{shuffle}]
