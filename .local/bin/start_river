@@ -4,16 +4,13 @@
 # export GPG_TTY=$(tty)
 export PINENTRY_USER_DATA="USE_CURSES=1"
 
-# FZF
-export FZF_DEFAULT_OPTS="--color=light --color=fg:#000000,bg:#ffffff,hl:#0031a9 --color=fg+:#000000,bg+:#e0e0e0,hl+:#0031a9 --color=info:#6f5500,prompt:#193668,pointer:#0031a9 --color=marker:#006800,spinner:#005e8b,header:#595959"
-
 # Video-Acceleration stuffs
 export ANV_DEBUG=video-decode,video-encode
 export LIBVA_DRIVER_NAME=iHD
 
 # Libre-office
 export SAL_USE_VCLPLUGIN=gtk3
-export GTK_THEME=Adwaita:light
+export GTK_THEME=Adwaita:dark
 # export QT_STYLE_OVERRIDE=Adwaita-Light
 export GSK_RENDERER=vulkan
 # export ADW_DEBUG_COLOR_SCHEME=prefer-light
