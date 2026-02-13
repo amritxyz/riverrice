@@ -1,7 +1,7 @@
 {
 	"layer": "top",
 	"spacing": 0,
-	"height": 0,
+	"height": 15,
 
 	"margin-top": 4,
 	"margin-right": 4,
@@ -43,15 +43,6 @@
 		"tooltip": false
 	},
 
-	"cpu": {
-		"format": "cpu {usage}%",
-		"interval": 2,
-		"states": {
-			"warning": 60,
-			"critical": 80
-		}
-	},
-
 	"temperature": {
 		"format": "{temperatureC}°c",
 		"interval": 5,
@@ -60,10 +51,17 @@
 		"tooltip": false
 	},
 
-	"memory": {
-		"format": "mem {percentage}%",
+	"cpu": {
+		"format": "CPU {usage}%",
 		"interval": 2,
+		"states": {
+			"critical": 60
+		}
+	},
 
+	"memory": {
+		"format": "MEM {percentage}%",
+		"interval": 2,
 		"states": {
 			"warning": 60,
 			"critical": 80
@@ -71,14 +69,15 @@
 	},
 
 	"battery": {
-		"format": "bat {capacity}%",
-		"format-charging": "chr {capacity}%",
+		"format": "BAT {capacity}%",
+		"format-charging": "CHR {capacity}%",
 		"interval": 5,
 		"states": {
 			"warning": 35,
 			"critical": 15
 		},
 		"events": {
+			"on-charging-100": "notify-send -u normal 'Battery Full!'",
 			"on-discharging-warning": "notify-send -u normal 'Low Battery'",
 			"on-discharging-critical": "notify-send -u critical 'Very Low Battery'"
 		},
@@ -86,19 +85,20 @@
 	},
 
 	"network": {
-		"format-wifi" : "wifi {bandwidthDownBits}",
-		"format-ethernet": "enth {bandwidthDownBits}",
-		"format-disconnected" : "no network",
+		"format-wifi": "WiFi {bandwidthDownBits}",
+		"format-ethernet": "ETH {bandwidthDownBits}",
+		"format-disconnected": "No Network",
 		"interval": 5,
 		"tooltip": false
 	},
 
 	"pulseaudio": {
-		"scroll-step": 5,
+		"scroll-step": 2,
 		"max-volume": 150,
-		"format": "vol {volume}%",
-		"format-bluetooth": "bt {volume}%",
-		"nospacing": 1,
+		"format": "VOL {volume}%",
+		"format-muted": "VOL {volume}%",
+		"format-bluetooth": "BT VOL {volume}%",
+		"format-bluetooth-muted": "BT VOL {volume}%",
 		"tooltip": false
 	}
 }
