@@ -1,6 +1,6 @@
 #!/bin/sh
 
-browserdir="/home/void/.mozilla/firefox"
+browserdir="/home/void/.config/mozilla/firefox"
 profilesini="$browserdir/profiles.ini"
 
 # Start firefox in headless mode
