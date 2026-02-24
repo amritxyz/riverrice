@@ -35,6 +35,7 @@ riverctl map normal $mod+Shift C spawn '~/.local/bin/caps_esc'
 riverctl map normal $mod M spawn '~/.local/bin/river_touchpad.sh enable'
 riverctl map normal $mod+Shift M spawn '~/.local/bin/river_touchpad.sh disable'
 riverctl map normal $mod A spawn 'foot -e cmus'
+riverctl map normal $mod+Shift A spawn 'pkill -SIGKILL fuzzel || ~/.local/bin/power-manager.sh'
 # riverctl map normal $mod T spawn "pkill -SIGKILL fuzzel || ~/.local/share/darkman/switch-theme.sh"
 
 riverctl map normal $mod Backspace spawn 'sh -c "pkill -SIGKILL wf-recorder; pkill -SIGKILL ffmpeg"'
