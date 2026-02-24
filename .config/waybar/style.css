@@ -59,7 +59,6 @@ tooltip {
 
 /* Modules: CPU, Memory, Battery, Network, PulseAudio */
 #cpu,
-#power-profiles-daemon,
 #temperature,
 #memory,
 #battery,

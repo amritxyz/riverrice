@@ -18,7 +18,6 @@
 
 	"modules-right": [
 		"tray",
-		"power-profiles-daemon",
 		"temperature",
 		"cpu",
 		"memory",
@@ -42,17 +41,6 @@
 	"clock": {
 		"format": "{:%I:%M %p - %a, %d %b %Y}",
 		"tooltip": false
-	},
-
-	"power-profiles-daemon": {
-		"format": "{icon}",
-		"tooltip": false,
-		"format-icons": {
-			"default": "D",
-			"performance": "P",
-			"balanced": "B",
-			"power-saver": "S"
-		}
 	},
 
 	"temperature": {
