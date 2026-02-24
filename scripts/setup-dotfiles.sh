@@ -26,3 +26,6 @@ ln -sfT "$HOME/.config/shell/profile" "$HOME/.profile"
 
 # Move riverrice repo into ~/.local/git-repos
 mkdir -p "$HOME/.local/git-repos"
+
+# TLP Power-management config
+cp -r "$RICE_DIR/.local/share/99-power.conf" "/etc/tlp.d/99-power.conf"
