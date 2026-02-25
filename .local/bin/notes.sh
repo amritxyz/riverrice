@@ -10,7 +10,8 @@ TERMINAL="foot"
 # New note function
 newnote() {
 	# Prompt for name
-	name=$(fuzzel --no-mouse --dmenu --prompt="Enter note name: " -w 50% -I -l 0 <<EOF
+	name=$(fuzzel --no-mouse --dmenu --match-mode=exact --no-sort \
+		--prompt ="Enter note name: " -w 50% -I -l 0 <<EOF
 EOF
 	)
 	[ -z "$name" ] && exit 0
@@ -31,7 +32,8 @@ $files"
 
 	# Show in fuzzel
 	choice=$(echo "$choices" | fuzzel --dmenu \
-		--prompt="Choose note or create new: " -w 50% -I -l 5)
+		--prompt="Choose note or create new: " \
+		-w 50% -I -l 5  --match-mode=exact --no-sort)
 
 	[ -z "$choice" ] && exit 0
 

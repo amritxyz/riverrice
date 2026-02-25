@@ -3,7 +3,7 @@
 if pgrep -x kanshi >/dev/null; then
     choice=$(printf "Yes\nNo\n" |
         fuzzel --dmenu --prompt="Kill existing kanshi? " \
-            -w 50% -I -l 2 --no-mouse)
+            -w 50% -I -l 2 --no-mouse --match-mode=exact --no-sort)
 
     case "$choice" in
         Yes)
@@ -18,7 +18,7 @@ fi
 
 choice=$(printf "Yes\nNo\n" |
     fuzzel --dmenu --prompt="Start kanshi? " \
-        -w 50% -I -l 2 --no-mouse)
+        -w 50% -I -l 2 --no-mouse --match-mode=exact --no-sort)
 
 case "$choice" in
     Yes)
@@ -41,7 +41,7 @@ choice=$(printf '%s\n' \
     "Monitor-UHD" \
     "Mirror" |
     fuzzel --dmenu --prompt="Select display profile: " \
-        -w 50% -I -l 5 --no-mouse)
+        -w 50% -I -l 5 --no-mouse --match-mode=exact --no-sort)
 
 case "$choice" in
     Main)          kanshictl switch main ;;
