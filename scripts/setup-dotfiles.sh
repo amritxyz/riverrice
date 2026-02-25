@@ -28,7 +28,7 @@ ln -sfT "$HOME/.config/shell/profile" "$HOME/.profile"
 mkdir -p "$HOME/.local/git-repos"
 
 # TLP Power-management config
-cp -r "$RICE_DIR/.local/share/99-power.conf" "/etc/tlp.d/99-power.conf"
+sudo cp -r "$RICE_DIR/.local/share/99-power.conf" "/etc/tlp.d/99-power.conf"
 log "Starting TLP service."
 sudo systemctl start tlp.service
 sudo systemctl enable tlp.service
