@@ -11,3 +11,4 @@ pyright
 deno
 typescript
 svelte-language-server
+wabt
