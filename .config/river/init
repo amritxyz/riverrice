@@ -170,7 +170,7 @@ riverctl spawn "gsettings set org.gnome.desktop.wm.preferences titlebar-font 'no
 
 riverctl set-repeat 80 300
 
-riverctl rule-add ssd
+riverctl rule-add ssd tearing
 riverctl rule-add -app-id float float
 riverctl rule-add -app-id 'xdg-desktop-portal*' float
 riverctl rule-add -title 'top*' float
@@ -180,8 +180,8 @@ riverctl rule-add -app-id 'mpv*' float
 riverctl rule-add -app-id 'gimp*' tags 128
 riverctl rule-add -app-id 'org.pwmt.zathura*' float
 
-riverctl hide-cursor timeout 5000
-riverctl hide-cursor when-typing enabled
+riverctl hide-cursor timeout 3000
+riverctl hide-cursor when-typing disable
 riverctl xcursor-theme Adwaita 24
 riverctl input "$TOUCHPAD_ID" pointer-accel 0.3
 
