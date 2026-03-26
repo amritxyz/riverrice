@@ -16,8 +16,8 @@ else
 	warn "Neovim config already exists. Skipping."
 fi
 
-# Move riverrice repo into ~/.local/git-repos
-mv "$RICE_DIR" "$HOME/.local/git-repos/riverrice"
+# Move dotfiles repo into ~/.local/git-repos
+mv "$RICE_DIR" "$HOME/.local/git-repos/dotfiles"
 
 export XDG_STATE_HOME="$HOME/.local/state"
 export HISTFILE="$XDG_STATE_HOME/bash/history"

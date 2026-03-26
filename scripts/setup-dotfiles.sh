@@ -24,5 +24,5 @@ cp -r "$RICE_DIR/.local/bin/"* "$HOME/.local/bin"
 ln -sfT "$HOME/.config/shell/bashrc" "$HOME/.bashrc"
 ln -sfT "$HOME/.config/shell/profile" "$HOME/.profile"
 
-# Move riverrice repo into ~/.local/git-repos
+# Move dotfiles repo into ~/.local/git-repos
 mkdir -p "$HOME/.local/git-repos"
