@@ -50,6 +50,12 @@ echo
 bash "$SCRIPT_DIR/cursor.sh"
 
 echo
+bash "$SCRIPT_DIR/dwl.sh"
+
+echo
+bash "$SCRIPT_DIR/power-saving.sh"
+
+echo
 bash "$SCRIPT_DIR/posix.sh"
 
 echo
