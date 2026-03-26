@@ -81,20 +81,20 @@
 	<!-- Set default monospace font -->
 	<alias>
 		<family>monospace</family>
-		<prefer><family>DejaVu Sans Mono</family></prefer>
+		<prefer><family>IBM Plex Mono</family></prefer>
 	</alias>
 	<alias>
-		<family>DejaVu Sans Mono</family>
+		<family>IBM Plex Mono</family>
 		<default><family>monospace</family></default>
 	</alias>
 
 	<!-- Set default sans-serif font -->
 	<alias>
 	  <family>sans-serif</family>
-	  <prefer><family>DejaVu Sans</family></prefer>
+	  <prefer><family>Atkinson Hyperlegible</family></prefer>
 	</alias>
 	<alias>
-	  <family>DejaVu Sans</family>
+	  <family>Atkinson Hyperlegible</family>
 	  <default><family>sans-serif</family></default>
 	</alias>
 

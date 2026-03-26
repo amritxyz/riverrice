@@ -1,22 +1,22 @@
-# River Rice  
-**Personal dotfiles for my minimalist Wayland setup using [River](https://codeberg.org/river/river).**
+# Dot-files
+**Personal dot configs for my minimalist Wayland setup using [Dwl](https://codeberg.org/dwl/dwl) [fork of 'DWM'].**
 
 ---
 
 ## Installation
 
 ```bash
-git clone --depth=1 https://codeberg.org/amrit/riverrice.git ~/riverrice
-sh ~/riverrice/scripts/install.sh
+git clone --depth=1 https://codeberg.org/amrit/dotfiles.git ~/dotfiles
+sh ~/dotfiles/scripts/install.sh
 ```
 
 ---
 
 ## What's Included
 
-You can see the included packages *[here](https://codeberg.org/amrit/riverrice/src/branch/main/packages)*.
+You can see the included packages *[here](https://codeberg.org/amrit/dotfiles/src/branch/main/packages)*.
 
-- Dynamic Wayland compositor: **River**
+- Dynamic Wayland compositor: **DWL**
 - Themed with **Adwaita**
 - Minimal configs for:
   - Waybar

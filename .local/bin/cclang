@@ -28,36 +28,52 @@ cat > "$s/main.h" << 'EOF'
 
 #include <stdint.h>
 
-typedef uint8_t   u8;
-typedef uint16_t  u16;
-typedef uint32_t  u32;
-typedef uint64_t  u64;
+typedef uint8_t u8;
+typedef uint16_t u16;
+typedef uint32_t u32;
+typedef uint64_t u64;
 
-typedef int8_t    i8;
-typedef int16_t   i16;
-typedef int32_t   i32;
-typedef int64_t   i64;
+typedef int8_t i8;
+typedef int16_t i16;
+typedef int32_t i32;
+typedef int64_t i64;
 
-typedef float     f32;
-typedef double    f64;
+typedef i8 b8;
+typedef i32 b32;
+
+typedef float f32;
+typedef double f64;
 
 #endif
 EOF
 
 cat > "$n/Makefile" << 'EOF'
-CC = cc
-CFLAGS = -Wall -Wextra -std=c99
-SRC = src/main.c
-OUT = main.o
+CC      = cc
+CFLAGS  = -Wall -Werror -Wextra -std=c99 -Isrc
+# LDFLAGS = -lm
+SRC     = src/main.c
+OBJ     = build/main.o
+OUT     = bin/main
+HEADERS = src/main.h
 
-all:
-	${CC} ${CFLAGS} ${SRC} -o ${OUT}
+all: dirs $(OUT)
 
-run:
-	./${OUT}
+dirs:
+	mkdir -p build bin
+
+build/%.o: src/%.c $(HEADERS)
+	$(CC) $(CFLAGS) -c $< -o $@
+
+$(OUT): $(OBJ)
+	$(CC) $(OBJ) $(LDFLAGS) -o $(OUT)
+
+run: all
+	./$(OUT)
 
 clean:
-	rm -f ${OUT}
+	rm -rf build bin
+
+.PHONY: all dirs run clean
 EOF
 
 cat > "$n/.gitignore" << 'EOF'
@@ -65,6 +81,7 @@ cat > "$n/.gitignore" << 'EOF'
 *.out
 *.obj
 build/
+bin/
 EOF
 
 echo "Project $n created."

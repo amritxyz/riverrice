@@ -1,3 +1,0 @@
-#!/bin/sh
-
-riverctl keyboard-layout -options 'caps:swapescape,ctrl:menu_rctrl' us

@@ -21,8 +21,8 @@ cmd mkfile ${{
 cmd open &{{
 	case $(file --mime-type -Lb $f) in
 		text/*|application/json|application/javascript|inode/*|application/*-ini) lf -remote "send $id \$nvim \$fx";;
-		image/*) pkill -SIGKILL imv; imv -W 1100 -H 575 "$f";;
-		audio/*|video/*|application/ogg) pkill -SIGKILL mpv; mpv --geometry=50% --force-window "$f";;
+		image/*) imv -W 1100 -H 575 "$f";;
+		audio/*|video/*|application/ogg) mpv --geometry=50% --force-window "$f";;
 		application/pdf|image/vnd.djvu|application/x-cbr|application/x-cbz|application/x-comic|application/x-comic+zip) zathura "$f";;
 		application/vnd.oasis.opendocument.*|application/vnd.ms-office|application/vnd.openxmlformats-officedocument.*|application/vnd.sun.xml.*) libreoffice "$f";;
 		*) xdg-open "$f"
@@ -53,25 +53,35 @@ cmd extract ${{
 	}
 }}
 
+cmd setwall ${{
+	case "$f" in
+		*.jpg|*.png)
+			sed -i "s|^bgloc=.*|bgloc=\"$f\"|" "$HOME/.local/bin/setbgw"
+			"$HOME/.local/bin/setbgw"
+			;;
+		*)
+			printf "Not an image file\n"
+			;;
+	esac
+}}
+
 # Bindings
 map c
 map d
 map m
 
 map zi extract
+map a setwall
 
 # Basic Functions
 map . set hidden!
 map dd delete
 map du %du -sh "$f"
-map a %pkill -SIGKILL swaybg;nohup swaybg -i "$f" > /dev/null 2>&1 &
 
 # Backup
 map bak %bak "$f"
 
-# map u $trashy restore -r 0
-map dr $trashy restore
-map de $trashy empty --all
+map o $mpv --force-window "$f"
 map p paste
 map x cut
 map y copy
@@ -94,6 +104,7 @@ map ga cd ~/.local/audio
 map gv cd ~/.local/vids
 map gs cd ~/.local/share
 map gr cd ~/.local/git-repos
+map gw cd ~/.local/share/arch-wall
 map gp cd ~/.local/practice
 map gl cd ~/.local/dl
 map gx cd ~/.local/dox

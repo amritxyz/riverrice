@@ -10,7 +10,7 @@ export LIBVA_DRIVER_NAME=iHD
 
 # Libre-office
 export SAL_USE_VCLPLUGIN=gtk3
-export GTK_THEME=Adwaita:dark
+export GTK_THEME=Adwaita:light
 # export QT_STYLE_OVERRIDE=Adwaita-Light
 export GSK_RENDERER=vulkan
 # export ADW_DEBUG_COLOR_SCHEME=prefer-light
@@ -27,7 +27,7 @@ export SDL_VIDEODRIVER=wayland
 export NO_AT_BRIDGE=1
 
 export XDG_SESSION_TYPE=wayland
-export XDG_SESSION_DESKTOP=river
-export XDG_CURRENT_DESKTOP=river
+export XDG_SESSION_DESKTOP=dwl
+export XDG_CURRENT_DESKTOP=dwl
 
-exec river
+exec someblocks -p | dwl -s "setbgw"

@@ -4,3 +4,5 @@ qt5-wayland
 qt5ct
 qt6-wayland
 qt6ct
+wlroots0.19
+fcft

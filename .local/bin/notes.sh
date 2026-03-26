@@ -1,52 +1,56 @@
 #!/bin/sh
 
-# Config
 folder="$HOME/.local/dox/notes/mds/"
-mkdir -p "$folder"
-
-# Terminal
+bakdir="/opt/void/bak/notes"
+mkdir -p "$folder" "$bakdir"
 TERMINAL="foot"
 
-# New note function
-newnote() {
-	# Prompt for name
-	name=$(fuzzel --no-mouse --dmenu --match-mode=exact --no-sort \
-		--prompt ="Enter note name: " -w 50% -I -l 0 <<EOF
-EOF
-	)
-	[ -z "$name" ] && exit 0
-	[ -z "$name" ] || name=$(date +%F_%H-%M-%S)
-	name=$(echo "$name" | sed 's/[[:space:]]\+/_/g')
-	setsid -f "$TERMINAL" --title="$name" nvim "$folder${name}.md" >/dev/null 2>&1
+do_backup() {
+	src="$1"
+	[ -f "$src" ] || exit 1
+	cp "$src" "$bakdir/$(basename "$src")"
 }
 
-# Select existing or create new
+open_nvim() {
+	filepath="$1"
+	script_path="$(realpath "$0")"   # absolute path so nvim can call back
+
+	nvim_cmd="autocmd BufWritePost /home/void/.local/dox/notes/mds/*.md silent !sh '${script_path}' --backup <afile>:p"
+
+	setsid -f "$TERMINAL" -e nvim \
+		-c "$nvim_cmd" \
+		"$filepath" >/dev/null 2>&1
+	}
+
+if [ "$1" = "--backup" ]; then
+	do_backup "$2"
+	exit 0
+fi
+
+newnote() {
+	[ -z "$name" ] && name=$(date +%F_%H-%M-%S)
+	name=$(echo "tmp_$name" | sed 's/[[:space:]]\+/_/g')
+	open_nvim "${folder}${name}.md"
+}
+
 selected() {
-	# List note names (without .md, spaces instead of underscores), sorted newest first
 	files=$(find "$folder" -maxdepth 1 -name "*.md" -type f -printf '%f\n' | \
 		sed 's/\.md$//' | sed 's/_/ /g' | sort -r)
-
-	# Build list: "New" + one note per line (no indentation!)
-	choices="New
-$files"
-
-	# Show in fuzzel
-	choice=$(echo "$choices" | fuzzel --dmenu \
-		--prompt="Choose note or create new: " \
-		-w 50% -I -l 5  --match-mode=exact --no-sort)
-
+	choices=$(printf "new\n$files")
+	choice=$(printf '%s\n' "$choices" | fuzzel --no-mouse --dmenu --match-mode=exact --no-sort \
+		--prompt "Note name: " -w 50% -I -l 10)
 	[ -z "$choice" ] && exit 0
 
 	case "$choice" in
-		New) newnote ;;
+		"new")
+			newnote ;;
 		*)
 			filename=$(echo "$choice" | sed 's/[[:space:]]\+/_/g')
-			filepath="$folder${filename}.md"
+			filepath="${folder}${filename}.md"
 			[ ! -f "$filepath" ] && echo "# $choice" > "$filepath"
-			setsid -f "$TERMINAL" --title="$filename" nvim "$filepath" >/dev/null 2>&1
+			open_nvim "$filepath"
 			;;
 	esac
 }
 
-# Run
 selected

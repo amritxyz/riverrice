@@ -3,27 +3,28 @@ icons=0
 text-alignment=left
 default-timeout=5000
 
-background-color=#1d2021
-text-color=#dfcfb3
-border-color=#3c3836
-border-size=2
+background-color=#ffffff
+text-color=#000000
+border-color=#9f9f9f
+border-size=3
 border-radius=0
 padding=8
+margin=14,34,5
 
 [urgency=low]
-background-color=#303536
-text-color=#d4be98
-border-color=#434a4c
+background-color=#f2f2f2
+text-color=#595959
+border-color=#9f9f9f
 default-timeout=3000
 
 [urgency=normal]
-background-color=#1d2021
-text-color=#dfcfb3
-border-color=#7daea3
+background-color=#f2f2f2
+text-color=#000000
+border-color=#4250ef
 default-timeout=5000
 
 [urgency=critical]
-background-color=#ea6962
-text-color=#ebe1d0
-border-color=#cc241d
+background-color=#fff1f0
+text-color=#8f1313
+border-color=#a60000
 default-timeout=8000
