@@ -44,6 +44,9 @@ PRACTICE_DIR="practice"
 NOTES_DIR="notes"
 REACT_DIR="react_dev"
 TYPLTX="typst_latex"
+TMP_DIR="/opt/void"
+LIBS_DIR="$TMP_DIR/libs"
+
 
 # /opt/void
 if [ -d "$BAK_MAIN_DIR" ]; then
@@ -184,9 +187,6 @@ fi
 ask ":: Would you like to download Raylib for Wayland? [Y/n] "
 read -r LO
 if [ "$LO" = "Y" ] || [ "$LO" = "y" ] || [ -z "$LO" ]; then
-	TMP_DIR="/opt/void"
-	LIBS_DIR="$TMP_DIR/libs"
-
 	if [ -d "$TMP_DIR" ]; then
 		warn "$TMP_DIR Exists..."
 	else
