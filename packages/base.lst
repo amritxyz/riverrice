@@ -1,7 +1,7 @@
 base-devel
 pulsemixer
 brightnessctl
-htop
+btop
 xdg-desktop-portal-wlr
 xdg-desktop-portal-gtk
 wlr-randr

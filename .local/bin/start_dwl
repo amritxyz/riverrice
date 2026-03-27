@@ -27,7 +27,7 @@ export SDL_VIDEODRIVER=wayland
 export NO_AT_BRIDGE=1
 
 export XDG_SESSION_TYPE=wayland
-export XDG_SESSION_DESKTOP=dwl
-export XDG_CURRENT_DESKTOP=dwl
+export XDG_SESSION_DESKTOP=wlroots
+export XDG_CURRENT_DESKTOP=wlroots
 
-exec someblocks -p | dwl -s "setbgw"
+someblocks -p | dbus-run-session dwl -s "{ envs.sh; setbgw; mako; } &"
